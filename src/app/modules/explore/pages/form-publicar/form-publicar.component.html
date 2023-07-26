@@ -1,95 +1,51 @@
-<h1>
-    Formulario de mascota perdida
-</h1>
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h4 class="card-title">Informacion de la mascota</h4>
-        <hr>
-        <div id='raza'>
-            <label>Raza</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"></button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item">foxterrier</a></li>
-                    <li><a class="dropdown-item">Gran danes</a></li>
-                    <li><a class="dropdown-item">Caniche</a></li>
-                    <li><a class="dropdown-item">Labrador</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="Tamaño">
-            <label>Tamaño: </label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"></button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item">foxterrier</a></li>
-                    <li><a class="dropdown-item">Gran danes</a></li>
-                    <li><a class="dropdown-item">Caniche</a></li>
-                    <li><a class="dropdown-item">Labrador</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="Edad">
-            <label>Edad:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-        </div>
-        <div id="nombre">
-            <label>Nombre:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-        </div>
-        <div id="sexo">
-            <label>Sexo:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"></button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item">Macho</a></li>
-                    <li><a class="dropdown-item">Hembra</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="descripcion">
-            <label>Descripcion de tu mascota:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div> 
-        </div>
-        <div id="perdida">
-            <label>Como se perdio:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div> 
-        </div>
-        <div id="imagenes">
-            <div class="container text-center">
-                <div class="row align-items-start">
-                  <div class="col">
-                    <label>Imagen Principal</label>
-                    <input type="file">
-                  </div>
-                  <div class="col">
-                    <label>Imagen N2</label>
-                    <input type="file">
-                  </div>
-                  <div class="col">
-                    <label>Imagen N3</label>
-                    <input type="file">
-                  </div>
-                  <div class="col">
-                    <label>Imagen N4</label>
-                    <input type="file">
-                  </div>
-                </div>
-              </div>
+<div id="divprincipal">
+    <h1>
+        Formulario de mascota perdida
+    </h1>
+        <section>
+                <header>
+                    <span>
+                        <h2>Informacion de la mascota</h2>
+                    </span>
+                </header>
+            <form>
+                <label for="raza">Raza: </label>
+                <select name="raza" id="raza">
+                    <option>Foxterrier</option>
+                    <option>Foxterrier</option>
+                    <option>Foxterrier</option>
+                    <option>Foxterrier</option>
+                </select>
+
+                <label for="tamaño">Tamaño: </label>
+                <select name="tamaño" id="tamaño" >
+                    <option>Pequeño</option>
+                    <option>Mediano</option>
+                    <option>Grande</option>
+                </select>
+
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad">
+
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre">
+
+                <label for="sexo">Sexo: </label>
+                <select name="sexo" id="nombre">
+                    <option>Hembra</option>
+                    <option>Macho</option>
+                </select>
+
+                <label for="descripcion">Descripcion de tu mascota: </label>
+                <input type="text" name="descripcion" id="descripcion">
+
+                <label for="perdida">Como se perdio: </label>
+                <input type="text" name="perdida" id="perdida">
+
+                <label>Imagenes de tu mascota </label>
+                <input>
+            </form>
+        </section>  
         </div>
     </div>
 </div>

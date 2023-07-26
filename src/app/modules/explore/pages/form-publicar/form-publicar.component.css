@@ -1,0 +1,16 @@
+#divprincipal{
+    justify-content: center
+}
+h1{
+    text-align: center;
+}
+.card{
+    justify-content: center;
+}
+
+input{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom-color: black;
+}
