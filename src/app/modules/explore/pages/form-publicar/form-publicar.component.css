@@ -1,16 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 #divprincipal{
-    justify-content: center
-}
-h1{
-    text-align: center;
-}
-.card{
-    justify-content: center;
-}
-
-input{
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    border-bottom-color: black;
+    background-color:#F2c995;
 }
