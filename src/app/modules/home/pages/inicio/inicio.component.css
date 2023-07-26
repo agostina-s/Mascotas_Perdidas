@@ -1,0 +1,31 @@
+body{
+  background-color: #e2b278;
+}
+#div1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#div2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#boton{
+  color: black;
+  text-align: center;
+  border-color: #B88B54;
+  background-color: #B88B54;
+  margin: 25px;
+  box-shadow: 2px 5px 5px rgb(167, 129, 83);
+}
+#boton:hover{
+  border-radius: 5px;
+  background: #e2b278;
+
+}
+#mapa{
+  background-color: #b99365;
+  color: black;
+  border-color: #b99365;
+}
