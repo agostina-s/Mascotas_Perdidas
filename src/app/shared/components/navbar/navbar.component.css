@@ -1,3 +1,6 @@
 .menu{
-    background-color: rgb(170, 106, 28);
+    background-color: #B88B54;
+}
+.sidemenu{
+    transition: 0.5s;
 }
