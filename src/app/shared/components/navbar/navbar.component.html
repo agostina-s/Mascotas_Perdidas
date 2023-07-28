@@ -18,31 +18,37 @@
         <!-- offcanvas menu -->
         <div class="offcanvas offcanvas-start sidemenu" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <!-- header -->
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <div class="offcanvasheader">
+                <img src="../../../../assets/Logoprueba.png" class="float start-0" alt="...">
+                <h3 class="offcanvas-title align-self-start" id="offcanvasNavbarLabel">Mascotas <br>Perdidas</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <!-- body -->
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/home/inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" routerLink="">Mi Perfil</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                            <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="" >Mis Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/explore/busqueda">Ver mascotas perdidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="">Ver mascotas encontradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/home/nosotros">Acerca de nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/explore/publicacion">Prototipo publicacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/explore/form-publicar">Prototipo formulario publicar</a>
                     </li>
                 </ul>
             </div>

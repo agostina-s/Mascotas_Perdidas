@@ -4,3 +4,14 @@
 .sidemenu{
     transition: 0.5s;
 }
+.titulomenu{
+    margin-bottom: 0;
+}
+
+.offcanvasheader{
+
+    display: flex;
+    align-items: center;
+
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
