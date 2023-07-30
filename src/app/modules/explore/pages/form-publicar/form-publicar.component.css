@@ -57,29 +57,34 @@ header span{
     position:absolute;
     width: 500px;
     transform:translate(-50%,-35%);
-    top:125%;
+    top:135%;
     left:50%;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 3px solid black;
     border-radius: 10px;
 }
 
-.mascota{
+.ubicacion{
     padding:.8rem;
     overflow:hidden;
     color:black
 }
-.mascota{
+.ubicacion{
     border:black;
 }
-.mascota label, .mascota input,.mascota select,.mascota textarea{
+.ubicacion label, .ubicacion input,.ubicacion select,.ubicacion textarea{
     display:block;
     width:100%;
     margin-bottom:8px;
 }
-.mascota input,.mascota text,.mascota select{
+.ubicacion input,.ubicacion text,.ubicacion select{
     border: none;
     border-bottom:2px solid black;
     margin-bottom:10px;
     background: none;
+}
+
+iframe{
+    transform:translate(60%,10px);
+    border-radius: 10px;
 }
