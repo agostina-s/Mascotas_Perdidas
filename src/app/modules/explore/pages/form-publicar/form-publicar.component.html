@@ -1,7 +1,8 @@
 <div id="divprincipal">
-    <h1>
+    <h1 id="h1principal">
         Formulario de mascota perdida
     </h1>
+    
     <section class="form-mascota">
         <header>
             <span>
@@ -51,6 +52,27 @@
             <input type="file" name="imagenes" id="imagenes">
             <h6>Imagen N4</h6>
             <input type="file" name="imagenes" id="imagenes">
+        </form>
+    <!--Formulario de ubicacion, aca se separa el formulario de arriba con el de abajo-->
+    </section><br>
+    <section class="form-ubicacion">
+        <header>
+            <span>
+                <h2>Ubicacion</h2>
+            </span>
+        </header>
+        <form class="ubicacion">
+            <label for="ciudad">Ciudad</label>
+            <select name="ciudad" id="ciudad">
+                <option>Cipolletti</option>
+                <option>Fernandez Oro</option>
+                <option>Neuquen</option>
+            </select>
+            <label for="barrio">Barrio</label>
+            <input type="text" name="barrio" id="barrio">
+            <label for="fecha">Fecha de la perdida</label>
+            <input type="date" name="fecha" id="fecha">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12414.105648848905!2d-67.9881331!3d-38.934800800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1690293312106!5m2!1ses!2sar" width="200" height="200" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align="center"></iframe>        
         </form>
     </section>
 </div>
