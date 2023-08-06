@@ -10,9 +10,8 @@
     background-color: #F2c995;
     width: 400px;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    top:20%;
+    left:35%;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
