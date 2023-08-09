@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 
+//FIREBASE
+import { enviroment } from 'src/enviroments/enviroment';
+import { AngularFireModule} from '@angular/fire/compat'; //importacion de firestore (BD)
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //importacion de AUTH
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // importacion de storage (para imagenes)
 
 
 
@@ -16,7 +21,12 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    //importacion shared
+    SharedModule,
+    //modulos de firebase
+    AngularFireModule.initializeApp(enviroment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
