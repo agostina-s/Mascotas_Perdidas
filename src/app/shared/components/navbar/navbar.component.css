@@ -4,3 +4,6 @@
 .sidemenu{
     transition: 0.5s;
 }
+nav{
+    position:absolute
+}
