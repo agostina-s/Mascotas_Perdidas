@@ -5,20 +5,21 @@
 }
 #divprincipal{
     background-color:#F2c995;
+    padding-top: 20px;
+
 }
 .form-mascota{
     background-color: #F2c995;
-    width: 400px;
+    width: 500px;
     position:absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%,-30%);
+    transform:translate(-50%,-50%);
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 10px;
 }
 header{
-    transform:translateY(50);
     width:100%;
     background-color: #B88B54;
     overflow:hidden;
@@ -59,6 +60,22 @@ header span{
     border: 2px solid black;
     border-radius: 10px;
 }
+#h1principal{
+    text-align: center;
+}
+
+
+.form-ubicacion{
+    position:absolute;
+    width: 500px;
+    transform:translate(-50%,-35%);
+    top:135%;
+    left:50%;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
 .ubicacion{
     padding:.8rem;
     overflow:hidden;
@@ -77,4 +94,9 @@ header span{
     border-bottom:2px solid black;
     margin-bottom:10px;
     background: none;
+}
+
+iframe{
+    transform:translate(60%,10px);
+    border-radius: 10px;
 }

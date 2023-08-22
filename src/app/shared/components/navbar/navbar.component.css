@@ -4,6 +4,26 @@
 .sidemenu{
     transition: 0.5s;
 }
-nav{
-    position:absolute
+
+.titulomenu{
+    margin-bottom: 0;
+}
+.offcanvas-title{
+    color: #141414;
+}
+
+.offcanvasheader{
+    display: flex;
+    align-items: center;
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
