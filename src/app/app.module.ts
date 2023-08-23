@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
-import { FormpublicarComponent } from './modules/form-publicar/form-publicar/formpublicar/formpublicar.component';
 
 
 
@@ -13,7 +12,6 @@ import { FormpublicarComponent } from './modules/form-publicar/form-publicar/for
 @NgModule({
   declarations: [
     AppComponent,
-    FormpublicarComponent
   ],
   imports: [
     BrowserModule,
