@@ -4,6 +4,7 @@ import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 import { FormEncontreComponent } from './pages/form-encontre/form-encontre.component';
 import { FormPublicarComponent } from './pages/form-publicar/form-publicar.component';
 import { PublicacionComponent } from './pages/publicacion/publicacion.component';
+import { CardsComponent } from './pages/cards/cards.component';
 
 const routes: Routes = [
     //rutas secundarias
@@ -11,6 +12,7 @@ const routes: Routes = [
     {path: 'form-encontre', component: FormEncontreComponent},
     {path: 'form-publicar', component: FormPublicarComponent},
     {path: 'publicacion', component: PublicacionComponent},
+    {path:'cards',component:CardsComponent}
 ];
 
 @NgModule({

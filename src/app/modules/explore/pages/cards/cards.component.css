@@ -1,0 +1,27 @@
+.cards{
+    margin-left: 50px;
+    
+   
+}
+.fondo{
+    background-color: #F2C995;
+    
+    
+}
+.card-img-top{
+    height: 15rem;
+    width: 100%;
+
+
+}
+.card-body{
+    background-color: #E5D1B8;
+    
+    
+    
+
+    
+}
+.list-group-item{
+    background-color: #E5D1B8;
+}

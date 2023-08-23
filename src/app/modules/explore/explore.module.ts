@@ -6,6 +6,7 @@ import { FormPublicarComponent } from './pages/form-publicar/form-publicar.compo
 import { FormEncontreComponent } from './pages/form-encontre/form-encontre.component';
 import { PublicacionComponent } from './pages/publicacion/publicacion.component';
 import { BusquedaComponent } from './pages/busqueda/busqueda.component';
+import { CardsComponent } from './pages/cards/cards.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { BusquedaComponent } from './pages/busqueda/busqueda.component';
     FormPublicarComponent,
     FormEncontreComponent,
     PublicacionComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
