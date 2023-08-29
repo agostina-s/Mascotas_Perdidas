@@ -1,4 +1,4 @@
-.form-ubicacion{
+.form-contacto{
     background-color: #F2c995;
     width: 400px;
     position:absolute;
@@ -10,8 +10,7 @@
     text-align: center;
 }
 
-
-.form-ubicacion{
+.form-contacto{
     position:absolute;
     width: 500px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
@@ -19,27 +18,22 @@
     border-radius: 10px;
 }
 
-.ubicacion{
+.contacto{
     padding:.8rem;
     overflow:hidden;
     color:black
 }
-.ubicacion{
+.contacto{
     border:black;
 }
-.ubicacion label, .ubicacion input,.ubicacion select,.ubicacion textarea{
+.contacto label, .contacto input,.contacto select,.contacto textarea{
     display:block;
     width:100%;
     margin-bottom:8px;
 }
-.ubicacion input,.ubicacion text,.ubicacion select{
+.contacto input,.contacto text,.contacto select{
     border: none;
     border-bottom:2px solid black;
     margin-bottom:10px;
     background: none;
-}
-
-iframe{
-    transform:translate(60%,10px);
-    border-radius: 10px;
 }
