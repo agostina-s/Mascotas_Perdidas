@@ -1,11 +1,13 @@
 #fondo{
-  position: absolute;
+  position: relative;
   left: 0%;
   right: 0%;
-  top: 0%;
   bottom: 2%;
 
   background-image: linear-gradient(0.01deg, #F2C995 0%, rgba(184, 139, 84, 0.48) 43.69%), url('/assets/fondo.jpg');
+}
+.contenedor{
+  min-height: 100vh;
 }
 
 h1{
