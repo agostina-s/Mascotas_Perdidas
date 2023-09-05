@@ -1,0 +1,39 @@
+.form-contacto{
+    background-color: #F2c995;
+    width: 400px;
+    position:absolute;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#h1principal{
+    text-align: center;
+}
+
+.form-contacto{
+    position:absolute;
+    width: 500px;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.contacto{
+    padding:.8rem;
+    overflow:hidden;
+    color:black
+}
+.contacto{
+    border:black;
+}
+.contacto label, .contacto input,.contacto select,.contacto textarea{
+    display:block;
+    width:100%;
+    margin-bottom:8px;
+}
+.contacto input,.contacto text,.contacto select{
+    border: none;
+    border-bottom:2px solid black;
+    margin-bottom:10px;
+    background: none;
+}
