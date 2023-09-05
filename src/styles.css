@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
 
-h1,h2,h3{
+h1,h2,h3,h4,h5,h6{
     font-family: Inter;
     font-style: normal;
     font-weight: 800;
+    color: black;
 }
 
 p{
@@ -14,6 +15,15 @@ p{
     font-weight: 600;
 }
 
+.btn{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+}
+
 html {
     background-color: #F2C995;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
 }
