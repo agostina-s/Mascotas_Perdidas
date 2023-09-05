@@ -1,5 +1,24 @@
-body{
-  background-color: #e2b278;
+#fondo{
+  position: relative;
+  left: 0%;
+  right: 0%;
+  bottom: 2%;
+
+  background-image: linear-gradient(0.01deg, #F2C995 0%, rgba(184, 139, 84, 0.48) 43.69%), url('/assets/fondo.jpg');
+}
+.contenedor{
+  min-height: 100vh;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #div1{
   display: flex;
@@ -28,4 +47,6 @@ body{
   background-color: #b99365;
   color: black;
   border-color: #b99365;
+  border-radius: 5%;
+  align-items: center;
 }
