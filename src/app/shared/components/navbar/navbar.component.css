@@ -27,3 +27,8 @@ hr{
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.cerrarsesion{
+    display: flex;
+    margin-top: auto;
+}
