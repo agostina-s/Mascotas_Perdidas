@@ -1,6 +1,9 @@
 
 
-
+.container-fluid{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .bg-color{
     background-color: #F2c995;

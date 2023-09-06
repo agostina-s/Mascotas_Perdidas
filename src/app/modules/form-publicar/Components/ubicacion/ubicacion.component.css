@@ -1,22 +1,13 @@
 .form-ubicacion{
     background-color: #F2c995;
-    width: 400px;
-    position:absolute;
+    width: 500px;
+    margin-top:40px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
 }
 #h1principal{
     text-align: center;
-}
-
-
-.form-ubicacion{
-    position:absolute;
-    width: 500px;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 3px solid black;
-    border-radius: 10px;
 }
 
 .ubicacion{
