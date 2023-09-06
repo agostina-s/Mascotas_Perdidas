@@ -9,7 +9,17 @@
 #h1principal{
     text-align: center;
 }
-
+header{
+    width:100%;
+    background-color: #B88B54;
+    overflow:hidden;
+    border-top-left-radius:10px;
+    border-top-right-radius: 10px;
+}
+header span{
+    font-size:100px;
+    text-align: center;
+}
 .ubicacion{
     padding:.8rem;
     overflow:hidden;
@@ -24,10 +34,12 @@
     margin-bottom:8px;
 }
 .ubicacion input,.ubicacion text,.ubicacion select{
-    border: none;
-    border-bottom:2px solid black;
-    margin-bottom:10px;
-    background: none;
+    text-decoration: #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #e2b278;
 }
 
 iframe{
