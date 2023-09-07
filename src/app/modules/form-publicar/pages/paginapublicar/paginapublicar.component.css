@@ -15,7 +15,10 @@ span{
     text-align: center;
 }
 button{
-    height: 200px;
+    height: 50px;
+    width: 300px;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border-color: black;
 }
 
 .container-fluid{
