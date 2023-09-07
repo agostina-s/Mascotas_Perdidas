@@ -1,4 +1,22 @@
 
+h1{
+    text-align: center;  
+    border-radius: 20px;
+}
+.h1{
+    padding-bottom: 40px;
+}
+span{
+    background-color: rgba(0, 0, 0, 0.351);
+    border-radius: 20px ;
+}
+.button{
+    padding-top: 40px;
+    text-align: center;
+}
+button{
+    height: 200px;
+}
 
 .container-fluid{
     padding-top: 40px;
