@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
-import { ContactoEncontreComponent } from './modules/components/contacto-encontre/contacto-encontre.component';
 
 
 
@@ -13,7 +12,6 @@ import { ContactoEncontreComponent } from './modules/components/contacto-encontr
 @NgModule({
   declarations: [
     AppComponent,
-    ContactoEncontreComponent,
   ],
   imports: [
     BrowserModule,
