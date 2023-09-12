@@ -5,11 +5,11 @@
                 <div class="login-container">
                     <h2>Iniciar Sesión</h2>
                     <form class="login-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <input type="password" placeholder="Contraseña" required>
+                        <input [(ngModel)]="usuarios.email" type="text" placeholder="Correo electrónico" required name="email">
+                        <input [(ngModel)]="usuarios.password" type="text" placeholder="Contraseña" required name="contraseña">
                     </form>
                     <p class="register-link">¿No tienes una cuenta? <a href="#">Registrarse</a></p>
-                    <button class="btn button" type="submit">Iniciar sesión</button>
+                    <button class="btn button" type="submit" (click)="ingresar()">Iniciar sesión</button>
                 </div>
             </div>
 
