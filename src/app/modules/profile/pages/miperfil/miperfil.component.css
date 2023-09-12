@@ -80,9 +80,9 @@ h1.text-center {
 }
 
 .accordion-button {
-    background-color:#B88B54;
+    background-color: #B88B54;
     color: black;
-    border: black;
+    border: 1px solid rgb(0, 0, 0); /* Cambia 'white' al color deseado para el borde */
     border-radius: 5px;
     padding: 10px 15px;
     text-align: left;
