@@ -1,0 +1,42 @@
+.form-mascota{
+  background-color: #F2c995;
+  width: 500px;
+  box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+header{
+  width:100%;
+  background-color: #B88B54;
+  overflow:hidden;
+  border-top-left-radius:10px;
+  border-top-right-radius: 10px;
+}
+header span{
+  font-size:100px;
+  text-align: center;
+}
+
+
+.mascota{
+  padding:.8rem;
+  overflow:hidden;
+  color:black
+}
+.mascota{
+  border:black;
+}
+.mascota label, .mascota input,.mascota select,.mascota textarea{
+  display:block;
+  width:100%;
+  margin-bottom:8px;
+}
+.mascota input,.mascota text,.mascota select{
+  text-decoration: #000000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #e2b278;
+}
