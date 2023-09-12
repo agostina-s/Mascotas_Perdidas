@@ -1,14 +1,11 @@
 .background{
     background-color: #e2b278;
-  }
-
+}
 
 img{
-    height: 400px;
-    width: 400px;
-   
-margin: 20% 25%;
-
+    height: 100%;
+    width: 100%;
+    /* margin: 20% 25%; */
     /* Agregamos margen inferior para evitar solapamiento */
 }
 .container {
