@@ -7,7 +7,9 @@ const routes: Routes = [
   {path: 'explore', loadChildren:()=>import('./modules/explore/explore.module').then( m => m.ExploreModule)},
   {path: 'auth', loadChildren:()=>import('./modules/auth/auth.module').then( m => m.AuthModule)},
   {path: 'form-publicar',loadChildren:()=>import('./modules/form-publicar/formpublicar.module').then( m=>m.FormpublicarModule)},
-  {path: 'form-encontre',loadChildren:()=>import('./modules/form-encontre/form-encontre.module').then( m=>m.FormEncontreModule)}
+  {path: 'form-encontre',loadChildren:()=>import('./modules/form-encontre/form-encontre.module').then( m=>m.FormEncontreModule)},
+  {path: 'profile', loadChildren:()=>import('./modules/profile/profile.module').then( m => m.ProfileModule)}
+
 ];
 
 @NgModule({
