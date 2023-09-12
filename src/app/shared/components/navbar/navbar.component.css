@@ -14,10 +14,8 @@
 }
 
 .offcanvasheader{
-
     display: flex;
     align-items: center;
-
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
 }
 
