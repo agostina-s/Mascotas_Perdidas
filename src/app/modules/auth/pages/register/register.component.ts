@@ -26,9 +26,8 @@ export class RegisterComponent {
   // crear una nueva colección para usuarios
   coleccionUsuarios: Usuario[] = [];
 
-    // servicioAuth referencia a nuestro servicio Auth
   constructor(
-    public servicioAuth: AuthService, 
+    public servicioAuth: AuthService, // servicioAuth referencia a nuestro servicio Auth
     public servicioFirestore: FirestoreService,
     public router: Router
   ) { }
@@ -47,7 +46,7 @@ export class RegisterComponent {
     })
     // el método CATCH mostrará el error en caso de un error xd
     .catch(error => 
-      alert("Hubo un error al cargar el nuevo usuario :( \n"+error)
+      alert("Hubo un error al cargar el nuevo usuario :( \n"+error+'email='+this.usuarios.email)
     );
 
     //constante para UID
@@ -63,6 +62,7 @@ export class RegisterComponent {
     this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res => {
       console.log(this.usuarios)
+      console.log(this.usuarios.email)  
     })
     .catch(error =>{
       console.log('Error =>', error)
