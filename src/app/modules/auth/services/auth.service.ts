@@ -18,7 +18,7 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
-  //funcion para LOGEARSE
+  //funcion para LOGUEARSE
   iniciarSesion(email: string, contrasena: string){
     // valida email y contraseña de la BD
     return this.auth.signInWithEmailAndPassword(email, contrasena)
