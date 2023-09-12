@@ -1,0 +1,108 @@
+#perfil{
+background-color: #e2b278;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.user-section {
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+.user-button {
+    background-color:#B88B54;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.publications-section {
+    
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.publications-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.categories-list {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el espacio interno de la lista */
+}
+
+.categories-list li {
+    margin: 5px 0; /* Añade espacio vertical entre las categorías */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+}
+
+.categories-list li.active {
+    font-weight: bold; /* Estilo para la categoría activa (cambiar según tus preferencias) */
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el título de configuración */
+h1.text-center {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el acordeón */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color:#B88B54;
+    color: black;
+    border: black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #B88B54;
+}
+
+.accordion-body {
+    padding: 10px;
+    
+    background-color: #B88B54;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
