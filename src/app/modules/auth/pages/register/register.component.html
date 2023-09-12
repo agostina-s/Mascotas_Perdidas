@@ -8,16 +8,16 @@
                     <h2>Registrarse</h2>
                     <form class="login-form">
                         <!-- Nombre -->
-                        <input [(ngModel)]="usuarios.name" type="text" placeholder="Nombre" required>
+                        <input [(ngModel)]="usuarios.name" type="text" placeholder="Nombre" name="name" required>
 
                         <!-- Apellido -->
                         <!-- <input [(ngModel)]="usuarios.apellido" type="text" placeholder="Apellido" required> -->
 
                         <!-- Email -->
-                        <input [(ngModel)]="usuarios.email" type="text" placeholder="Correo electrónico" required>
+                        <input [(ngModel)]="usuarios.email" type="text" placeholder="Correo electrónico" name="email" required>
 
                         <!-- Contraseña -->
-                        <input [(ngModel)]="usuarios.password" [type]="hide ? 'password' : 'text'" #input minlength="6" placeholder="Contraseña" required>
+                        <input [(ngModel)]="usuarios.password" [type]="hide ? 'password' : 'text'" #input minlength="6" placeholder="Contraseña" name="contraseña" required>
 
                         <!-- repetir contraseña -->
                         <!-- <input type="password" placeholder="Confirmar contraseña" required> -->
