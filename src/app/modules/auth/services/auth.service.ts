@@ -26,7 +26,7 @@ export class AuthService {
 
 
   //funcion para TOMAR UID
-  async getuid(){
+  async getUID(){
     //genera una promesa y user la captura 
     const user = await this.auth.currentUser;
 
