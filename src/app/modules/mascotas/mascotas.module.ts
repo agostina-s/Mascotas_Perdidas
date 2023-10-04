@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CardmascotasRoutingModule } from './cardmascotas-routing.module';
+import { MascotasRoutingModule } from './mascotas-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    CardmascotasRoutingModule
+    MascotasRoutingModule
   ]
 })
-export class CardmascotasModule { }
+export class MascotasModule { }
