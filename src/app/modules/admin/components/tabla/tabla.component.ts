@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Mascotas } from 'src/app/models/mascotasperdidas';
 
 @Component({
   selector: 'app-tabla',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent {
-
+  coleccionmascotas: Mascotas [] = [];
+  productoSeleccionado!: Mascotas;
 }
