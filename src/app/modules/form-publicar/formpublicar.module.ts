@@ -6,6 +6,7 @@ import { InfomascotaComponent } from './Components/infomascota/infomascota.compo
 import { UbicacionComponent } from './Components/ubicacion/ubicacion.component';
 import { ContactoComponent } from './Components/contacto/contacto.component';
 import { PaginapublicarComponent } from './pages/paginapublicar/paginapublicar.component';
+import { FormularioComponent } from './Components/formulario/formulario.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PaginapublicarComponent } from './pages/paginapublicar/paginapublicar.c
     InfomascotaComponent,
     UbicacionComponent,
     ContactoComponent,
-    PaginapublicarComponent
+    PaginapublicarComponent,
+    FormularioComponent
   ],
   imports: [
     CommonModule,
