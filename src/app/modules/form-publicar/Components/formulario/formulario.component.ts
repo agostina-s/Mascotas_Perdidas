@@ -57,8 +57,12 @@ export class FormularioComponent {
         alert("Se ha añadido su mascota correctamente")
       })
       .catch(error =>{
-        alert("Hubo un error al agregar sus mascota :( ")
+        alert("Hubo un error al agregar sus mascota :( \n"+error);
       })
     }
   }
+  
+  
+
+
 }
