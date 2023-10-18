@@ -38,20 +38,27 @@ export class FormularioComponent {
 
   async agregarmascota(){
     if(this.mascotas.value){
-      let nuevoProducto: Producto = {
-        idProducto: '',
+      let nuevamascota: Mascotas = {
+        uid : '',
         raza:this.mascotas.value.nombre!,
         tamaño: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,
-        nombre:this.mascotas.value.edad!,
-        sexo:this.mascotas.value.edad!,
-        descripcion:this.mascotas.value.edad!,
-        perdida:this.mascotas.value.edad!,
-        imagenprincipal:this.mascotas.value.edad!,
-        imagenn2:this.mascotas.value.edad!,
-        imagen3:this.mascotas.value.edad!,
-        imagen4:this.mascotas.value.edad!,
+        nombre:this.mascotas.value.nombre!,
+        sexo:this.mascotas.value.sexo!,
+        descripcion:this.mascotas.value.descripcion!,
+        perdida:this.mascotas.value.perdida!,
+        imagenprincipal:this.mascotas.value.imagenprincipal!,
+        imagenn2:this.mascotas.value.imagenn2!,
+        imagen3:this.mascotas.value.imagenn3!,
+        imagen4:this.mascotas.value.imagenn4!,
       }
+      await this.servicioCrud.crearmascota(nuevamascota)
+      .then(mascotas=>{
+        alert("Se ha añadido su mascota correctamente")
+      })
+      .catch(error =>{
+        alert("Hubo un error al agregar sus mascota :( ")
+      })
     }
   }
 }
