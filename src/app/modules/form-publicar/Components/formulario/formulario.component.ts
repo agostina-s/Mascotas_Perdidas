@@ -35,4 +35,23 @@ export class FormularioComponent {
       this.coleccionmascotas = mascotas
     })
   }
+
+  async agregarmascota(){
+    if(this.mascotas.value){
+      let nuevoProducto: Producto = {
+        idProducto: '',
+        raza:this.mascotas.value.nombre!,
+        tamaño: this.mascotas.value.tamano!,
+        edad: this.mascotas.value.edad!,
+        nombre:this.mascotas.value.edad!,
+        sexo:this.mascotas.value.edad!,
+        descripcion:this.mascotas.value.edad!,
+        perdida:this.mascotas.value.edad!,
+        imagenprincipal:this.mascotas.value.edad!,
+        imagenn2:this.mascotas.value.edad!,
+        imagen3:this.mascotas.value.edad!,
+        imagen4:this.mascotas.value.edad!,
+      }
+    }
+  }
 }
