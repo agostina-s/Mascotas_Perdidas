@@ -52,7 +52,7 @@ export class FormularioComponent {
         imagen3:this.mascotas.value.imagenn3!,
         imagen4:this.mascotas.value.imagenn4!,
       }
-      await this.servicioCrud.crearmascota(nuevamascota)
+      await this.servicioCrud.crearMascota(nuevamascota)
       .then(mascotas=>{
         alert("Se ha añadido su mascota correctamente")
       })

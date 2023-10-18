@@ -13,8 +13,11 @@ export class ServicesService {
     this.mascotasColeccion = database.collection("mascotas")
   }
 
-  //funcion crear mascota
-  crearmascota(Mascota:Mascotas){
+  //
+  //
+  //
+  //funcion crear mascota CREAR
+  crearMascota(Mascota:Mascotas){
     return new Promise(async(resolve,reject)=>{
       try{
         const id = this.database.createId();
@@ -29,16 +32,25 @@ export class ServicesService {
     })
   }
 
+  //
+  //
+  //
   //funcion obtener mascotas
   obtenerMascota(){
     return this.mascotasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
+  //
+  //
+  //
   //funcion modificar mascotas
   modificarMascota(uid: string, nuevoData:Mascotas){
     return this.database.collection("mascotas").doc(uid).update(nuevoData)
   }
 
+  //
+  //
+  //
   //funcion eliminar mascotas
   eliminarMascotas(uid:string){
     return new Promise ((resolve,reject) =>{
