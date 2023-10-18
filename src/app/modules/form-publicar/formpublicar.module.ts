@@ -4,22 +4,27 @@ import { CommonModule } from '@angular/common';
 import { FormpublicarRoutingModule } from './formpublicar-routing.module';
 import { InfomascotaComponent } from './Components/infomascota/infomascota.component';
 import { UbicacionComponent } from './Components/ubicacion/ubicacion.component';
-import { ContactoComponent } from './Components/contacto/contacto.component';
 import { PaginapublicarComponent } from './pages/paginapublicar/paginapublicar.component';
 import { FormularioComponent } from './Components/formulario/formulario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     InfomascotaComponent,
     UbicacionComponent,
-    ContactoComponent,
     PaginapublicarComponent,
     FormularioComponent
   ],
   imports: [
     CommonModule,
-    FormpublicarRoutingModule
+    FormpublicarRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports:[
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class FormpublicarModule { }

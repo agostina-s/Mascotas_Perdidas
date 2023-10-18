@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactoComponent } from '../form-publicar/Components/contacto/contacto.component';
 import { InfoEncontreComponent } from './components/info-encontre/info-encontre.component';
 import { ContactoEncontreComponent } from './components/contacto-encontre/contacto-encontre.component';
 import { UbicacionEncontreComponent } from './components/ubicacion-encontre/ubicacion-encontre.component';

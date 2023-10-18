@@ -4,7 +4,7 @@
             <h2>Informacion de la mascota</h2>
         </span>
     </header>
-    <form [FormGroup]="mascotas" class="mascota">
+    <form [formGroup]="mascotas" class="mascota">
         
         <label for="raza"><strong>Raza: </strong> </label>
         <select name="raza" id="raza" formControlName="raza">
@@ -38,7 +38,7 @@
         </select>
 
         <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-        <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota">
+        <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion">
 
         <label for="perdida"><strong>Como se perdio: </strong></label>
         <input type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida">
