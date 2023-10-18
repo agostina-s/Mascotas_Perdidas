@@ -1,4 +1,5 @@
 export interface Mascotas {
+    //informacion de la mascota
     uid: string;
     raza: string;
     tamaño: string;
@@ -11,4 +12,5 @@ export interface Mascotas {
     imagenn2:string;
     imagen3:string;
     imagen4:string;
+
 }
