@@ -12,6 +12,9 @@ export class FormularioComponent {
   coleccionmascotas: Mascotas [] = [];
   productoSeleccionado!: Mascotas; // ! -> toma valores vacios
 
+
+
+  //enlaza nuestro formulario
   mascotas = new FormGroup({
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
@@ -36,21 +39,24 @@ export class FormularioComponent {
     mail: new FormControl("",Validators.required),
   })
   
+  //llamamos al servicio CRUD
   constructor(
     public servicioCrud: ServicesService
   ){}
 
-  ngOnInit():void{
-    this.servicioCrud.obtenerMascota().subscribe(mascotas =>{
-      this.coleccionmascotas = mascotas
-    })
-  }
+  // //NO NECESITAMOS PEDIR LAS PUBLICACIONES
+  // ngOnInit():void{
+  //   this.servicioCrud.obtenerMascota().subscribe(mascotas =>{
+  //     this.coleccionmascotas = mascotas
+  //   })
+  // }
 
-  async agregarmascota(){
+  //
+  async agregarMascota(){
     if(this.mascotas.value){
       let nuevamascota: Mascotas = {
         // INFORMACION DE LA MASCOTA
-        idmp : '',
+        idmp : '', //se guarda vacio para agregarlo en el crud
         raza:this.mascotas.value.nombre!,
         tamaño: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,
@@ -83,8 +89,4 @@ export class FormularioComponent {
       })
     }
   }
-  
-  
-
-
 }
