@@ -98,6 +98,9 @@
             </span>
         </header>
         <section class="mascota">
+            <!-- COMIENZO FORM -->
+
+            <!-- RAZA -->
             <label for="raza"><strong>Raza: </strong> </label>
             <select name="raza" id="raza" formControlName="raza">
                 <option selected>Eliga la raza: </option>
@@ -108,6 +111,7 @@
                 <option value="collie">Collie</option>
             </select>
 
+            <!-- TAMAÑO -->
             <label for="tamaño"><strong>Tamaño: </strong></label>
             <select name="tamaño" id="tamaño" formControlName="tamaño">
                 <option selected>Eliga el tamaño de sus mascota: </option>
@@ -116,12 +120,15 @@
                 <option value="grande">Grande</option>
             </select>
 
+            <!-- EDAD -->
             <label for="edad"><strong>Edad: </strong></label>
             <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
 
+            <!-- NOMBRE -->
             <label for="nombre"><strong>Nombre: </strong> </label>
             <input type="text" name="nombre" placeholder="Ingrese el nombre de su mascota" id="nombre" formControlName="nombre">
 
+            <!-- SEXO -->
             <label for="sexo"><strong>Sexo: </strong></label>
             <select name="sexo" id="nombre" formControlName="sexo">
                 <option selected>Elega el sexo de su mascota</option>
@@ -129,21 +136,24 @@
                 <option value="macho">Macho</option>
             </select>
 
+            <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
             <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion">
 
+            <!-- COMO SE PERDIO -->
             <label for="perdida"><strong>Como se perdio: </strong></label>
             <input type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida">
 
+            <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
             <h6>Imagen principal</h6>
-            <input type="file" name="imagenes" id="imagenes">
+            <input type="text" name="imagenes">
             <h6>Imagen N2</h6>
-            <input type="file" name="imagenes" id="imagenes">
+            <input type="text" name="imagenes">
             <h6>Imagen N3</h6>
-            <input type="file" name="imagenes" id="imagenes">
+            <input type="text" name="imagenes">
             <h6>Imagen N4</h6>
-            <input type="file" name="imagenes" id="imagenes">
+            <input type="text" name="imagenes">
         </section>
     </div>
 
@@ -153,6 +163,7 @@
                 <h2>Ubicacion</h2>
             </span>
         </header>
+        <!-- INFO UBICACION -->
         <section class="ubicacion">
             <label for="nombre"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad">
@@ -173,6 +184,7 @@
             </span>
         </header>
         <section class="contacto">
+            <!-- INFO CONTACTO -->
             <label for="nombre"><strong>Nombre del dueño:</strong></label>
             <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="dueño">
             
