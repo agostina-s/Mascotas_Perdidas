@@ -1,3 +1,7 @@
+//archivo CRUD services
+
+
+
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
@@ -17,13 +21,13 @@ export class ServicesService {
   //
   //
   //funcion crear mascota CREAR
-  crearMascota(Mascota:Mascotas){
+  crearMascota(mascota:Mascotas){
     return new Promise(async(resolve,reject)=>{
       try{
         const id = this.database.createId();
-        Mascota.uid = id;
+        mascota.uid = id;
 
-        const resultado = await this.mascotasColeccion.doc(id).set(Mascota)
+        const resultado = await this.mascotasColeccion.doc(id).set(mascota)
 
         resolve(resultado);
       } catch(error){
