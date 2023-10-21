@@ -50,7 +50,7 @@ export class FormularioComponent {
     if(this.mascotas.value){
       let nuevamascota: Mascotas = {
         // INFORMACION DE LA MASCOTA
-        uid : '',
+        idmp : '',
         raza:this.mascotas.value.nombre!,
         tamaño: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,

@@ -1,6 +1,6 @@
 export interface Mascotas {
-    // INFORMACION DE LA MASCOTA
-    uid: string;
+    // INFORMACION DE LA MASCOTA PERDIDA
+    idmp: string;
     raza: string;
     tamaño: string;
     edad: number;

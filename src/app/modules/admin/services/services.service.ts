@@ -25,7 +25,7 @@ export class ServicesService {
     return new Promise(async(resolve,reject)=>{
       try{
         const id = this.database.createId();
-        mascota.uid = id;
+        mascota.idmp = id;
 
         const resultado = await this.mascotasColeccion.doc(id).set(mascota)
 
@@ -39,8 +39,11 @@ export class ServicesService {
   //
   //
   //
-  //funcion obtener mascotas
+  //funcion obtener mascotas GET
   obtenerMascota(){
+    // snapshoot -> captura los cambios
+    // pipe -> tubería por dónde viajan esos nuevos datos
+    // map -> recorre esos datos, los lee
     return this.mascotasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
@@ -48,19 +51,20 @@ export class ServicesService {
   //
   //
   //funcion modificar mascotas
-  modificarMascota(uid: string, nuevoData:Mascotas){
-    return this.database.collection("mascotas").doc(uid).update(nuevoData)
+  modificarMascota(idmp: string, nuevoData:Mascotas){
+    //Envíamos el id del producto seleccionado y su nueva información
+    return this.database.collection("mascotas").doc(idmp).update(nuevoData)
   }
 
   //
   //
   //
   //funcion eliminar mascotas
-  eliminarMascotas(uid:string){
+  eliminarMascotas(idmp:string){
     return new Promise ((resolve,reject) =>{
       try{
-        const resp = this.mascotasColeccion.doc(uid).delete()
-        resolve(resp)
+        const respuesta = this.mascotasColeccion.doc(idmp).delete()
+        resolve(respuesta)
       }
       catch(error){
         reject(error)
