@@ -10,7 +10,8 @@ import { SharedModule } from './shared/shared.module';
 import { enviroment } from 'src/enviroments/enviroment';
 import { AngularFireModule} from '@angular/fire/compat'; //importacion de firestore (BD)
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //importacion de AUTH
-import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // importacion de storage (para imagenes)
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+ // importacion de storage (para imagenes)
 
 
 

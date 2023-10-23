@@ -1,0 +1,17 @@
+<!-- GET PUBLICACIONES -->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let col of coleccionMascotas">
+        <div class="card">
+            <img src="{{col.imagenprincipal}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{col.nombre}}</h5>
+                <p class="card-text">{{col.descripcion}}</p>
+
+                <!-- BOTÓN PARA VER MAS -->
+                <button type="button" class="btn btn-outline-primary">
+                    Ver más
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

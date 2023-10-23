@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { Mascotas } from 'src/app/models/mascotasperdidas';
+import { ServicesService } from '../../../admin/services/services.service';
 @Component({
   selector: 'app-paginapublicar',
   templateUrl: './paginapublicar.component.html',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class PaginapublicarComponent {
 
+
 }
+
+
