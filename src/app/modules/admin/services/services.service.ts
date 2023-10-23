@@ -72,4 +72,12 @@ export class ServicesService {
     })
   }
 
+  //
+  //
+  //
+  //funcion para obetener mascota por ID
+  obtenerMascotaById(id:string){
+
+  }
+
 }

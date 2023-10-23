@@ -13,9 +13,12 @@ export class PublicacionComponent{
 
   //publicacionID:string;
 
-  constructor(private acroutes:ActivatedRoute){
-    this.acroutes.params.subscribe(params => {
-      console.log(params)
+  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
+    this.acroutes.params.subscribe(param => {
+      console.log(param)
+      if(param['id']){
+        this.servicioCRUD.obtenerMascotaById(param['id'])
+      }
       //this.publicacionID= params['id'];
     })
   }
