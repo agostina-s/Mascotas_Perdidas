@@ -14,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InfomascotaComponent,
     UbicacionComponent,
     PaginapublicarComponent,
-    FormularioComponent
+    FormularioComponent, 
   ],
   imports: [
     CommonModule,
