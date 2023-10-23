@@ -2,14 +2,14 @@ export interface Mascotas {
     // INFORMACION DE LA MASCOTA PERDIDA
     idmp: string;
     raza: string;
-    tamaño: string;
+    tamano: string;
     edad: number;
     nombre:string;
     sexo:string;
     descripcion:string;
     perdida:string;
     imagenprincipal:string;
-    imagenn2:string;
+    imagen2:string;
     imagen3:string;
     imagen4:string;
     // UBICACION

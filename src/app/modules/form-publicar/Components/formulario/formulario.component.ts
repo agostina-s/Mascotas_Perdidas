@@ -25,9 +25,9 @@ export class FormularioComponent {
     descripcion: new FormControl("",Validators.required),
     perdida: new FormControl("",Validators.required),
     imagenprincipal: new FormControl("",Validators.required),
-    imagenn2: new FormControl("",Validators.required),
-    imagenn3: new FormControl("",Validators.required),
-    imagenn4: new FormControl("",Validators.required),
+    imagen2: new FormControl("",Validators.required),
+    imagen3: new FormControl("",Validators.required),
+    imagen4: new FormControl("",Validators.required),
     // UBICACION
     ciudad: new FormControl("",Validators.required),
     barrio: new FormControl("",Validators.required),
@@ -58,16 +58,16 @@ export class FormularioComponent {
         // INFORMACION DE LA MASCOTA
         idmp : '', //se guarda vacio para agregarlo en el crud
         raza:this.mascotas.value.nombre!,
-        tamaño: this.mascotas.value.tamano!,
+        tamano: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,
         nombre:this.mascotas.value.nombre!,
         sexo:this.mascotas.value.sexo!,
         descripcion:this.mascotas.value.descripcion!,
         perdida:this.mascotas.value.perdida!,
         imagenprincipal:this.mascotas.value.imagenprincipal!,
-        imagenn2:this.mascotas.value.imagenn2!,
-        imagen3:this.mascotas.value.imagenn3!,
-        imagen4:this.mascotas.value.imagenn4!,
+        imagen2:this.mascotas.value.imagen2!,
+        imagen3:this.mascotas.value.imagen3!,
+        imagen4:this.mascotas.value.imagen4!,
         // UBICACION
         ciudad: this.mascotas.value.ciudad!,
         barrio: this.mascotas.value.barrio!,
