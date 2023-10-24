@@ -4,14 +4,15 @@
         <div class="card ">
             <img src="{{col.imagenprincipal}}" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{col.nombre}}</h5>
-                <p class="card-tittle">{{col.ciudad}}</p>
+                <h3 class="card-title">{{col.nombre}}</h3>
+                <h4 class="card-tittle">{{col.ciudad}}</h4>
                 <p class="card-text">{{col.descripcion}}</p>
 
                 <!-- BOTÓN PARA VER MAS -->
                 <button type="button" class="btn btn-outline-primary">
                     Ver más
                 </button>
+                <div class="row-cols-md-3">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -24,6 +25,7 @@
                       <li><a class="dropdown-item" href="#">Compartir</a></li>
                     </ul>
                   </div>
+                </div>  
             </div>
         </div>
     </div>
