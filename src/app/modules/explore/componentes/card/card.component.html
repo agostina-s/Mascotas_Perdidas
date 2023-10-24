@@ -8,7 +8,7 @@
                 <p class="card-text">{{col.descripcion}}</p>
 
                 <!-- BOTÓN PARA VER MAS -->
-                <button type="button" class="btn btn-outline-primary">
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['publicacion', col.idmp]">
                     Ver más
                 </button>
             </div>
