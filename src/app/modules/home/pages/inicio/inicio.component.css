@@ -1,3 +1,8 @@
+
+.componente{
+  min-height: 90vh;
+}
+
 #fondo{
   position: relative;
   left: 0%;
@@ -51,3 +56,4 @@ h5{
   border-radius: 5%;
   align-items: center;
 }
+

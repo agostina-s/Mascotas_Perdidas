@@ -1,6 +1,10 @@
 .menu{
     background-color: #B88B54;
 }
+.link{
+    cursor: pointer;
+}
+
 .sidemenu{
     transition: 0.5s;
     background-color: #86653C;
@@ -10,7 +14,7 @@
     margin-bottom: 0;
 }
 .offcanvas-title{
-    color: #141414;
+    color: #000000;
 }
 
 .offcanvasheader{
