@@ -1,11 +1,9 @@
 //archivo CRUD services
-
-
-
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -76,15 +74,35 @@ export class ServicesService {
   //
   //
   //funcion para obetener mascota por ID
-  obtenerMascotaById(idmp:string){
-    return new Promise ((resolve, reject) => {
-      try{
-        const res= this.mascotasColeccion.doc(idmp).get()
-        resolve(res)
-      } catch(error){
-        reject (error)}
-    }) 
-
+  publicacion!: Observable<Mascotas>
+  getById(idmp: string){
+    // Utiliza AngularFirestore para obtener una publicación por su ID
+    this.publicacion = this.database.collection('mascotas').doc(idmp).valueChanges().pipe(map((data:any) => data as Mascotas));
+    return this.publicacion
   }
+
+
+
+
+
+  /*
+  async obtenerMascotaById(id:string):Promise<Publicacion | undefined{
+    const publicaciones = await this.obtenerMascota();
+    const publiElegida = publicaciones.find( mascota => publicacion.id === id )
+
+  }*/
+
+
+
+  // obtenerMascotaById(idmp:string){
+  //   return new Promise ((resolve, reject) => {
+  //     try{
+  //       const res= this.mascotasColeccion.doc(idmp).get()
+  //       resolve(res)
+  //     } catch(error){
+  //       reject (error)}
+  //   }) 
+
+  // }
 
 }

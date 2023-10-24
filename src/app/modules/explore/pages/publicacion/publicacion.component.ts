@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 //CRUD Service
@@ -17,9 +17,8 @@ export class PublicacionComponent{
     this.acroutes.params.subscribe(param => {
       console.log(param)
       if(param['id']){
-        this.servicioCRUD.obtenerMascotaById(param['id']).then(publicacion => {
-          //this.publicacion = publicacion;
-        })
+        this.servicioCRUD.obtenerMascotaById(param['id'])
+        
       }
       //this.publicacionID= params['id'];
     })
