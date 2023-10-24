@@ -1,13 +1,13 @@
 <!-- GET PUBLICACIONES -->
 <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col" *ngFor="let col of coleccionMascotas">
-        <div class="card ">
+        <div class="card">
             <img src="{{col.imagenprincipal}}" class="card-img-top">
             <div class="card-body">
                 <h3 class="card-title">{{col.nombre}}</h3>
-                <h3 class="card-title">{{col.raza}},{{col.tamano}}</h3>
-                <h4 class="card-tittle">{{col.ciudad}}</h4>
-                <p class="card-text">{{col.descripcion}}</p>
+                <h5 class="card-title">{{col.raza}}</h5>
+                <h5 class="card-title">{{col.tamano}}</h5>
+                <h5 class="card-tittle">{{col.ciudad}}</h5>
                 <div class="container text-center">
                     <div class="row align-items-start">
                         <div class="col">

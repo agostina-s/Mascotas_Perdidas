@@ -13,3 +13,6 @@ ul{
 .dropdown-toggle::after{
     content: none;
 }
+img{
+    height: 300px;
+}
