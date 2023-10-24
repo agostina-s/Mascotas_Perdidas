@@ -16,8 +16,11 @@ export class PublicacionComponent{
   constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
     this.acroutes.params.subscribe(param => {
       console.log(param)
+      const idPublicacion = param['id']
       if(param['id']){
-        this.servicioCRUD.obtenerMascotaById(param['id'])
+        this.servicioCRUD.obtenerMascotaById(idPublicacion).subscribe(data => {
+          this.publicacion = data;
+        })
         
       }
       //this.publicacionID= params['id'];
