@@ -1,5 +1,5 @@
 <div class="container-flex px-3 text-center publicacion m-auto justify-content-center">
-    <div class="row gx-5 justify-content-center">
+    <div class="row gx-5 justify-content-center" *ngIf="publicacion">
 
         <!-- <div class="col col-md-auto">
             <div class="p-3"></div>
@@ -11,23 +11,29 @@
             <div class="card my-3 border-0 " style="max-width: none; background-color: #F2C995;">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Golden_Retriever_9-year_old.jpg" class="img-fluid rounded-2" alt="">
+                        <!-- IMAGEN -->
+                        <img src="{{ publicacion.imagenprincipal }}" class="img-fluid rounded-2" alt="">
                     </div>
                     <div class="col-md-8"> 
                         <!-- div derecha -->
                         <div class="container text-center">
                             <div class="row">
-                                <div class=""><h3 class="card-title rounded-2 p-1 m-2" style="background-color: #E7BE89;">Negrito</h3></div>
-                            
-                                <div class=""><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">VeredaCalle (Raza)</p></div>
+                                <!-- NOMBRE -->
+                                <div class=""><h3 class="card-title rounded-2 p-1 m-2" style="background-color: #E7BE89;">{{ publicacion.nombre }}</h3></div>
+                                <!-- RAZA -->
+                                <div class=""><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">{{ publicacion.raza }} (Raza)</p></div>
                             
                                 <div class="row">
-                                    <div class="col"><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">2 Años</p></div>
-                                    <div class="col"><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">Mediano</p></div>
+                                    <!-- EDAD -->
+                                    <div class="col"><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">{{ publicacion.edad }}</p></div>
+                                    <!-- TAMAÑO -->
+                                    <div class="col"><p class="rounded-2 p-1 m-2" style="background-color: #E7BE89;">{{ publicacion.tamano }}</p></div>
                                 </div>
-                                <div class=""><p class=" rounded-2 p-1 m-2" style="background-color: #E7BE89;">Este perro ijueperra se perdio en tal y tal tal</p>
+                                <!-- COMO SE PERDIO -->
+                                <div class=""><p class=" rounded-2 p-1 m-2" style="background-color: #E7BE89;">{{ publicacion.perdida }}</p>
                                 </div>
-                                <div class="">  <p class="card-text"><small class="text-body-secondary">Actualizado hace 1 semana</small></p>
+                                <!-- DESCRIPCION -->
+                                <div class="">  <p class="card-text"><small class="text-body-secondary">{{ publicacion.descripcion }}</small></p>
                                 </div>
                             </div>
                         </div>

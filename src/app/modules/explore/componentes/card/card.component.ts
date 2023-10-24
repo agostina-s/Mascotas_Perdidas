@@ -27,9 +27,10 @@ export class CardComponent {
       this.coleccionMascotas = mascota;
     })
   }
-  masInfo(info: Mascotas){
-        // info resguarda la información del producto seleccionado
-        this.publiSeleccionada = info;
+  // masInfo(info: Mascotas){
+  //       // info resguarda la información del producto seleccionado
+  //       this.publiSeleccionada = info;
       
-  }
+  // }
+  
 }

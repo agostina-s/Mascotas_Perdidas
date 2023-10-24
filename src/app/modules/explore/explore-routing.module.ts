@@ -10,7 +10,7 @@ const routes: Routes = [
     {path: 'busqueda', component: BusquedaComponent},
     // {path: 'form-encontre', component: FormEncontreComponent},
     // {path: 'form-publicar', component: FormPublicarComponent},
-    {path: 'publicacion', component: PublicacionComponent},
+    {path: 'publicacion/:id', component: PublicacionComponent},
 ];
 
 @NgModule({
