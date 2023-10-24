@@ -9,6 +9,7 @@ ul{
     background-color: #E5D1B8;
     border:none;
     color:black;
+    
 }
 .dropdown-toggle::after{
     content: none;
