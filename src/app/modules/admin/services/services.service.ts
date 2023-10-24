@@ -75,7 +75,7 @@ export class ServicesService {
   //
   //funcion para obetener mascota por ID
   publicacion!: Observable<Mascotas>
-  getById(idmp: string){
+  obtenerMascotaById(idmp: string){
     // Utiliza AngularFirestore para obtener una publicación por su ID
     this.publicacion = this.database.collection('mascotas').doc(idmp).valueChanges().pipe(map((data:any) => data as Mascotas));
     return this.publicacion
