@@ -14,6 +14,9 @@ export class PublicacionComponent{
   publicacion?:Mascotas;
 
   constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
+
+    //lo siguiente se ejecutara al momento de ser cargada la pagina
+    //llama a la funcion obtenerMascotasById y envia el id para que le devuelva una publicacion especifica con subscribe()
     this.acroutes.params.subscribe(param => {
       console.log(param)
       const idPublicacion = param['id']
