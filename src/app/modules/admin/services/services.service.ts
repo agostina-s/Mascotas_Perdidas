@@ -76,7 +76,14 @@ export class ServicesService {
   //
   //
   //funcion para obetener mascota por ID
-  obtenerMascotaById(id:string){
+  obtenerMascotaById(idmp:string){
+    return new Promise ((resolve, reject) => {
+      try{
+        const res= this.mascotasColeccion.doc(idmp).get()
+        resolve(res)
+      } catch(error){
+        reject (error)}
+    }) 
 
   }
 
