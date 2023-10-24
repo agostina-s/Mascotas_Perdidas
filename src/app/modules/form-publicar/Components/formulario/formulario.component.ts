@@ -57,7 +57,7 @@ export class FormularioComponent {
       let nuevamascota: Mascotas = {
         // INFORMACION DE LA MASCOTA
         idmp : '', //se guarda vacio para agregarlo en el crud
-        raza:this.mascotas.value.nombre!,
+        raza:this.mascotas.value.raza!,
         tamano: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,
         nombre:this.mascotas.value.nombre!,

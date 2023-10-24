@@ -1,0 +1,18 @@
+.card{
+    background-color: #E5D1B8;
+}
+ul{
+    background-color: #E5D1B8;
+    border-color: black;
+}
+#dropdownMenuButton{
+    background-color: #E5D1B8;
+    border:none;
+    color:black;    
+}
+.dropdown-toggle::after{
+    content: none;
+}
+img{
+    height: 300px;
+}
