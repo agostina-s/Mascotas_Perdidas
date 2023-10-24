@@ -1,5 +1,9 @@
 .background{
-    background-color: #e2b278;
+    background-color: #F2C995;
+}
+
+.componente{
+    min-height: 90vh;
 }
 
 img{
