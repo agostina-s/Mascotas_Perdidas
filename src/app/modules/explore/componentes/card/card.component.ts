@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 //crud service
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
+import 'bootstrap'
+
 
 @Component({
   selector: 'app-card',
