@@ -1,14 +1,14 @@
 <!-- GET PUBLICACIONES -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let col of coleccionMascotas">
+    <div class="col" *ngFor="let publicacion of coleccionMascotas">
         <div class="card">
-            <img src="{{col.imagenprincipal}}" class="card-img-top">
+            <img src="{{publicacion.imagenprincipal}}" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{col.nombre}}</h5>
-                <p class="card-text">{{col.descripcion}}</p>
+                <h5 class="card-title">{{publicacion.nombre}}</h5>
+                <p class="card-text">{{publicacion.descripcion}}</p>
 
                 <!-- BOTÓN PARA VER MAS -->
-                <button type="button" class="btn btn-outline-primary" [routerLink]="['publicacion', col.idmp]">
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['../publicacion', publicacion.idmp]">
                     Ver más
                 </button>
             </div>

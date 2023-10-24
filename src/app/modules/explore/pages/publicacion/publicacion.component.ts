@@ -11,13 +11,15 @@ import { ServicesService } from 'src/app/modules/admin/services/services.service
 })
 export class PublicacionComponent{
 
-  //publicacionID:string;
+  publicacion?:Mascotas;
 
   constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
     this.acroutes.params.subscribe(param => {
       console.log(param)
       if(param['id']){
-        this.servicioCRUD.obtenerMascotaById(param['id'])
+        this.servicioCRUD.obtenerMascotaById(param['id']).then(publicacion => {
+          //this.publicacion = publicacion;
+        })
       }
       //this.publicacionID= params['id'];
     })
