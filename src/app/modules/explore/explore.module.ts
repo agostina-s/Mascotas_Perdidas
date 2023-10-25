@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+//carousel de ngx bootstrap
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 import { ExploreRoutingModule } from './explore-routing.module';
 // import { FormPublicarComponent } from './pages/form-publicar/form-publicar.component';
 // import { FormEncontreComponent } from './pages/form-encontre/form-encontre.component';
@@ -21,7 +24,8 @@ import { CardComponent } from './componentes/card/card.component';
   ],
   imports: [
     CommonModule,
-    ExploreRoutingModule
+    ExploreRoutingModule,
+    CarouselModule.forRoot()
   ]
 })
 export class ExploreModule { }
