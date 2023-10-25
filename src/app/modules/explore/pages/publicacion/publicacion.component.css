@@ -8,4 +8,8 @@ html{
     background-color: #F2C995;
 }
 
-
+.fixed-size-img{
+    width: 100%; /* Ancho deseado */
+    height: 100%; /* Altura deseada */
+    object-fit: cover; /* Controla el recorte de la imagen */
+}
