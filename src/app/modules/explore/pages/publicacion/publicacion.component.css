@@ -58,15 +58,23 @@ html{
         margin-left: none;
         margin-right: none;
     }
+    .contCarrusel{
+        margin-bottom: 1.5rem;
+    }
 }
 
 .casilla{
     background-color: #E7BE89;
     color: #000;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 1rem;
+
 }
 
 .colinfo{
     padding: 0;
+}
+
+.card-text{
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
