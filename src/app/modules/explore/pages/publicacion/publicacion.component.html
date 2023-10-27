@@ -7,41 +7,40 @@
                     <!-- div izquierda / arriba -->
                     <div class="col-md-4">
                         <!-- CARRUSEL -->
-                        <div id="CarruselMascota" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <!-- IMAGEN -->
-                                <!-- <img src="{{ publicacion.imagenprincipal }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt=""> -->
-                                    <img src="{{ publicacion.imagenprincipal }}" alt="Imagen 2" class="d-block w-100 img-fluid rounded-2 fixed-size-img">
+                        <!-- CONTENEDOR DE CARRUSEL -->
+                        <div class="contCarrusel">
+                            <div id="CarruselMascota" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-item active">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
                                     <!-- IMAGEN -->
-                                    <img src="{{ publicacion.imagen2 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
+                                    <!-- <img src="{{ publicacion.imagenprincipal }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt=""> -->
+                                        <img src="{{ publicacion.imagenprincipal }}" alt="Imagen 2" class="d-block w-100 img-fluid rounded-2 fixed-size-img">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <!-- IMAGEN -->
+                                        <img src="{{ publicacion.imagen2 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <!-- IMAGEN -->
+                                        <img src="{{ publicacion.imagen3 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
+                                    </div>
                                 </div>
-                                <div class="carousel-item active">
-                                    <!-- IMAGEN -->
-                                    <img src="{{ publicacion.imagen3 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#CarruselMascota" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#CarruselMascota" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#CarruselMascota" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#CarruselMascota" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-                            </button>
+                            <!-- FIN CARRUSEL -->
                         </div>
-                        <!-- FIN CARRUSEL -->
-                        
-                        <!-- a -->
-                        <!-- <img src="{{ publicacion.imagen3 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt=""> -->
-                        <!-- a -->
                     </div>
                     <!-- div derecha / abajo -->
                     <div class="col-md-8"> 
