@@ -3,6 +3,10 @@
 html{
     background-color: #F2C995;
 }
+.espacioLado {
+    margin-left: none;
+    margin-right: none;
+}
 
 .publicacion{
     background-color: #F2C995;
@@ -26,4 +30,32 @@ html{
     height: 100%;
     object-fit: contain; 
     /* Controla el recorte de la imagen */
+}
+
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    .espacioLado {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .contCarrusel{
+        height: 70vh;
+    }
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .espacioLado {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .espacioLado {
+        margin-left: none;
+        margin-right: none;
+    }
 }
