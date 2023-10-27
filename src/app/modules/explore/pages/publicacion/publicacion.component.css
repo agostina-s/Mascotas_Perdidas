@@ -42,8 +42,14 @@ html{
     .contCarrusel{
         height: 70vh;
     }
-    p{
-        font-size: 1.3rem;
+    .p1{
+        font-size: 1.4rem;
+    }
+    .p2{
+        font-size: 1.15rem;
+    }
+    .colderecha{
+        padding-left: 5rem;
     }
 }
 
@@ -53,8 +59,14 @@ html{
         margin-left: 4%;
         margin-right: 4%;
     }
-    p{
-        font-size: 1.2rem;
+    .p1{
+        font-size: 1.3rem;
+    }
+    .p2{
+        font-size: 1.07rem;
+    }
+    .colderecha{
+        padding-left: 1.5rem;
     }
 }
 
@@ -67,8 +79,11 @@ html{
     .contCarrusel{
         margin-bottom: 1.5rem;
     }
-    p{
+    .p1{
         font-size: 1.2rem;
+    }
+    .p2{
+        font-size: 1.02rem;
     }
 }
 
@@ -76,7 +91,12 @@ html{
     background-color: #E7BE89;
     color: #000;
     margin-bottom: 1rem;
+}
 
+.casilla-contacto{
+    color: #000;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
 }
 
 .colinfo{
