@@ -1,4 +1,4 @@
-<div class="container-fluid px-3 text-center publicacion m-auto justify-content-center">
+<div class="container-fluid p-3 text-center publicacion m-auto justify-content-center">
     <div class="gx-5 justify-content-center" *ngIf="publicacion">
         <div class="my-4">
             <!-- CARD -->
@@ -9,23 +9,22 @@
                         <!-- CARRUSEL -->
                         <!-- CONTENEDOR DE CARRUSEL -->
                         <div class="contCarrusel">
-                            <div id="CarruselMascota" class="carousel slide" data-bs-ride="carousel">
+                            <div id="CarruselMascota" class="carousel slide carousel-container" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-inner">
+                                <div class="carousel-inner my-auto">
                                     <div class="carousel-item active">
                                     <!-- IMAGEN -->
-                                    <!-- <img src="{{ publicacion.imagenprincipal }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt=""> -->
                                         <img src="{{ publicacion.imagenprincipal }}" alt="Imagen 2" class="d-block w-100 img-fluid rounded-2 fixed-size-img">
                                     </div>
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen2 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
                                     </div>
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen3 }}" class="d-block w-100 img-fluid rounded-2 fixed-size-img" alt="">
                                     </div>

@@ -13,3 +13,16 @@ html{
     height: 100%; /* Altura deseada */
     object-fit: cover; /* Controla el recorte de la imagen */
 }
+
+.contCarrusel{
+    height: 45vh;
+    background-color: black;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
