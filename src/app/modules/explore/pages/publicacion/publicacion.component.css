@@ -42,6 +42,9 @@ html{
     .contCarrusel{
         height: 70vh;
     }
+    p{
+        font-size: 1.3rem;
+    }
 }
 
 /* Estilos para pantallas medianas (notebooks) */
@@ -49,6 +52,9 @@ html{
     .espacioLado {
         margin-left: 4%;
         margin-right: 4%;
+    }
+    p{
+        font-size: 1.2rem;
     }
 }
 
@@ -60,6 +66,9 @@ html{
     }
     .contCarrusel{
         margin-bottom: 1.5rem;
+    }
+    p{
+        font-size: 1.2rem;
     }
 }
 
@@ -77,4 +86,11 @@ html{
 .card-text{
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
+}
+
+.col1{
+    margin-right: 0.3rem;
+}
+.col2{
+    margin-left: 0.3rem;
 }
