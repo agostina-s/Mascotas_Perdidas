@@ -92,4 +92,33 @@ export class FormularioComponent {
   mostrarDivDescripcion = true;
   mostrarDivUbicacion = true;
   mostrarDivContacto = true;
+
+  mostrarBtnAtras = false
+  mostrarBtnFinalizar = false
+
+    btnSiguienteForm(){
+    if(this.mostrarDivDescripcion == true && this.mostrarDivContacto == false && this.mostrarDivUbicacion == false){
+      this.mostrarDivContacto = true;
+      this.mostrarDivDescripcion = false
+    }else{
+      this.mostrarBtnAtras = true
+    }
+    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == true && this.mostrarDivUbicacion == false){
+      this.mostrarDivContacto = true;
+      this.mostrarDivUbicacion = false;
+    }
+    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == false && this.mostrarDivUbicacion == true){
+      this.mostrarBtnFinalizar = true
+    }
+  }
+  btnAtrasForm(){
+    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == true && this.mostrarDivUbicacion == false){
+      this.mostrarDivContacto = false;
+      this.mostrarDivDescripcion = true;
+    }
+    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == false && this.mostrarDivUbicacion == true){
+      this.mostrarDivContacto = true;
+      this.mostrarDivUbicacion = false;
+    }
+  }
 }
