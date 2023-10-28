@@ -89,36 +89,44 @@ export class FormularioComponent {
   }
 
   // MODIFICACION DE ESTILOS
-  mostrarDivDescripcion = true;
-  mostrarDivUbicacion = true;
-  mostrarDivContacto = true;
 
-  mostrarBtnAtras = false
-  mostrarBtnFinalizar = false
+  //Valores predefinidos
+  mostrarDivDescripcion = true;
+  mostrarDivUbicacion = false;
+  mostrarDivContacto = false;
+
+  mostrarBtnFinalizar = false;
+
+
 
     btnSiguienteForm(){
-    if(this.mostrarDivDescripcion == true && this.mostrarDivContacto == false && this.mostrarDivUbicacion == false){
-      this.mostrarDivContacto = true;
-      this.mostrarDivDescripcion = false
+      //si estoy parado en descripcion y presiono siguiente --> voy a ubicacion
+    if(this.mostrarDivDescripcion == true){
+      this.mostrarDivUbicacion = true;
+      this.mostrarDivDescripcion = false;
     }else{
-      this.mostrarBtnAtras = true
-    }
-    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == true && this.mostrarDivUbicacion == false){
-      this.mostrarDivContacto = true;
-      this.mostrarDivUbicacion = false;
-    }
-    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == false && this.mostrarDivUbicacion == true){
-      this.mostrarBtnFinalizar = true
+      //si estoy parado en ubicacion y presiono siguiente --> voy a contacto
+      if(this.mostrarDivUbicacion == true){
+        this.mostrarDivContacto = true;
+        this.mostrarDivUbicacion = false;
+      }else{
+        if(this.mostrarDivContacto == true){
+        }
+      }
     }
   }
   btnAtrasForm(){
-    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == true && this.mostrarDivUbicacion == false){
-      this.mostrarDivContacto = false;
-      this.mostrarDivDescripcion = true;
-    }
-    if(this.mostrarDivDescripcion == false && this.mostrarDivContacto == false && this.mostrarDivUbicacion == true){
-      this.mostrarDivContacto = true;
+    // si estoy parado en ubicacion y quiero volver atras --> voy hacia descripcion
+    if(this.mostrarDivUbicacion == true){
       this.mostrarDivUbicacion = false;
+      this.mostrarDivDescripcion = true;
+
+    }else{
+      //si estoy parado en contacto y quiero volver atras --> voy hacia ubicacion
+      if(this.mostrarDivContacto == true){
+        this.mostrarDivContacto = false;
+        this.mostrarDivUbicacion = true;
+      }
     }
   }
 }

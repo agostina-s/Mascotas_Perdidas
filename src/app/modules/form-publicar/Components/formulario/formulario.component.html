@@ -112,11 +112,11 @@
         </section>
     </div>
     <div class="mx-auto d-flex mt-3">
-        <button type="button" class="btn btn-success mx-auto" (click)="agregarMascota()">Enviar</button>
+        <button type="button" class="btn btn-success mx-auto" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button>
     </div>
 </div>
-<button type="button" class="btn btn-primary btn-lg" (click)="btnSiguienteForm()">Siguiente</button>
-<button type="button" class="btn btn-primary btn-lg" (click)="btnAtrasForm()" >Atras</button>
+<button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg" (click)="btnSiguienteForm()">Siguiente</button>
+<button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg" (click)="btnAtrasForm()" >Atras</button>
 
 
 <!--  <form [formGroup]="mascotas" class="mascota">
