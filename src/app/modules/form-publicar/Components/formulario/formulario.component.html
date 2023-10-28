@@ -1,5 +1,123 @@
 
 <div [formGroup]="mascotas">
+    <!-- TARJETA DE INFORMACION DE LA MASCOTA -->
+    <div class="form-mascota mx-auto">
+        <header>
+            <span>
+                <h2>Informacion de la mascota</h2>
+            </span>
+        </header>
+        <div class="mascota">
+            <!-- COMIENZO FORM -->
+
+            <!-- RAZA -->
+            <label for="raza"><strong>Raza: </strong> </label>
+            <select name="raza" id="raza" formControlName="raza">
+                <option selected>Eliga la raza: </option>
+                <option value="Caniche">Caniche</option>
+                <option value="Galgo">Galgo</option>
+                <option value="Chihuahua">chihuahua</option>
+                <option value="Foxterrier">Foxterrier</option>
+                <option value="Collie">Collie</option>
+                <option value="Salchicha">Salchicha</option>
+                <option value="Golden Retriever">Golden Retriever </option>
+            </select>
+
+            <!-- TAMAÑO -->
+            <label for="tamaño"><strong>Tamaño: </strong></label>
+            <select name="tamaño" id="tamaño" formControlName="tamano">
+                <option selected>Eliga el tamaño de sus mascota: </option>
+                <option value="Pequeño">Pequeño</option>
+                <option value="Mediano">Mediano</option>
+                <option value="Grande">Grande</option>
+            </select>
+
+            <!-- EDAD -->
+            <label for="edad"><strong>Edad: </strong></label>
+            <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
+
+            <!-- NOMBRE -->
+            <label for="nombre"><strong>Nombre: </strong> </label>
+            <input type="text" name="nombre" placeholder="Ingrese el nombre de su mascota" id="nombre" formControlName="nombre">
+
+            <!-- SEXO -->
+            <label for="sexo"><strong>Sexo: </strong></label>
+            <select name="sexo" id="nombre" formControlName="sexo">
+                <option selected>Elega el sexo de su mascota</option>
+                <option value="Hembra">Hembra</option>
+                <option value="Macho">Macho</option>
+            </select>
+
+            <!-- DESCRIPCION -->
+            <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
+            <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion">
+
+            <!-- COMO SE PERDIO -->
+            <label for="perdida"><strong>Como se perdio: </strong></label>
+            <input type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida" formControlName="perdida">
+
+            <!-- IMAGENES URL beta -->
+            <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
+            <h6>Imagen principal</h6>
+            <input type="text" name="imagenes" id="imagenprincipal" formControlName="imagenprincipal">
+            <h6>Imagen N2</h6>
+            <input type="text" name="imagenes" id="imagen2" formControlName="imagen2">
+            <h6>Imagen N3</h6>
+            <input type="text" name="imagenes" id="imagen3" formControlName="imagen3">
+            <h6>Imagen N4</h6>
+            <input type="text" name="imagenes" id="imagen4" formControlName="imagen4">
+        </div>
+    </div>
+    <!-- TARJETA DE INFORMACION DE LA UBICACION -->
+    <div class="form-ubicacion mx-auto">
+        <header>
+            <span>
+                <h2>Ubicacion</h2>
+            </span>
+        </header>
+        <!-- INFO UBICACION -->
+        <section class="ubicacion">
+            <label for="nombre"><strong>Ciudad:</strong></label>
+            <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
+
+            <label for="nombre"><strong>Barrio: </strong></label>
+            <input type="text" name="Barrio" id="barrio" formControlName="barrio">
+
+            <label for="nombre"><strong>Fecha cuando se perdio:</strong></label>
+            <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24828.18677879155!2d-67.9870464!3d-38.93487083570176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1692106176690!5m2!1ses-419!2sar" width="300" height="300" style="border-radius:5px; border-color: black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+    <!-- TARJETA DE INFORMACION DE CONTACTO -->
+    <div class="form-contacto mx-auto">
+        <header>
+            <span>
+                <h2>Contacto</h2>
+            </span>
+        </header>
+        <section class="contacto">
+            <!-- INFO CONTACTO -->
+            <label for="nombre"><strong>Nombre del dueño:</strong></label>
+            <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
+            
+            <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
+            <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
+
+            <label for="nombre"><strong>Telefono 2:</strong></label>
+            <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
+
+            <label for="gmail"><strong>Correo electrónico:</strong></label>
+            <input type="text" name="mail" id="mail" placeholder="Ingrese el Mail de contacto" formControlName="mail">
+        </section>
+    </div>
+    <div class="mx-auto d-flex mt-3">
+        <button type="button" class="btn btn-success mx-auto" (click)="agregarMascota()">Enviar</button>
+    </div>
+</div>
+
+
+
 <!--  <form [formGroup]="mascotas" class="mascota">
         
         <label for="raza"><strong>Raza: </strong> </label>
@@ -90,117 +208,3 @@
     </form>
 </div>
 -->
-
-    <div class="form-mascota mx-auto">
-        <header>
-            <span>
-                <h2>Informacion de la mascota</h2>
-            </span>
-        </header>
-        <div class="mascota">
-            <!-- COMIENZO FORM -->
-
-            <!-- RAZA -->
-            <label for="raza"><strong>Raza: </strong> </label>
-            <select name="raza" id="raza" formControlName="raza">
-                <option selected>Eliga la raza: </option>
-                <option value="Caniche">Caniche</option>
-                <option value="Galgo">Galgo</option>
-                <option value="Chihuahua">chihuahua</option>
-                <option value="Foxterrier">Foxterrier</option>
-                <option value="Collie">Collie</option>
-                <option value="Salchicha">Salchicha</option>
-                <option value="Golden Retriever">Golden Retriever </option>
-            </select>
-
-            <!-- TAMAÑO -->
-            <label for="tamaño"><strong>Tamaño: </strong></label>
-            <select name="tamaño" id="tamaño" formControlName="tamano">
-                <option selected>Eliga el tamaño de sus mascota: </option>
-                <option value="Pequeño">Pequeño</option>
-                <option value="Mediano">Mediano</option>
-                <option value="Grande">Grande</option>
-            </select>
-
-            <!-- EDAD -->
-            <label for="edad"><strong>Edad: </strong></label>
-            <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
-
-            <!-- NOMBRE -->
-            <label for="nombre"><strong>Nombre: </strong> </label>
-            <input type="text" name="nombre" placeholder="Ingrese el nombre de su mascota" id="nombre" formControlName="nombre">
-
-            <!-- SEXO -->
-            <label for="sexo"><strong>Sexo: </strong></label>
-            <select name="sexo" id="nombre" formControlName="sexo">
-                <option selected>Elega el sexo de su mascota</option>
-                <option value="Hembra">Hembra</option>
-                <option value="Macho">Macho</option>
-            </select>
-
-            <!-- DESCRIPCION -->
-            <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-            <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion">
-
-            <!-- COMO SE PERDIO -->
-            <label for="perdida"><strong>Como se perdio: </strong></label>
-            <input type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida" formControlName="perdida">
-
-            <!-- IMAGENES URL beta -->
-            <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
-            <h6>Imagen principal</h6>
-            <input type="text" name="imagenes" id="imagenprincipal" formControlName="imagenprincipal">
-            <h6>Imagen N2</h6>
-            <input type="text" name="imagenes" id="imagen2" formControlName="imagen2">
-            <h6>Imagen N3</h6>
-            <input type="text" name="imagenes" id="imagen3" formControlName="imagen3">
-            <h6>Imagen N4</h6>
-            <input type="text" name="imagenes" id="imagen4" formControlName="imagen4">
-        </div>
-    </div>
-    <div class="form-ubicacion mx-auto">
-        <header>
-            <span>
-                <h2>Ubicacion</h2>
-            </span>
-        </header>
-        <!-- INFO UBICACION -->
-        <section class="ubicacion">
-            <label for="nombre"><strong>Ciudad:</strong></label>
-            <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
-
-            <label for="nombre"><strong>Barrio: </strong></label>
-            <input type="text" name="Barrio" id="barrio" formControlName="barrio">
-
-            <label for="nombre"><strong>Fecha cuando se perdio:</strong></label>
-            <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24828.18677879155!2d-67.9870464!3d-38.93487083570176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1692106176690!5m2!1ses-419!2sar" width="300" height="300" style="border-radius:5px; border-color: black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-    </div>
-    <div class="form-contacto mx-auto">
-        <header>
-            <span>
-                <h2>Contacto</h2>
-            </span>
-        </header>
-        <section class="contacto">
-            <!-- INFO CONTACTO -->
-            <label for="nombre"><strong>Nombre del dueño:</strong></label>
-            <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
-            
-            <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
-            <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
-
-            <label for="nombre"><strong>Telefono 2:</strong></label>
-            <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
-
-            <label for="gmail"><strong>Correo electrónico:</strong></label>
-            <input type="text" name="mail" id="mail" placeholder="Ingrese el Mail de contacto" formControlName="mail">
-        </section>
-    </div>
-    <div class="button mx-auto ">
-        <button type="button" class="btn btn-success mx-auto" (click)="agregarMascota()">Enviar</button>
-    </div>
-</div>
-
