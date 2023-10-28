@@ -89,5 +89,7 @@ export class FormularioComponent {
   }
 
   // MODIFICACION DE ESTILOS
-  
+  mostrarDivDescripcion = true;
+  mostrarDivUbicacion = true;
+  mostrarDivContacto = true;
 }
