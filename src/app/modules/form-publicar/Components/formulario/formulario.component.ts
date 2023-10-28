@@ -108,12 +108,12 @@ export class FormularioComponent {
       }
     }
   }
+
   btnAtrasForm(){
     // si estoy parado en ubicacion y quiero volver atras --> voy hacia descripcion
     if(this.mostrarDivUbicacion == true){
       this.mostrarDivUbicacion = false;
       this.mostrarDivDescripcion = true;
-
     }else{
       //si estoy parado en contacto y quiero volver atras --> voy hacia ubicacion
       if(this.mostrarDivContacto == true){
