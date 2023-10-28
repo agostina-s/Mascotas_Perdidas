@@ -97,6 +97,10 @@ html{
     color: #000;
     margin-bottom: 1rem;
     border: 1px solid #000;
+    padding-top: 1rem;
+}
+.btn-contacto{
+    margin-bottom: 1rem;
 }
 
 .colinfo{
