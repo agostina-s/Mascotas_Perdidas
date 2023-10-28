@@ -15,16 +15,16 @@
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-inner my-auto">
-                                    <div class="carousel-item active">
+                                <div class="carousel-inner my-auto fixed-size-img">
+                                    <div class="carousel-item active fixed-size-img">
                                     <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagenprincipal }}" alt="Imagen 2" class="d-block w-100 rounded-2 fixed-size-img">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item fixed-size-img">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen2 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item fixed-size-img">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen3 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="label text-start colinfo"><h5 class="">Nombre del dueño:</h5></div>
                                     <div class="rounded-2 casilla p1 text-start"><p class="card-text ms-3">{{ publicacion.nombredueno }}</p></div>
-                                    <button type="button" class="btn btn-success btn-contacto">Contactar</button>
+                                    <button type="button" class="btn btn-success btn-contacto btn-block">Llamar</button>
                                     <!-- agregar funcionalidad al boton -->
                                 </div>
 
@@ -100,7 +100,14 @@
                 </div>
             </div>
             <!-- CARD -->
-
+            <div class="text-start">
+                <h1>Ubicacion</h1>
+                <div class="container-fluid">
+                    <div>
+                        <p>Aca tiene que ir el mapa</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
