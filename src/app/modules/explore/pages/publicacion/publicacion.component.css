@@ -3,9 +3,126 @@
 html{
     background-color: #F2C995;
 }
+.espacioLado {
+    margin-left: none;
+    margin-right: none;
+}
 
 .publicacion{
     background-color: #F2C995;
 }
 
+.contCarrusel{
+    height: 50vh;
+}
 
+.carousel-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fixed-size-img{
+    height: 100%;
+    width: auto;
+    object-fit: contain; 
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* Controla el recorte de la imagen */
+}
+
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    .espacioLado {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .contCarrusel{
+        height: 80vh;
+    }
+    .p1{
+        font-size: 1.4rem;
+    }
+    .p2{
+        font-size: 1.15rem;
+    }
+    .colderecha{
+        padding-left: 5rem;
+    }
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .espacioLado {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .contCarrusel{
+        height: 80vh;
+    }
+    .p1{
+        font-size: 1.3rem;
+    }
+    .p2{
+        font-size: 1.07rem;
+    }
+    .colderecha{
+        padding-left: 1.5rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .espacioLado {
+        margin-left: none;
+        margin-right: none;
+    }
+    .contCarrusel{
+        margin-bottom: 1.5rem;
+    }
+    .p1{
+        font-size: 1.2rem;
+    }
+    .p2{
+        font-size: 1.02rem;
+    }
+}
+
+.casilla{
+    background-color: #E7BE89;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.casilla-contacto{
+    color: #000;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    padding-top: 1rem;
+}
+.btn-contacto{
+    margin-bottom: 1rem;
+    width: 40%;
+}
+
+.colinfo{
+    padding: 0;
+}
+
+.card-text{
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.col1{
+    margin-right: 0.3rem;
+}
+.col2{
+    margin-left: 0.3rem;
+}
