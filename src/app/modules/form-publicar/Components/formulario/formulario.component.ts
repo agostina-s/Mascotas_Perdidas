@@ -14,7 +14,7 @@ export class FormularioComponent {
 
 
 
-  //enlaza nuestro formulario
+  //ENLAZAMIENTO AL FORMULARIO
   mascotas = new FormGroup({
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
@@ -39,7 +39,7 @@ export class FormularioComponent {
     mail: new FormControl("",Validators.required),
   })
   
-  //llamamos al servicio CRUD
+  //LLAMAR AL SERVICIO CRUD
   constructor(
     public servicioCrud: ServicesService
   ){}
@@ -51,7 +51,7 @@ export class FormularioComponent {
   //   })
   // }
 
-  //
+  //FUNCION QUE ENVIA EL FORM
   async agregarMascota(){
     if(this.mascotas.value){
       let nuevamascota: Mascotas = {
@@ -77,8 +77,6 @@ export class FormularioComponent {
         tel1: this.mascotas.value.tel1!,
         tel2: this.mascotas.value.tel2!,
         mail: this.mascotas.value.mail!,
-
-
       }
       await this.servicioCrud.crearMascota(nuevamascota)
       .then(mascotas=>{
@@ -89,4 +87,7 @@ export class FormularioComponent {
       })
     }
   }
+
+  // MODIFICACION DE ESTILOS
+  
 }
