@@ -95,11 +95,7 @@ export class FormularioComponent {
   mostrarDivUbicacion = false;
   mostrarDivContacto = false;
 
-  mostrarBtnFinalizar = false;
-
-
-
-    btnSiguienteForm(){
+  btnSiguienteForm(){
       //si estoy parado en descripcion y presiono siguiente --> voy a ubicacion
     if(this.mostrarDivDescripcion == true){
       this.mostrarDivUbicacion = true;
@@ -109,9 +105,6 @@ export class FormularioComponent {
       if(this.mostrarDivUbicacion == true){
         this.mostrarDivContacto = true;
         this.mostrarDivUbicacion = false;
-      }else{
-        if(this.mostrarDivContacto == true){
-        }
       }
     }
   }
