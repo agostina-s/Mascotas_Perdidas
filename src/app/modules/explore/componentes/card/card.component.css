@@ -3,16 +3,22 @@
 }
 ul{
     background-color: #E5D1B8;
-    border-color: black;
+    border: 1px solid black
 }
 #dropdownMenuButton{
     background-color: #E5D1B8;
     border:none;
     color:black;    
+
 }
 .dropdown-toggle::after{
     content: none;
 }
 img{
     height: 300px;
+    object-fit: cover;
+}
+.card{
+    border: 1px solid black; 
+    margin-bottom: 20px;
 }
