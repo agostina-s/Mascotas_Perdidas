@@ -1,3 +1,5 @@
+/* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
+
 .form-contacto{
     background-color: #F2c995;
     width: 500px;
@@ -6,9 +8,7 @@
     border: 2px solid black;
     border-radius: 10px;
 }
-#h1principal{
-    text-align: center;
-}
+
 header{
     width:100%;
     background-color: #B88B54;
@@ -94,9 +94,7 @@ header span{
     border: 2px solid black;
     border-radius: 10px;
 }
-#h1principal{
-    text-align: center;
-}
+
 header{
     width:100%;
     background-color: #B88B54;
