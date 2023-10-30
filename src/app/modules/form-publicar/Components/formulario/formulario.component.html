@@ -7,7 +7,7 @@
                 <h2>Informacion de la mascota</h2>
             </span>
         </header>
-        <div class="mascota">
+        <div class="mascota tarjetas-info">
             <!-- COMIENZO FORM -->
 
             <!-- RAZA -->
@@ -76,7 +76,7 @@
             </span>
         </header>
         <!-- INFO UBICACION -->
-        <section class="ubicacion">
+        <div class="ubicacion tarjetas-info">
             <label for="nombre"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
 
@@ -87,7 +87,7 @@
             <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24828.18677879155!2d-67.9870464!3d-38.93487083570176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1692106176690!5m2!1ses-419!2sar" width="300" height="300" style="border-radius:5px; border-color: black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        </div>
     </div>
     <!-- TARJETA DE INFORMACION DE CONTACTO -->
     <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar">
@@ -96,7 +96,7 @@
                 <h2>Contacto</h2>
             </span>
         </header>
-        <section class="contacto">
+        <div class="contacto tarjetas-info">
             <!-- INFO CONTACTO -->
             <label for="nombre"><strong>Nombre del dueño:</strong></label>
             <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
@@ -109,7 +109,7 @@
 
             <label for="gmail"><strong>Correo electrónico:</strong></label>
             <input type="text" name="mail" id="mail" placeholder="Ingrese el Mail de contacto" formControlName="mail">
-        </section>
+        </div>
     </div>
     <div class="mx-auto d-flex mt-3">
         <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button>

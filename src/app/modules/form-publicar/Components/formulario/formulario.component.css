@@ -16,6 +16,7 @@ header{
     border-top-left-radius:10px;
     border-top-right-radius: 10px;
 }
+
 header span{
     font-size:100px;
     text-align: center;
@@ -23,11 +24,10 @@ header span{
 .contacto{
     padding:.8rem;
     overflow:hidden;
-    color:black
-}
-.contacto{
+    color:black;
     border:black;
 }
+
 .contacto label, .contacto input,.contacto select,.contacto textarea{
     display:block;
     width:100%;
@@ -50,27 +50,14 @@ header span{
     border-radius: 10px;
 }
 
-header{
-    width:100%;
-    background-color: #B88B54;
-    overflow:hidden;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
-}
-header span{
-    font-size:100px;
-    text-align: center;
-}
-
 
 .mascota{
     padding:.8rem;
     overflow:hidden;
-    color:black
+    color:black;
+    border: black;
 }
-.mascota{
-    border:black;
-}
+
 .mascota label, .mascota input,.mascota select,.mascota textarea{
     display:block;
     width:100%;
@@ -95,25 +82,13 @@ header span{
     border-radius: 10px;
 }
 
-header{
-    width:100%;
-    background-color: #B88B54;
-    overflow:hidden;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
-}
-header span{
-    font-size:100px;
-    text-align: center;
-}
 .ubicacion{
     padding:.8rem;
     overflow:hidden;
-    color:black
+    color:black;
+    border: black;
 }
-.ubicacion{
-    border:black;
-}
+
 .ubicacion label, .ubicacion input,.ubicacion select,.ubicacion textarea{
     display:block;
     width:100%;
