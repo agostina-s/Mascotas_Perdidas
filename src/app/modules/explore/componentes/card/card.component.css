@@ -15,10 +15,13 @@ ul{
     content: none;
 }
 img{
-    height: 300px;
+    height: 15rem;
     object-fit: cover;
 }
 .card{
     border: 1px solid black; 
     margin-bottom: 20px;
+}
+#botonvermas{
+    border:1px solid black;  
 }
