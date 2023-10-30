@@ -1,9 +1,24 @@
 /* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
-
 .form-contacto{
     background-color: #F2c995;
     width: 500px;
     margin-top: 40px;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+/* CONTROLA LA TARJETA DE INFORMACION DE MASCOTA */
+.form-mascota{
+    background-color: #F2c995;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* CONTROLA LA TARJETA DE INFORMACION DE LA UBICACION */
+.form-ubicacion{
+    background-color: #F2c995;
+    margin-top:40px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
@@ -21,80 +36,19 @@ header span{
     font-size:100px;
     text-align: center;
 }
-.contacto{
+.tarjetas-info{
     padding:.8rem;
     overflow:hidden;
     color:black;
     border:black;
 }
 
-.contacto label, .contacto input,.contacto select,.contacto textarea{
+.tarjetas-info label, .tarjetas-info input,.tarjetas-info select,.tarjetas-info textarea{
     display:block;
     width:100%;
     margin-bottom:8px;
 }
-.contacto input,.contacto text,.contacto select{
-    text-decoration: #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    background-color: #e2b278;
-}
-
-/* CONTROLA LA TARJETA DE INFORMACION DE MASCOTA */
-.form-mascota{
-    background-color: #F2c995;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-
-.mascota{
-    padding:.8rem;
-    overflow:hidden;
-    color:black;
-    border: black;
-}
-
-.mascota label, .mascota input,.mascota select,.mascota textarea{
-    display:block;
-    width:100%;
-    margin-bottom:8px;
-}
-.mascota input,.mascota text,.mascota select{
-    text-decoration: #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    background-color: #e2b278;
-}
-
-
-/* CONTROLA LA TARJETA DE INFORMACION DE LA UBICACION */
-.form-ubicacion{
-    background-color: #F2c995;
-    margin-top:40px;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-.ubicacion{
-    padding:.8rem;
-    overflow:hidden;
-    color:black;
-    border: black;
-}
-
-.ubicacion label, .ubicacion input,.ubicacion select,.ubicacion textarea{
-    display:block;
-    width:100%;
-    margin-bottom:8px;
-}
-.ubicacion input,.ubicacion text,.ubicacion select{
+.tarjetas-info input,.tarjetas-info text,.tarjetas-info select{
     text-decoration: #000000;
     padding: 10px;
     margin-bottom: 10px;
@@ -107,7 +61,6 @@ iframe{
     transform:translate(60%,10px);
     border-radius: 10px;
 }
-
 
 /* Estilo para la transición */
 .transicion-div {
