@@ -146,3 +146,8 @@ iframe{
     height: 0;
     overflow: hidden;
 }
+/* Estilo para mostrar el div */
+.mostrar {
+    opacity: 1;
+    height: auto;
+}
