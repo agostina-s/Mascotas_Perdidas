@@ -14,7 +14,7 @@ export class FormularioComponent {
 
 
 
-  //enlaza nuestro formulario
+  //ENLAZAMIENTO AL FORMULARIO
   mascotas = new FormGroup({
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
@@ -39,7 +39,7 @@ export class FormularioComponent {
     mail: new FormControl("",Validators.required),
   })
   
-  //llamamos al servicio CRUD
+  //LLAMAR AL SERVICIO CRUD
   constructor(
     public servicioCrud: ServicesService
   ){}
@@ -51,7 +51,7 @@ export class FormularioComponent {
   //   })
   // }
 
-  //
+  //FUNCION QUE ENVIA EL FORM
   async agregarMascota(){
     if(this.mascotas.value){
       let nuevamascota: Mascotas = {
@@ -77,8 +77,6 @@ export class FormularioComponent {
         tel1: this.mascotas.value.tel1!,
         tel2: this.mascotas.value.tel2!,
         mail: this.mascotas.value.mail!,
-
-
       }
       await this.servicioCrud.crearMascota(nuevamascota)
       .then(mascotas=>{
@@ -87,6 +85,41 @@ export class FormularioComponent {
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
       })
+    }
+  }
+
+  // MODIFICACION DE ESTILOS
+
+  //Valores predefinidos
+  mostrarDivDescripcion = true;
+  mostrarDivUbicacion = false;
+  mostrarDivContacto = false;
+
+  btnSiguienteForm(){
+      //si estoy parado en descripcion y presiono siguiente --> voy a ubicacion
+    if(this.mostrarDivDescripcion == true){
+      this.mostrarDivUbicacion = true;
+      this.mostrarDivDescripcion = false;
+    }else{
+      //si estoy parado en ubicacion y presiono siguiente --> voy a contacto
+      if(this.mostrarDivUbicacion == true){
+        this.mostrarDivContacto = true;
+        this.mostrarDivUbicacion = false;
+      }
+    }
+  }
+
+  btnAtrasForm(){
+    // si estoy parado en ubicacion y quiero volver atras --> voy hacia descripcion
+    if(this.mostrarDivUbicacion == true){
+      this.mostrarDivUbicacion = false;
+      this.mostrarDivDescripcion = true;
+    }else{
+      //si estoy parado en contacto y quiero volver atras --> voy hacia ubicacion
+      if(this.mostrarDivContacto == true){
+        this.mostrarDivContacto = false;
+        this.mostrarDivUbicacion = true;
+      }
     }
   }
 }

@@ -137,3 +137,17 @@ iframe{
     transform:translate(60%,10px);
     border-radius: 10px;
 }
+
+
+/* Estilo para la transición */
+.transicion-div {
+    transition: all 0.3s ease; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+/* Estilo para mostrar el div */
+.mostrar {
+    opacity: 1;
+    height: auto;
+}
