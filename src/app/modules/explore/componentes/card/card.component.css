@@ -8,7 +8,8 @@ ul{
 #dropdownMenuButton{
     background-color: #E5D1B8;
     border:none;
-    color:black;    
+    color:black; 
+    padding:0px;
 
 }
 .dropdown-toggle::after{
