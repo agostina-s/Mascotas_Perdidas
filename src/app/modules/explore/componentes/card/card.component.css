@@ -29,6 +29,11 @@ img{
 .padding{
     padding:0px;
 }
+
+/*Modal*/
 .modal-header{
+    background: #B88B54;
+}
+.modal-footer{
     background: #B88B54;
 }
