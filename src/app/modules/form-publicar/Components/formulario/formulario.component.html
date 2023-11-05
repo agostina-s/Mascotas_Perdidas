@@ -10,43 +10,51 @@
         <div class="mascota tarjetas-info">
             <!-- COMIENZO FORM -->
 
-            <!-- RAZA -->
-            <label for="raza"><strong>Raza: </strong> </label>
-            <select name="raza" id="raza" formControlName="raza">
-                <option selected>Eliga la raza: </option>
-                <option value="Caniche">Caniche</option>
-                <option value="Galgo">Galgo</option>
-                <option value="Chihuahua">chihuahua</option>
-                <option value="Foxterrier">Foxterrier</option>
-                <option value="Collie">Collie</option>
-                <option value="Salchicha">Salchicha</option>
-                <option value="Golden Retriever">Golden Retriever </option>
-            </select>
-
-            <!-- TAMAÑO -->
-            <label for="tamaño"><strong>Tamaño: </strong></label>
-            <select name="tamaño" id="tamaño" formControlName="tamano">
-                <option selected>Eliga el tamaño de sus mascota: </option>
-                <option value="Pequeño">Pequeño</option>
-                <option value="Mediano">Mediano</option>
-                <option value="Grande">Grande</option>
-            </select>
-
-            <!-- EDAD -->
-            <label for="edad"><strong>Edad: </strong></label>
-            <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
-
             <!-- NOMBRE -->
             <label for="nombre"><strong>Nombre: </strong> </label>
             <input type="text" name="nombre" placeholder="Ingrese el nombre de su mascota" id="nombre" formControlName="nombre">
-
-            <!-- SEXO -->
-            <label for="sexo"><strong>Sexo: </strong></label>
-            <select name="sexo" id="nombre" formControlName="sexo">
-                <option selected>Elega el sexo de su mascota</option>
-                <option value="Hembra">Hembra</option>
-                <option value="Macho">Macho</option>
-            </select>
+            <div class="row">
+                <div class="col">
+                    <!-- RAZA -->
+                    <label for="raza"><strong>Raza: </strong> </label>
+                    <select name="raza" id="raza" formControlName="raza">
+                        <option selected>Eliga la raza: </option>
+                        <option value="Caniche">Caniche</option>
+                        <option value="Galgo">Galgo</option>
+                        <option value="Chihuahua">chihuahua</option>
+                        <option value="Foxterrier">Foxterrier</option>
+                        <option value="Collie">Collie</option>
+                        <option value="Salchicha">Salchicha</option>
+                        <option value="Golden Retriever">Golden Retriever </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <!-- TAMAÑO -->
+                    <label for="tamaño"><strong>Tamaño: </strong></label>
+                    <select name="tamaño" id="tamaño" formControlName="tamano">
+                        <option selected>Tamaño de sus mascota: </option>
+                        <option value="Pequeño">Pequeño</option>
+                        <option value="Mediano">Mediano</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- EDAD -->
+                    <label for="edad"><strong>Edad: </strong></label>
+                    <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
+                </div>
+                <div class="col">
+                    <!-- SEXO -->
+                    <label for="sexo"><strong>Sexo: </strong></label>
+                    <select name="sexo" id="nombre" formControlName="sexo">
+                        <option selected>Elega el sexo de su mascota</option>
+                        <option value="Hembra">Hembra</option>
+                        <option value="Macho">Macho</option>
+                    </select>
+                </div>
+            </div>
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
