@@ -1,3 +1,33 @@
+.tarjetas{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    .tarjetas{
+        padding-left: 32%;
+        padding-right: 32%;
+    }
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .tarjetas{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .tarjetas{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+
 /* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
 .form-contacto{
     background-color: #F2c995;
@@ -20,11 +50,13 @@
     border: 2px solid black;
     border-radius: 10px;
 }
+h2{
+    margin: 0;
+}
 
 header{
     width:100%;
     background-color: #B88B54;
-    overflow:hidden;
     border-top-left-radius:10px;
     border-top-right-radius: 10px;
 }

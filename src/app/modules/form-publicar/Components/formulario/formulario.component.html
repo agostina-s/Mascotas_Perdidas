@@ -1,8 +1,8 @@
 
-<div [formGroup]="mascotas" class="container-fluid">
+<div [formGroup]="mascotas" class="container-fluid tarjetas">
     <!-- TARJETA DE INFORMACION DE LA MASCOTA -->
     <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar">
-        <header>
+        <header class="py-2">
             <span>
                 <h2>Informacion de la mascota</h2>
             </span>
@@ -70,7 +70,7 @@
     </div>
     <!-- TARJETA DE INFORMACION DE LA UBICACION -->
     <div id="ubicacion"  *ngIf="mostrarDivUbicacion" class="form-ubicacion mx-auto transicion-div mostrar">
-        <header>
+        <header class="py-2">
             <span>
                 <h2>Ubicacion</h2>
             </span>
@@ -91,7 +91,7 @@
     </div>
     <!-- TARJETA DE INFORMACION DE CONTACTO -->
     <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar">
-        <header>
+        <header class="py-2">
             <span>
                 <h2>Contacto</h2>
             </span>
