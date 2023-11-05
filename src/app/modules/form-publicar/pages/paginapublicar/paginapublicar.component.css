@@ -2,6 +2,8 @@
 h1{
     text-align: center;  
     border-radius: 20px;
+    margin-bottom: 0px;
+    margin-top: 2rem;
 }
 
 .container-fluid{
