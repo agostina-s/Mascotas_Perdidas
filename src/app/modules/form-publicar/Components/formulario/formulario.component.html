@@ -60,10 +60,6 @@
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
             <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion"></textarea>
 
-            <!-- COMO SE PERDIO -->
-            <label for="perdida"><strong>Como se perdio: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida" formControlName="perdida"></textarea>
-
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
             <h6>Imagen principal</h6>
@@ -85,12 +81,19 @@
         </header>
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
+            <!-- COMO SE PERDIO -->
+            <label for="perdida"><strong>Cómo se perdió: </strong></label>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Denos una explicacion sobre la pérdida" formControlName="perdida"></textarea>
+
+            <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
 
+            <!-- BARRIO -->
             <label for="nombre"><strong>Barrio: </strong></label>
             <input type="text" name="Barrio" id="barrio" formControlName="barrio">
 
+            <!-- FECHA -->
             <label for="nombre"><strong>Fecha cuando se perdio:</strong></label>
             <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
 
