@@ -1,130 +1,83 @@
+.tarjetas{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    .tarjetas{
+        padding-left: 32%;
+        padding-right: 32%;
+    }
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .tarjetas{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .tarjetas{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+
+/* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
 .form-contacto{
     background-color: #F2c995;
-    width: 500px;
-    margin-top: 40px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
 }
-#h1principal{
-    text-align: center;
-}
-header{
-    width:100%;
-    background-color: #B88B54;
-    overflow:hidden;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
-}
-header span{
-    font-size:100px;
-    text-align: center;
-}
-.contacto{
-    padding:.8rem;
-    overflow:hidden;
-    color:black
-}
-.contacto{
-    border:black;
-}
-.contacto label, .contacto input,.contacto select,.contacto textarea{
-    display:block;
-    width:100%;
-    margin-bottom:8px;
-}
-.contacto input,.contacto text,.contacto select{
-    text-decoration: #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    background-color: #e2b278;
-}
-
-
+/* CONTROLA LA TARJETA DE INFORMACION DE MASCOTA */
 .form-mascota{
     background-color: #F2c995;
-    width: 500px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
 }
 
-header{
-    width:100%;
-    background-color: #B88B54;
-    overflow:hidden;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
-}
-header span{
-    font-size:100px;
-    text-align: center;
-}
-
-
-.mascota{
-    padding:.8rem;
-    overflow:hidden;
-    color:black
-}
-.mascota{
-    border:black;
-}
-.mascota label, .mascota input,.mascota select,.mascota textarea{
-    display:block;
-    width:100%;
-    margin-bottom:8px;
-}
-.mascota input,.mascota text,.mascota select{
-    text-decoration: #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    background-color: #e2b278;
-}
-
-
-
-
+/* CONTROLA LA TARJETA DE INFORMACION DE LA UBICACION */
 .form-ubicacion{
     background-color: #F2c995;
-    width: 500px;
-    margin-top:40px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
     border: 2px solid black;
     border-radius: 10px;
 }
-#h1principal{
-    text-align: center;
+h2{
+    margin: 0;
 }
+
 header{
     width:100%;
     background-color: #B88B54;
-    overflow:hidden;
     border-top-left-radius:10px;
     border-top-right-radius: 10px;
 }
+
 header span{
     font-size:100px;
     text-align: center;
 }
-.ubicacion{
+.tarjetas-info{
     padding:.8rem;
     overflow:hidden;
-    color:black
-}
-.ubicacion{
+    color:black;
     border:black;
 }
-.ubicacion label, .ubicacion input,.ubicacion select,.ubicacion textarea{
+
+.tarjetas-info label, .tarjetas-info input,.tarjetas-info select,.tarjetas-info textarea{
     display:block;
     width:100%;
     margin-bottom:8px;
 }
-.ubicacion input,.ubicacion text,.ubicacion select{
+.tarjetas-info input,.tarjetas-info text,.tarjetas-info select{
     text-decoration: #000000;
     padding: 10px;
     margin-bottom: 10px;
@@ -134,10 +87,8 @@ header span{
 }
 
 iframe{
-    transform:translate(60%,10px);
     border-radius: 10px;
 }
-
 
 /* Estilo para la transición */
 .transicion-div {
