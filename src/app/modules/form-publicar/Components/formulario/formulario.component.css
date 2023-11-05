@@ -31,23 +31,23 @@
 /* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
 .form-contacto{
     background-color: #F2c995;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
-    border-radius: 10px;
+    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
+    border: 1px solid black;
+    border-radius: 20px;
 }
 /* CONTROLA LA TARJETA DE INFORMACION DE MASCOTA */
 .form-mascota{
     background-color: #F2c995;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
+    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
+    border: 1px solid black;
     border-radius: 10px;
 }
 
 /* CONTROLA LA TARJETA DE INFORMACION DE LA UBICACION */
 .form-ubicacion{
     background-color: #F2c995;
-    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-    border: 2px solid black;
+    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
+    border: 1px solid black;
     border-radius: 10px;
 }
 h2{
@@ -77,14 +77,21 @@ header span{
     width:100%;
     margin-bottom:8px;
 }
+
+.tarjetas-info input::placeholder, .tarjetas-info textarea::placeholder{
+    color: #424242;
+}
+
 .tarjetas-info input,.tarjetas-info text,.tarjetas-info select, textarea{
     text-decoration: #000000;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #000000;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #e2b278;
 }
+
+.tar
 
 iframe{
     border-radius: 10px;
