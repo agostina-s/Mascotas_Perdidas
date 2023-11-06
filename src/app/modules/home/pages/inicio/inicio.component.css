@@ -9,32 +9,49 @@
   right: 0%;
   bottom: 2%;
   height: 50%;
-
   background-image: linear-gradient(0.01deg, #F2C995 0%, rgba(184, 139, 84, 0.48) 43.69%), url('/assets/fondo.jpg');
 }
 .contenedor{
   min-height: 100vh;
 }
 
-h1{
+/* TITULO */
+.encabezado{
   display: flex;
   align-items: center;
 }
+.letraTitulo{
+  display: flex;
+  text-align: end;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 3.5rem;
+  margin-right: auto;
+}
+.logoTitulo{
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
 h5{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #div1{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #div2{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #boton{
   color: black;
   text-align: center;
@@ -43,6 +60,7 @@ h5{
   margin: 25px;
   box-shadow: 2px 5px 5px rgb(167, 129, 83);
 }
+
 #boton:hover{
   border-radius: 5px;
   background: #e2b278;
