@@ -44,29 +44,14 @@
     }
 }
 
-
-/* CONTROLA TARJETA DE INFORMACION DE CONTACTO */
-.form-contacto{
+/* CONTROLA LAS TARJETAS DEL FORMULARIO */
+.form-mascota, .form-ubicacion, .form-contacto{
     background-color: #F2c995;
     /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
     border: 1px solid black;
     border-radius: 20px;
 }
-/* CONTROLA LA TARJETA DE INFORMACION DE MASCOTA */
-.form-mascota{
-    background-color: #F2c995;
-    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
-    border: 1px solid black;
-    border-radius: 10px;
-}
 
-/* CONTROLA LA TARJETA DE INFORMACION DE LA UBICACION */
-.form-ubicacion{
-    background-color: #F2c995;
-    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
-    border: 1px solid black;
-    border-radius: 10px;
-}
 h2{
     margin: 0;
 }
@@ -74,8 +59,8 @@ h2{
 header{
     width:100%;
     background-color: #B88B54;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
 }
 
 header span{
@@ -108,19 +93,11 @@ header span{
     background-color: #e2b278;
 }
 
-.tar
 
 iframe{
     border-radius: 10px;
 }
 
-/* Estilo para la transición */
-.transicion-div {
-    transition: all 0.3s ease; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-}
 /* Estilo para mostrar el div */
 .mostrar {
     opacity: 1;
