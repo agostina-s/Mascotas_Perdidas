@@ -55,6 +55,14 @@ img{
 #textarea{
     background:#E8BE89;
     border-radius: 10px;
-
+    border: 1px solid black
+    
+}
+#exampleFormControlTextarea1{
+    background-color:#E8BE89;
+    border:none;
+    border-top:1px solid black;
+    border-top-left-radius:0px;
+    border-top-right-radius: 0px;
     
 }
