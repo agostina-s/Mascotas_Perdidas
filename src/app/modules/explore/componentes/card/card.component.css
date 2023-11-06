@@ -45,5 +45,7 @@ img{
 }
 .form-check{
     background:#E8BE89;
-    padding:10px
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
