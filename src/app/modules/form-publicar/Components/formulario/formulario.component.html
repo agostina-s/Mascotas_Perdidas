@@ -1,12 +1,16 @@
 <div class="text-center mb-4">
     <h2 class="text-muted">
-        <span class="titulo-activo">Descripcion</span> - <span class="ubiSpan">Ubicacion</span> - <span class="contSpan">Contacto</span>
+        <span [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>
+        -
+        <span [ngClass]="{'titulo-activo': mostrarDivUbicacion, 'titulo-inactivo': !mostrarDivUbicacion}">Ubicacion</span>
+        - 
+        <span [ngClass]="{'titulo-activo': mostrarDivContacto, 'titulo-inactivo': !mostrarDivContacto}">Contacto</span>
     </h2>
 </div>
 
 <div [formGroup]="mascotas" class="container-fluid tarjetas">
     <!-- TARJETA DE INFORMACION DE LA MASCOTA -->
-    <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar shadow-lg">
+    <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar shadow-lg" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Informacion de la mascota</h2>
@@ -75,7 +79,7 @@
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE LA UBICACION -->
-    <div id="ubicacion"  *ngIf="mostrarDivUbicacion" class="form-ubicacion mx-auto transicion-div mostrar">
+    <div id="ubicacion"  *ngIf="mostrarDivUbicacion" class="form-ubicacion mx-auto transicion-div mostrar" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Ubicacion</h2>
@@ -105,7 +109,7 @@
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE CONTACTO -->
-    <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar">
+    <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Contacto</h2>

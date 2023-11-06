@@ -13,7 +13,6 @@ export class FormularioComponent {
   productoSeleccionado!: Mascotas; // ! -> toma valores vacios
 
 
-
   //ENLAZAMIENTO AL FORMULARIO
   mascotas = new FormGroup({
     // INFORMACION DE LA MASCOTA

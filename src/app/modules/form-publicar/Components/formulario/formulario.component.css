@@ -8,17 +8,17 @@
 .titulo-activo{
     color: #000000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
-    transition: color 0.5s ease-in-out; /* Transición de color */
+    transition: color 1s ease-in-out; /* Transición de color */
     animation: bounce 1s infinite alternate; /* Animación de rebote */
 }
 
 .titulo-inactivo {
-    transition: opacity 0.5s, transform 0.5s; /* Transición de opacidad y escala */
+    transition: opacity 2s, transform 2s; /* Transición de opacidad y escala */
     transform: scale(0.8); /* Escala el título inactivo */
 }
 
 .titulo-activo {
-    animation: bounce 1s infinite alternate; /* Animación de rebote */
+    animation: bounce 5s infinite alternate; /* Animación de rebote */
 }
 
 @keyframes bounce {
