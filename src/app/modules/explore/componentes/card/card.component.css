@@ -37,6 +37,9 @@ img{
 .modal-footer{
     background: #B88B54;
 }
+.modal-body{
+    background: #B88B54;
+}
 #botonreportar{
     color:rgb(175, 16, 16)
 }
