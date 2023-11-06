@@ -12,8 +12,8 @@ h1{
 }
 
 .bg-color{
-    background: rgb(242,201,149);
-    background: linear-gradient(153deg, rgba(242,201,149,1) 0%, rgba(246,217,178,1) 100%);
+    background: rgb(226,178,120);
+    background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
 }
 .appform{
     margin-left: 20%;
