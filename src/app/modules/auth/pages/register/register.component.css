@@ -35,14 +35,16 @@
     background-color: #e2b278;
 }
 
+/* OJITO */
 .login-form button {
     padding: 10px;
-    background-color: #007bff;
-    color: blue;
-    border: none;
+    background-color: #f0d8b8;
+    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .login-form button:hover {
