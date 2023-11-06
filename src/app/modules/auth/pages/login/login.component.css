@@ -35,14 +35,17 @@
         border-radius: 4px;
         background-color: #f0d8b8;
 }
-    
+
+/* OJITO */
 .login-form button {
         padding: 10px;
-        /* background-color: #007bff; */
-        border: none;
+        background-color: #f0d8b8;
+        border: 1px solid black;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
 }
     
 .login-form button:hover {
@@ -57,14 +60,6 @@
     background-color: rgba(135, 183, 255, 0.77);
 }
 
-.ojito{
-    height: fit-content;
-}
-.btnOjito{
-    height: 100%;
-    border-top-left-radius: 0px;
-    border: 1px solid black;
-}
 /* Input contraseña */
 .contrasena{
     margin-bottom: 0px;
