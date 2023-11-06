@@ -133,4 +133,20 @@ export class FormularioComponent {
       }
     }
   }
+
+  btnDescripcion(){
+    this.mostrarDivDescripcion = true;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = false;
+  }
+  btnUbicacion(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = true;
+    this.mostrarDivContacto = false;
+  }
+  btnContacto(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = true;
+  }
 }

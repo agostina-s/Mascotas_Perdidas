@@ -1,11 +1,11 @@
-<div class="text-center mb-4">
-    <h2 class="text-muted">
-        <span [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>
+<div class="text-center pb-auto">
+    <h4 class="text-muted progreso">
+        <span class="pointer" (click)="btnDescripcion()" [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>
         -
-        <span [ngClass]="{'titulo-activo': mostrarDivUbicacion, 'titulo-inactivo': !mostrarDivUbicacion}">Ubicacion</span>
+        <span class="pointer" (click)="btnUbicacion()" [ngClass]="{'titulo-activo': mostrarDivUbicacion, 'titulo-inactivo': !mostrarDivUbicacion}">Ubicacion</span>
         - 
-        <span [ngClass]="{'titulo-activo': mostrarDivContacto, 'titulo-inactivo': !mostrarDivContacto}">Contacto</span>
-    </h2>
+        <span class="pointer" (click)="btnContacto()" [ngClass]="{'titulo-activo': mostrarDivContacto, 'titulo-inactivo': !mostrarDivContacto}">Contacto</span>
+    </h4>
 </div>
 
 <div [formGroup]="mascotas" class="container-fluid tarjetas">

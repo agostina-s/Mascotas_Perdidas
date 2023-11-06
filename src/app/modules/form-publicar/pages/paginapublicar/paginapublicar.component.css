@@ -1,8 +1,7 @@
 
-h1{
+.h1{
     text-align: center;  
-    border-radius: 20px;
-    margin-bottom: 0px;
+    margin-bottom: none;
     margin-top: 2rem;
 }
 
