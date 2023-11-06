@@ -36,26 +36,45 @@
 
 /* Estilos para pantallas grandes (computadoras de escritorio) */
 @media screen and (min-width: 1300px) {
-
+.logoTitulo{
+  height: 210px;
+  width: 210px;
+}
+.letraTitulo{
+  font-size: 4rem;
+}
 }
 
 /* Estilos para pantallas medianas (notebooks) */
 @media screen and (max-width: 1300px) and (min-width: 768px) {
-
+  .logoTitulo{
+    height: 200px;
+    width: 200px;
+  }
+  .letraTitulo{
+    font-size: 3.5rem;
+  }
 }
 
 /* Estilos para pantallas pequeñas (móviles) */
 @media screen and (max-width: 767px) {
-
+  .logoTitulo{
+    height: 100px;
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .letraTitulo{
+    font-size: 2.5rem;
+  }
 }
-
-
-h5{
+.subtitulo{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
+/* BOTONES */
 #div1{
   display: flex;
   justify-content: center;
