@@ -52,4 +52,6 @@ img{
     border-radius: 10px;
     border: solid 1px black;
 }
-
+#textarea{
+    background:#E8BE89;
+}
