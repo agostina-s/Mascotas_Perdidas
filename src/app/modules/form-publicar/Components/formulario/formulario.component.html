@@ -1,7 +1,16 @@
+<div class="text-center mb-4">
+    <h4 class="text-muted progreso">
+        <span class="pointer" (click)="btnDescripcion()" [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>
+        -
+        <span class="pointer" (click)="btnUbicacion()" [ngClass]="{'titulo-activo': mostrarDivUbicacion, 'titulo-inactivo': !mostrarDivUbicacion}">Ubicacion</span>
+        - 
+        <span class="pointer" (click)="btnContacto()" [ngClass]="{'titulo-activo': mostrarDivContacto, 'titulo-inactivo': !mostrarDivContacto}">Contacto</span>
+    </h4>
+</div>
 
 <div [formGroup]="mascotas" class="container-fluid tarjetas">
     <!-- TARJETA DE INFORMACION DE LA MASCOTA -->
-    <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar">
+    <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar shadow-lg" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Informacion de la mascota</h2>
@@ -18,7 +27,6 @@
                     <!-- RAZA -->
                     <label for="raza"><strong>Raza: </strong> </label>
                     <select name="raza" id="raza" formControlName="raza">
-                        <option selected>Eliga la raza: </option>
                         <option value="Caniche">Caniche</option>
                         <option value="Galgo">Galgo</option>
                         <option value="Chihuahua">chihuahua</option>
@@ -32,7 +40,6 @@
                     <!-- TAMAÑO -->
                     <label for="tamaño"><strong>Tamaño: </strong></label>
                     <select name="tamaño" id="tamaño" formControlName="tamano">
-                        <option selected>Tamaño de sus mascota: </option>
                         <option value="Pequeño">Pequeño</option>
                         <option value="Mediano">Mediano</option>
                         <option value="Grande">Grande</option>
@@ -49,7 +56,6 @@
                     <!-- SEXO -->
                     <label for="sexo"><strong>Sexo: </strong></label>
                     <select name="sexo" id="nombre" formControlName="sexo">
-                        <option selected>Elega el sexo de su mascota</option>
                         <option value="Hembra">Hembra</option>
                         <option value="Macho">Macho</option>
                     </select>
@@ -58,11 +64,7 @@
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-            <input type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion">
-
-            <!-- COMO SE PERDIO -->
-            <label for="perdida"><strong>Como se perdio: </strong></label>
-            <input type="text" name="perdida" id="perdida" placeholder="Denos una explicacion de la perdida" formControlName="perdida">
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion"></textarea>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
@@ -77,7 +79,7 @@
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE LA UBICACION -->
-    <div id="ubicacion"  *ngIf="mostrarDivUbicacion" class="form-ubicacion mx-auto transicion-div mostrar">
+    <div id="ubicacion"  *ngIf="mostrarDivUbicacion" class="form-ubicacion mx-auto transicion-div mostrar" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Ubicacion</h2>
@@ -85,20 +87,29 @@
         </header>
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
+            <!-- COMO SE PERDIO -->
+            <label for="perdida"><strong>Cómo se perdió: </strong></label>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Denos una explicacion sobre la pérdida" formControlName="perdida"></textarea>
+
+            <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
 
+            <!-- BARRIO -->
             <label for="nombre"><strong>Barrio: </strong></label>
             <input type="text" name="Barrio" id="barrio" formControlName="barrio">
 
+            <!-- FECHA -->
             <label for="nombre"><strong>Fecha cuando se perdio:</strong></label>
             <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
 
+            <!-- MAPA -->
+            <label for="nombre"><strong>Mapa:</strong></label>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24828.531748143156!2d-68.01086362031148!3d-38.9338854569395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a30ee145c2355%3A0x488e3620b435393c!2sCipolletti%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1698456831052!5m2!1ses-419!2sar" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE CONTACTO -->
-    <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar">
+    <div id="contacto" *ngIf="mostrarDivContacto" class="form-contacto mx-auto transicion-div mostrar" [@fade]>
         <header class="py-2">
             <span>
                 <h2>Contacto</h2>

@@ -1,7 +1,8 @@
 
-h1{
+.titulo{
     text-align: center;  
-    border-radius: 20px;
+    margin-top: 2rem;
+    margin-bottom: 0px;
 }
 
 .container-fluid{
@@ -10,7 +11,8 @@ h1{
 }
 
 .bg-color{
-    background-color: #F2c995;
+    background: rgb(226,178,120);
+    background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
 }
 .appform{
     margin-left: 20%;

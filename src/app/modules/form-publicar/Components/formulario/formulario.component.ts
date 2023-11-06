@@ -2,16 +2,27 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from '../../../admin/services/services.service';
+import { trigger, transition, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  styleUrls: ['./formulario.component.css'],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('0.5s', style({ opacity: 1 })),
+      ]),
+      // transition(':leave', [
+      //   animate('0.5s', style({ opacity: 0 })),
+      // ]),
+    ]),
+  ],
 })
 export class FormularioComponent {
   coleccionmascotas: Mascotas [] = [];
   productoSeleccionado!: Mascotas; // ! -> toma valores vacios
-
 
 
   //ENLAZAMIENTO AL FORMULARIO
@@ -121,5 +132,21 @@ export class FormularioComponent {
         this.mostrarDivUbicacion = true;
       }
     }
+  }
+
+  btnDescripcion(){
+    this.mostrarDivDescripcion = true;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = false;
+  }
+  btnUbicacion(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = true;
+    this.mostrarDivContacto = false;
+  }
+  btnContacto(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = true;
   }
 }
