@@ -4,7 +4,6 @@ import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 
-
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
