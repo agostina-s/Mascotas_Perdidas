@@ -21,10 +21,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    
     border-radius: 4px;
     padding: 15px;
-   
 }
 
 .login-form input {
@@ -32,7 +30,7 @@
     padding: 10px;
     border: 1px solid #000000;
     border-radius: 4px;
-    background-color: #e2b278;
+    background-color: #f0d8b8;
 }
 
 /* OJITO */
