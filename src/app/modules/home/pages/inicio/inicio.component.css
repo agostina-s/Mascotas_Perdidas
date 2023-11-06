@@ -34,6 +34,22 @@
   margin-right: 2rem;
 }
 
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+
+}
+
+
 h5{
   display: flex;
   justify-content: center;
