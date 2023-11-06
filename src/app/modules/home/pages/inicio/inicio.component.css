@@ -34,6 +34,10 @@
   margin-right: 2rem;
 }
 
+.botones{
+  display: flex;
+}
+
 /* Estilos para pantallas grandes (computadoras de escritorio) */
 @media screen and (min-width: 1300px) {
 .logoTitulo{
@@ -42,6 +46,9 @@
 }
 .letraTitulo{
   font-size: 4rem;
+}
+.botones{
+  display: flex;
 }
 }
 
@@ -53,6 +60,9 @@
   }
   .letraTitulo{
     font-size: 3.5rem;
+  }
+  .botones{
+    display: flex;
   }
 }
 
@@ -66,6 +76,9 @@
   .letraTitulo{
     font-size: 2.5rem;
   }
+  .botones{
+    display: block;
+  }
 }
 .subtitulo{
   display: flex;
@@ -76,7 +89,6 @@
 
 /* BOTONES */
 #div1{
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -89,11 +101,14 @@
 
 #boton{
   color: black;
+  font-size: 1.5rem;
   text-align: center;
   border-color: #B88B54;
   background-color: #B88B54;
-  margin: 25px;
-  box-shadow: 2px 5px 5px rgb(167, 129, 83);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
 }
 
 #boton:hover{
@@ -101,6 +116,9 @@
   background: #e2b278;
 
 }
+
+
+/* SECCION EXPLORAR */
 #mapa{
   background-color: #b99365;
   color: black;
