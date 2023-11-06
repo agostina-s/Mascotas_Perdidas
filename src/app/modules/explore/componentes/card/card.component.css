@@ -70,3 +70,7 @@ img{
     background: rgb(154, 18, 18);
     border: 1px solid black
 }
+strong{
+    padding-left: 0.5rem;
+    padding-top:0.5rem;
+}
