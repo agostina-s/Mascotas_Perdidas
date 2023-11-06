@@ -2,11 +2,24 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from '../../../admin/services/services.service';
+import { trigger, transition, animate, style } from '@angular/animations';
+
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  styleUrls: ['./formulario.component.css'],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('0.5s', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('0.5s', style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class FormularioComponent {
   coleccionmascotas: Mascotas [] = [];
