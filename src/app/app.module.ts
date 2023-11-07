@@ -12,7 +12,6 @@ import { enviroment } from 'src/enviroments/enviroment';
 import { AngularFireModule} from '@angular/fire/compat'; //importacion de firestore (BD)
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //importacion de AUTH
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { FormularioComponent } from './form-encontre/components/formulario/formulario.component';
  // importacion de storage (para imagenes)
 
 
@@ -20,7 +19,6 @@ import { FormularioComponent } from './form-encontre/components/formulario/formu
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent,
   ],
   imports: [
     BrowserModule,
