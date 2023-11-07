@@ -34,39 +34,10 @@
   margin-right: 2rem;
 }
 
-/* Estilos para pantallas grandes (computadoras de escritorio) */
-@media screen and (min-width: 1300px) {
-.logoTitulo{
-  height: 210px;
-  width: 210px;
-}
-.letraTitulo{
-  font-size: 4rem;
-}
+.botones{
+  display: flex;
 }
 
-/* Estilos para pantallas medianas (notebooks) */
-@media screen and (max-width: 1300px) and (min-width: 768px) {
-  .logoTitulo{
-    height: 200px;
-    width: 200px;
-  }
-  .letraTitulo{
-    font-size: 3.5rem;
-  }
-}
-
-/* Estilos para pantallas pequeñas (móviles) */
-@media screen and (max-width: 767px) {
-  .logoTitulo{
-    height: 100px;
-    width: 100px;
-    margin-right: 1rem;
-  }
-  .letraTitulo{
-    font-size: 2.5rem;
-  }
-}
 .subtitulo{
   display: flex;
   justify-content: center;
@@ -76,7 +47,6 @@
 
 /* BOTONES */
 #div1{
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -89,23 +59,87 @@
 
 #boton{
   color: black;
+  font-size: 1.5rem;
   text-align: center;
-  border-color: #B88B54;
-  background-color: #B88B54;
-  margin: 25px;
-  box-shadow: 2px 5px 5px rgb(167, 129, 83);
+  border-color: #db9a5c;
+  background-color: #db9a5c;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0);
+  border-radius: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #boton:hover{
-  border-radius: 5px;
+  border-radius: 20px;
   background: #e2b278;
 
 }
+
+
+/* SECCION EXPLORAR */
 #mapa{
-  background-color: #b99365;
+  background-color: #db9a5c;
   color: black;
-  border-color: #b99365;
+  border-color: #db9a5c;
   border-radius: 5%;
   align-items: center;
 }
 
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+  .logoTitulo{
+    height: 210px;
+    width: 210px;
+  }
+  .letraTitulo{
+    font-size: 4rem;
+  }
+  .botones{
+    display: flex;
+  }
+  #boton{
+    font-size: 1.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .botonSpan{
+    display: block;
+  }
+}
+  
+  /* Estilos para pantallas medianas (notebooks) */
+  @media screen and (max-width: 1300px) and (min-width: 768px) {
+    .logoTitulo{
+      height: 200px;
+      width: 200px;
+    }
+    .letraTitulo{
+      font-size: 3.5rem;
+    }
+    .botones{
+      display: flex;
+    }
+}
+  
+  /* Estilos para pantallas pequeñas (móviles) */
+  @media screen and (max-width: 767px) {
+    .logoTitulo{
+      height: 100px;
+      width: 100px;
+      margin-right: 1rem;
+    }
+    .letraTitulo{
+      font-size: 2.5rem;
+    }
+    .botones{
+      display: block;
+    }
+}
+
+/*////////////////////////// CARROUSEL /////////////////////////*/
