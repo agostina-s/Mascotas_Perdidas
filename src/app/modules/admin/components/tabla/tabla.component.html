@@ -1,5 +1,5 @@
 <div class="container">
-    <table class="table">
+    <table *ngFor="let publicacion of coleccionMascotas" class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -13,8 +13,8 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <td>{{publicacion.nombre}}</td>
+            <td>{{publicacion.fechaperdida}}</td>
             <td>@mdo</td>
           </tr>
         </tbody>
