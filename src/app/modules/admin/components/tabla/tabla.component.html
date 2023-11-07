@@ -14,7 +14,7 @@
         <tbody>
             <tr *ngFor="let publicacion of coleccionMascotas">
               <th scope="row">{{publicacion.idmp}}</th>
-              <td><img [src]="publicacion.imagenprincipal" alt="" srcset=""></td>
+              <td><img [src]="publicacion.imagenprincipal" alt="imagen de la mascotas" id="imagendelamascota"></td>
               <td>{{publicacion.nombre}}</td>
               <td>{{publicacion.fechaperdida}}</td>
               <td>{{publicacion.ciudad}}</td>
