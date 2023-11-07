@@ -8,12 +8,14 @@ import { InfoEncontreComponent } from './components/info-encontre/info-encontre.
 import { PaginaEncontreComponent } from './pages/pagina-encontre/pagina-encontre.component';
 import { FormularioComponent } from '../form-publicar/Components/formulario/formulario.component';
 import { FormpublicarModule } from '../form-publicar/formpublicar.module';
+import { FormularioComponent } from './components/formulario/formulario.component';
 @NgModule({
   declarations: [
     ContactoEncontreComponent,
     UbicacionEncontreComponent,
     InfoEncontreComponent,
-    PaginaEncontreComponent
+    PaginaEncontreComponent,
+    FormularioComponent
   ],
   imports: [
     CommonModule,
