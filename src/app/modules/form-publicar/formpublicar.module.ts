@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports:[
     FormsModule,
     ReactiveFormsModule,
+    FormularioComponent
   ]
 })
 export class FormpublicarModule { }
