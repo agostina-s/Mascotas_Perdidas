@@ -45,14 +45,17 @@
                           <!-- CARDS -->
                           <div class="contCarrusel d-flex align-items-center rounded-2">
                             <div id="CarruselMascota" class="carousel slide carousel-container" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner my-auto fixed-size-img" *ngFor="let publicacion of coleccionMascotas.slice(0,4)">
-                                    <!-- card 1 -->
-                                    <div class="carousel-item active fixed-size-img">
+                                  <div class="carousel-inner my-auto fixed-size-img">
+                                    <!-- card 1 --> 
+                                    <div class="carousel-item fixed-size-img active">
+                                      <div class="card" style="width: 18rem;">
+                                        <img src="" class="card-img-top" alt=>
+                                        <div class="card-body">
+                                          <p class="card-text"></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas">
                                       <div class="card" style="width: 18rem;">
                                         <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
                                         <div class="card-body">
@@ -60,7 +63,8 @@
                                         </div>
                                       </div>
                                     </div>
-                                </div>
+
+                                  </div>
                             </div>
                             <!-- FIN CARRUSEL -->
                         </div>
@@ -69,7 +73,6 @@
                 </div>
             </div>
         </div>
-
 
 
 
