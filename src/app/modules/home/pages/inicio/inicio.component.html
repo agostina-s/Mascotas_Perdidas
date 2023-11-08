@@ -50,31 +50,13 @@
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-inner my-auto fixed-size-img">
+                                <div class="carousel-inner my-auto fixed-size-img" *ngFor="let publicacion of coleccionMascotas.slice(0,4)">
                                     <!-- card 1 -->
                                     <div class="carousel-item active fixed-size-img">
                                       <div class="card" style="width: 18rem;">
-                                        <img src="..." class="card-img-top" alt="...">
+                                        <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
                                         <div class="card-body">
-                                          <p class="card-text">1 text to build on the card title and make up the bulk of the card's content.</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!-- card 2 -->
-                                    <div class="carousel-item fixed-size-img">
-                                      <div class="card" style="width: 18rem;">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <p class="card-text">2 quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!-- card 3 -->
-                                    <div class="carousel-item fixed-size-img">
-                                      <div class="card" style="width: 18rem;">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <p class="card-text">3 quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <p class="card-text">{{ publicacion.descripcion }}</p>
                                         </div>
                                       </div>
                                     </div>
