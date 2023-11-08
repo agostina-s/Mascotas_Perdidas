@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas let i=index">
                                       <script>console.log(i)</script>
-                                      <div class="card">
+                                      <div class="card" [routerLink]="['explore/publicacion', publicacion.idmp]">
                                         <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
                                         <div class="card-body">
                                           <h5 class="card-title">{{ publicacion.nombre }}</h5>
