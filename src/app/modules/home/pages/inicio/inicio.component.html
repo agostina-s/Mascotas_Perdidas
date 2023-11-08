@@ -55,7 +55,8 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas">
+                                    <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas let i=index">
+                                      <script>console.log(i)</script>
                                       <div class="card" style="width: 18rem;">
                                         <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
                                         <div class="card-body">
