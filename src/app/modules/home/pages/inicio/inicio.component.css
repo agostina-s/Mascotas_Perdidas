@@ -167,10 +167,13 @@
 }
 
 .card-img-top{
-  max-height: 200px;
+  height: 18rem;
+  max-height: 18rem;
   object-fit: cover;
 }
 
 .card{
   background-color: #f0d8b8;
+  width: 18rem;
+  height: 26rem;
 }

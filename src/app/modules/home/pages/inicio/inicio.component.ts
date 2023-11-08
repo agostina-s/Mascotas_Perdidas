@@ -28,7 +28,7 @@ export class InicioComponent {
   }
 
   getDescripcionCorta(desc: string){
-    return desc.split(' ').splice(0,50).join(' ') + '...';
+    return desc.split(' ').splice(0,15).join(' ') + '...';
   }
 
 
