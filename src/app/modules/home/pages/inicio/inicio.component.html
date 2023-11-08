@@ -43,30 +43,31 @@
                               <span class="visually-hidden">Next</span>
                           </button>
                           <!-- CARDS -->
-                          <div class="contCarrusel d-flex align-items-center rounded-2">
-                            <div id="CarruselMascota" class="carousel slide carousel-container" data-bs-ride="carousel">
-                                  <div class="carousel-inner my-auto fixed-size-img">
-                                    <!-- card 1 --> 
-                                    <div class="carousel-item fixed-size-img active">
-                                      <div class="card" style="width: 18rem;">
-                                        <img src="" class="card-img-top" alt=>
-                                        <div class="card-body">
-                                          <p class="card-text"></p>
-                                        </div>
+                          <div class="contCarrusel d-flex align-items-center rounded-2 ">
+                            <div class="cont-fijo-cards">
+                              <div id="CarruselMascota" class="carousel slide carousel-container carousel-fade">
+                                <div class="carousel-inner my-auto fixed-size-img">
+                                  <!-- card 1 --> 
+                                  <div class="carousel-item fixed-size-img active">
+                                    <div class="card" style="width: 18rem;">
+                                      <img src="" class="card-img-top" alt=>
+                                      <div class="card-body">
+                                        <p class="card-text"></p>
                                       </div>
                                     </div>
-                                    <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas let i=index">
-                                      <script>console.log(i)</script>
-                                      <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
-                                        <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
-                                        <div class="card-body">
-                                          <h5 class="card-title">{{ publicacion.nombre }}</h5>
-                                          <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
-                                        </div>
-                                      </div>
-                                    </div>
-
                                   </div>
+                                  <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas let i=index">
+                                    <script>console.log(i)</script>
+                                    <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
+                                      <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
+                                      <div class="card-body">
+                                        <h5 class="card-title">{{ publicacion.nombre }}</h5>
+                                        <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
                             </div>
                             <!-- FIN CARRUSEL -->
                         </div>
