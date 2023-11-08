@@ -60,7 +60,9 @@
                                       <div class="card" style="width: 18rem;">
                                         <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
                                         <div class="card-body">
-                                          <p class="card-text">{{ publicacion.descripcion }}</p>
+                                          <h5 class="card-title">{{ publicacion.nombre }}</h5>
+
+                                          <p class="card-text">{{ publicacion.descripcion | slice:50 }}</p>
                                         </div>
                                       </div>
                                     </div>
