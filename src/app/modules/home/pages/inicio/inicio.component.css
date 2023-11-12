@@ -188,3 +188,17 @@
   cursor: pointer;
   border-radius: 10px;
 }
+
+
+.slider-wrapper{
+  display: flex;
+
+  max-width: 80vw;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.slider{
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}

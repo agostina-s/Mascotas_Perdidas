@@ -21,66 +21,19 @@
       </div>
       <div id="div2">
         <div id="mapa">
-          <!-- ---------------------- CARROUSEL --------------- -->
-          <div class="testimonial-slider">
-            <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <div class="testimonial-title">
-                                <h2 class="fw-bold display-6">Explore las publicaciones:</h2>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- BOTON ATRAS -->
-                          <button class="carousel-control-prev" type="button" data-bs-target="#CarruselMascota" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                          </button>
-                          <!-- BOTON ADELANTE -->
-                          <button class="carousel-control-next" type="button" data-bs-target="#CarruselMascota" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                          </button>
-                          <!-- CARDS -->
-                          <div class="contCarrusel d-flex align-items-center rounded-2 ">
-                            <div class="cont-fijo-cards">
-                              <div id="CarruselMascota" class="carousel slide carousel-container carousel-fade">
-                                <div class="carousel-inner my-auto fixed-size-img">
-                                  <!-- card 1 --> 
-                                  <div class="carousel-item fixed-size-img active">
-                                    <div class="card" style="width: 18rem;">
-                                      <img src="" class="card-img-top" alt=>
-                                      <div class="card-body">
-                                        <p class="card-text"></p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item fixed-size-img" *ngFor="let publicacion of coleccionMascotas let i=index">
-                                    <script>console.log(i)</script>
-                                    <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
-                                      <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
-                                      <div class="card-body">
-                                        <h5 class="card-title">{{ publicacion.nombre }}</h5>
-                                        <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                          </div>
-                            </div>
-                            <!-- FIN CARRUSEL -->
-                        </div>
-                        </div>
-                    </div>
+          <div class="slider-wrapper">
+            <div class="slider" *ngFor="let publicacion of coleccionMascotas let i=index">
+                <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
+                  <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ publicacion.nombre }}</h5>
+                    <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
+                  </div>
                 </div>
             </div>
-        </div>
 
-
-
+          </div>
         </div>
       </div>
-
   </div>
 </div>
