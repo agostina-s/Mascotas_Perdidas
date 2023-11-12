@@ -85,7 +85,7 @@
   background-color: #db9a5c;
   color: black;
   border-color: #db9a5c;
-  border-radius: 5%;
+  border-radius: 20px;
   align-items: center;
 }
 
@@ -179,6 +179,7 @@
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid black;
+  margin-left: 1rem;
 }
 
 .cont-fijo-cards{
@@ -192,10 +193,8 @@
 
 .slider-wrapper{
   display: flex;
-
   max-width: 80vw;
   overflow-x: auto;
-  overflow-y: auto;
 }
 .slider{
   display: flex;
