@@ -31,25 +31,25 @@
                   </svg>
               </button>
             </td>
-            </tr>
-          </tbody>
-          <div class="modal fade" *ngif="modalvisibleproducto" id="eliminarproducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro de elimnar el producto?</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {{productoSeleccionado.nombre}}
-                    <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" (click)="borrarProducto()">Eliminar</button>
-                  <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Cancelar</button>
+            <div class="modal fade" *ngif="modalvisibleproducto" id="eliminarpublicacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro de elimnar el producto?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      {{publicacion.nombre}}
+                      <img src="{{publicacion.imagen}}" alt="{{productoSeleccionado.alt}}">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="borrarProducto()">Eliminar</button>
+                    <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Cancelar</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            </tr>
+          </tbody>
       </table>
 </div>
