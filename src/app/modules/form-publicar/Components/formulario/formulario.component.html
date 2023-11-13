@@ -65,7 +65,7 @@
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describanos a sus mascota" formControlName="descripcion"></textarea>
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describá su mascota" formControlName="descripcion"></textarea>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
@@ -90,19 +90,19 @@
         <div class="ubicacion tarjetas-info">
             <!-- COMO SE PERDIO -->
             <label for="perdida"><strong>Cómo se perdió: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Denos una explicacion sobre la pérdida" formControlName="perdida"></textarea>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Explique como se perdio" formControlName="perdida"></textarea>
 
             <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
-            <input type="text" name="ciudad" id="ciudad" formControlName="ciudad">
+            <input type="text" name="ciudad" id="ciudad" formControlName="ciudad" placeholder="En que ciudad sucedio">
 
             <!-- BARRIO -->
             <label for="nombre"><strong>Barrio: </strong></label>
-            <input type="text" name="Barrio" id="barrio" formControlName="barrio">
+            <input type="text" name="Barrio" id="barrio" formControlName="barrio" placeholder="En que barrio sucedio">
 
             <!-- FECHA -->
-            <label for="nombre"><strong>Fecha cuando se perdio:</strong></label>
-            <input type="text" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de la perdida">
+            <label for="nombre"><strong>Fecha/Hora cuando se perdio:</strong></label>
+            <input type="datetime-local" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de perdida">
 
             <!-- MAPA -->
             <label for="nombre"><strong>Mapa:</strong></label>
@@ -128,14 +128,14 @@
             <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
 
             <label for="gmail"><strong>Correo electrónico:</strong></label>
-            <input type="text" name="mail" id="mail" placeholder="Ingrese el Mail de contacto" formControlName="mail">
+            <input type="text" name="mail" id="mail" placeholder="Ingrese un Mail de contacto" formControlName="mail">
         </div>
     </div>
     <div class="mx-auto d-flex mt-3">
-        <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button>
-        <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
-        <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button>
-    </div>
+         <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button> 
+         <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
+         <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button> 
+        </div>
 </div>
 
 
