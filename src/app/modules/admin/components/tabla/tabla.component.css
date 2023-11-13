@@ -2,3 +2,9 @@
     height: 4rem;
     width: 4rem;
 }
+.container-fluid{
+    background-color: #F2c995;
+}
+th{
+    background-color: #F2c995;
+}
