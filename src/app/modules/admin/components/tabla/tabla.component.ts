@@ -9,7 +9,6 @@ import { ServicesService } from 'src/app/modules/admin/services/services.service
 })
 export class TablaComponent {
   coleccionMascotas: Mascotas[] = [];
-
   publiSeleccionada!: Mascotas;
 
   constructor(
@@ -23,7 +22,25 @@ export class TablaComponent {
     this.servicioCRUD.obtenerMascota().subscribe(mascota =>{
       this.coleccionMascotas = mascota;
     })
-  }
+
+
 
 
 }
+
+
+mostrarBorrar(publiSeleccionada: Mascotas){ // boton para el model
+  this.publiSeleccionada = publiSeleccionada;
+}
+
+eliminarMascotas(){
+  this.servicioCRUD.eliminarMascotas(this.publiSeleccionada.idmp)
+  .then(respuesta =>{
+    alert("El producto se elimino correctamente.");
+  })
+  .catch(error =>{
+    alert("No se ha podido eliminar el producto: \n"+error)
+  })
+}
+}
+
