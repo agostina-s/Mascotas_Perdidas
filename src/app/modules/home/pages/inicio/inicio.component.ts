@@ -17,6 +17,7 @@ export class InicioComponent {
   constructor(
     //declaramos el SERVICIO CRUD
     public servicioCRUD: ServicesService
+
   ){}
 
   ngOnInit(): void{
@@ -30,9 +31,16 @@ export class InicioComponent {
   getDescripcionCorta(desc: string){
     return desc.split(' ').splice(0,10).join(' ') + '...';
   }
+  
+
+  flechaAtras: HTMLButtonElement = document.querySelector('#btnAtras') as HTMLButtonElement;
+  cards: HTMLDivElement = document.querySelector('.slider-wrapper .card') as HTMLDivElement;
+  cardsLista: HTMLDivElement =document.querySelector('slider-wrappper .slider') as HTMLDivElement;
+
 
 
   // CARROUSEL
-
+  // tabs = document.querySelectorAll('.slider-wrapper card');
+  
 
 }

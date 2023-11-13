@@ -155,7 +155,7 @@
   padding-left: 0.2em;
 }
 
-.carousel-control-prev,
+/* .carousel-control-prev,
 .carousel-control-next {
   background-color: #fff;
   width: 3em;
@@ -163,7 +163,7 @@
   border-radius: 50%;
   top: 60%;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-}
+} */
 
 .card-img-top{
   height: 18rem;
@@ -194,7 +194,15 @@
 .slider-wrapper{
   display: flex;
   max-width: 80vw;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider-wrapper ::-webkit-scrollbar{
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .slider{
   display: flex;
