@@ -11,4 +11,5 @@ th{
 }
 td{
     background-color: #F2c995;
+    border-bottom: 1px solid black;
 }
