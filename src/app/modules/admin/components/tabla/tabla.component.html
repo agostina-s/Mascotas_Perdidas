@@ -35,15 +35,15 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro de elimnar el producto?</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro de elimnar la publicacion?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                       {{publicacion.nombre}}
-                      <img src="{{publicacion.imagen}}" alt="{{productoSeleccionado.alt}}">
+                      <img src="{{publicacion.imagenprincipal}}">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" (click)="borrarProducto()">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" (click)="eliminarMascotas()">Eliminar</button>
                     <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Cancelar</button>
                   </div>
                 </div>
