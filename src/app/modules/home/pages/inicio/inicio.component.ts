@@ -35,8 +35,19 @@ export class InicioComponent {
 
   flechaAtras: HTMLButtonElement = document.querySelector('#btnAtras') as HTMLButtonElement;
   cards: HTMLDivElement = document.querySelector('.slider-wrapper .card') as HTMLDivElement;
-  cardsLista: HTMLDivElement =document.querySelector('slider-wrappper .slider') as HTMLDivElement;
+  cardsLista!: HTMLDivElement;
 
+  ngAfterViewInit() {
+    // Aquí, la vista y sus elementos están completamente inicializados.
+    this.cardsLista = document.querySelector('.slider-wrapper') as HTMLDivElement;
+  }
+
+  desplazarDerecha(){
+    this.cardsLista.scrollLeft += 200;
+  }
+  desplazarIzquierda(){
+    this.cardsLista.scrollLeft -= 200;
+  }
 
 
   // CARROUSEL

@@ -197,12 +197,14 @@
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .slider-wrapper ::-webkit-scrollbar{
   display: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 .slider{
   display: flex;
