@@ -34,6 +34,7 @@
             </tr>
           </tbody>
       </table>
+     <div class="container-fluid">
       <div *ngFor=" let publicacion of coleccionMascotas" class="modal fade" id="eliminarMascotas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -42,8 +43,13 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {{publiSeleccionada.nombre}}
-                <img class="img" src="{{publiSeleccionada.imagenprincipal}}">
+                <div class="col">
+                  <p>Nombre: {{publiSeleccionada.nombre}}</p>
+                  <p>Describanos </p>
+                </div>            
+                <div class="col">
+                  <img class="img" src="{{publiSeleccionada.imagenprincipal}}">
+                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Cancelar</button>
@@ -52,4 +58,5 @@
           </div>
         </div>
       </div>
+    </div> 
 </div>
