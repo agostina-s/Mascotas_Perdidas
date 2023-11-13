@@ -90,7 +90,7 @@
         <div class="ubicacion tarjetas-info">
             <!-- COMO la encontro -->
             <label for="perdida"><strong>Donde la encontro: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Denos una explicacion sobre donde encontro la mascota" formControlName="perdida"></textarea>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Donde encontro la mascota" formControlName="perdida"></textarea>
 
             <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
@@ -120,13 +120,13 @@
             <!-- INFO CONTACTO -->
             <label for="nombre"><strong>Ingrese su nombre:</strong></label>
             <input type="text" placeholder="Ingrese su nombre" name="dueño" id="nombresunombre" formControlName="nombresunombre">
-            
+            <!-- CONTACTO -->
             <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
             <input type="number" placeholder="Ingrese su numero de telefono" name="tel1" id="tel1" formControlName="tel1">
-
+             <!-- CONTACTO -->
             <label for="nombre"><strong>Telefono 2:</strong></label>
             <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
-
+             <!-- CONTACTO -->
             <label for="gmail"><strong>Correo electrónico:</strong></label>
             <input type="text" name="mail" id="mail" placeholder="Ingrese su Mail de contacto" formControlName="mail">
         </div>
@@ -138,4 +138,5 @@
         <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button>
     </div>
 </div>
+
 
