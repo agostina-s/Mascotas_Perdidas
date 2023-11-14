@@ -6,7 +6,15 @@
     width: 45%;
     
 }
-.botonA{
+
+.botonA {
     background-color: #86653C;
-    border:none;
+    border: none;
+    padding: 10px; /* Ajusta el relleno*/
+}
+
+.botonA li {
+    border-bottom: 2px solid #000000; /* ajustar el color y el grosor del borde */
+    display: inline; /* Para que el borde solo esté debajo del texto y no ocupe todo el ancho */
+    padding-bottom: 0; 
 }
