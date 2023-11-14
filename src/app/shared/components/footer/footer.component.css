@@ -6,3 +6,17 @@
     width: 45%;
     
 }
+
+.botonA, .botonB {
+    width: 100%;
+    text-align: center;
+    background-color: #86653C;
+    border:none
+}
+
+.botonA li, .botonB li {
+    display: inline-block;
+    padding: 0px 10px; /* Ajusta el relleno según tus preferencias */
+    margin: 0px 0;
+    border-bottom: 1px solid #000000;
+}
