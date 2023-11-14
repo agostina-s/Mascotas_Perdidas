@@ -7,25 +7,16 @@
     
 }
 
-.botonA {
+.botonA, .botonB {
+    width: 100%;
+    text-align: center;
     background-color: #86653C;
-    border: none;
-    padding: 10px; /* Ajusta el relleno*/
+    border:none
 }
 
-.botonA li {
-    border-bottom: 2px solid #000000; /* ajustar el color y el grosor del borde */
-    display: inline; /* Para que el borde solo esté debajo del texto y no ocupe todo el ancho */
-    padding-bottom: 0; 
-}
-.botonB {
-    background-color: #86653C;
-    border: none;
-    padding: 10px; /* Ajusta el relleno*/
-}
-
-.botonB li {
-    border-bottom: 2px solid #000000; /* ajustar el color y el grosor del borde */
-    display: inline; /* Para que el borde solo esté debajo del texto y no ocupe todo el ancho */
-    padding-bottom: 0; 
+.botonA li, .botonB li {
+    display: inline-block;
+    padding: 5px 10px; /* Ajusta el relleno según tus preferencias */
+    margin: 4px 0;
+    border-bottom: 2px solid #000000;
 }
