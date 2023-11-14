@@ -18,3 +18,14 @@
     display: inline; /* Para que el borde solo esté debajo del texto y no ocupe todo el ancho */
     padding-bottom: 0; 
 }
+.botonB {
+    background-color: #86653C;
+    border: none;
+    padding: 10px; /* Ajusta el relleno*/
+}
+
+.botonB li {
+    border-bottom: 2px solid #000000; /* ajustar el color y el grosor del borde */
+    display: inline; /* Para que el borde solo esté debajo del texto y no ocupe todo el ancho */
+    padding-bottom: 0; 
+}
