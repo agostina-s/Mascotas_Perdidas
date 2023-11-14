@@ -16,7 +16,7 @@
 
 .botonA li, .botonB li {
     display: inline-block;
-    padding: 5px 10px; /* Ajusta el relleno según tus preferencias */
-    margin: 4px 0;
-    border-bottom: 2px solid #000000;
+    padding: 0px 10px; /* Ajusta el relleno según tus preferencias */
+    margin: 0px 0;
+    border-bottom: 1px solid #000000;
 }
