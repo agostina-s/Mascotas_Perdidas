@@ -23,9 +23,6 @@ export class TablaComponent {
       this.coleccionMascotas = mascota;
     })
 
-
-
-
 }
 
 

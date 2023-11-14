@@ -8,6 +8,7 @@
 th{
     background-color: #F2c995;
     border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 td{
     background-color: #F2c995;
@@ -16,4 +17,8 @@ td{
 .img{
     height: 6rem;
     width: 6rem;
+}
+table{
+    background-color: #F2c995;
+    margin-bottom: 0;
 }
