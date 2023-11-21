@@ -54,7 +54,7 @@
 #div2{
   display: flex;
   justify-content: center;
-  align-items: center;
+
 }
 
 #boton{
@@ -86,7 +86,6 @@
   color: black;
   border-color: #db9a5c;
   border-radius: 20px;
-  align-items: center;
 }
 
 /* Estilos para pantallas grandes (computadoras de escritorio) */
@@ -143,27 +142,6 @@
 }
 
 /*////////////////////////// CARROUSEL /////////////////////////*/
-.testimonial-slider {
-  background-color: #db9a5c;
-  padding: 3em 2em;
-  border-radius: 20px;
-}
-.testimonial-title {
-  color: #fff;
-}
-.testimonial-title h2 {
-  padding-left: 0.2em;
-}
-
-/* .carousel-control-prev,
-.carousel-control-next {
-  background-color: #fff;
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  top: 60%;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-} */
 
 .card-img-top{
   height: 18rem;
@@ -190,7 +168,6 @@
   border-radius: 10px;
 }
 
-
 .slider-wrapper{
   display: flex;
   max-width: 80vw;
@@ -210,4 +187,12 @@
   display: flex;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+}
+
+
+.btn1{
+  transform: translateX(-90%) scale(2) translateY(250%); 
+}
+.btn2{
+  transform: translateX(90%) scale(2) translateY(250%); 
 }
