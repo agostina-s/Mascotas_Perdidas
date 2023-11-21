@@ -21,9 +21,22 @@
       </div>
       <div id="div2">
         <div id="mapa" class="p-4 position-relative">
+          <div>
+            <h2 class="align-items-start">Explorar publicaciones</h2>
+          </div>
+          <div class="slider-wrapper">
+            <div class="slider" *ngFor="let publicacion of coleccionMascotas let i=index">
+                <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
+                  <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ publicacion.nombre }}</h5>
+                    <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
+                  </div>
+                </div>
+            </div>
+          </div>
           <div class="position-relative">
             <div class="row">
-              <h2>Explorar publicaciones</h2>
                       <!-- voton atras -->
                       <div class="d-flex col">
                         <button class="btn btn1 position-absloute me-auto" (click)="desplazarIzquierda()">
@@ -40,17 +53,6 @@
                           </svg>
                         </button>
                       </div>
-            </div>
-          </div>
-          <div class="slider-wrapper">
-            <div class="slider" *ngFor="let publicacion of coleccionMascotas let i=index">
-                <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
-                  <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
-                  <div class="card-body">
-                    <h5 class="card-title">{{ publicacion.nombre }}</h5>
-                    <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
-                  </div>
-                </div>
             </div>
           </div>
         </div>

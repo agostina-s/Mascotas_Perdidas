@@ -43,10 +43,10 @@ export class InicioComponent {
   }
 
   desplazarDerecha(){
-    this.cardsLista.scrollLeft += 301;
+    this.cardsLista.scrollLeft += 319;
   }
   desplazarIzquierda(){
-    this.cardsLista.scrollLeft -= 301;
+    this.cardsLista.scrollLeft -= 307;
   }
 
 
