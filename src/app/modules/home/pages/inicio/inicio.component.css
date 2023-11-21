@@ -87,6 +87,7 @@
   border-color: #db9a5c;
   border-radius: 20px;
   width: 90vw;
+  margin-bottom: 2rem;
 }
 
 /* Estilos para pantallas grandes (computadoras de escritorio) */
@@ -195,12 +196,12 @@
 
 
 .btn1{
-  transform: translateX(-110%) scale(3) translateY(-300%); 
+  transform: translateX(-110%) scale(3.2) translateY(-320%); 
   border: none;
   padding: 0;
 }
 .btn2{
-  transform: translateX(110%) scale(3) translateY(-300%); 
+  transform: translateX(110%) scale(3.2) translateY(-320%); 
   border: none;
   padding: 0;
 }
