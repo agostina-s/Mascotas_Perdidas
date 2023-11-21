@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
-import { ServicesService } from '../../services/services.service';
+import { ServicesService } from 'src/app/modules/admin/services/services.service';
 
 @Component({
   selector: 'app-tabla',
@@ -9,36 +8,36 @@ import { ServicesService } from '../../services/services.service';
   styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent {
-  coleccionmascotas: Mascotas [] = [];
-  productoSeleccionado!: Mascotas; // ! -> toma valores vacios
+  coleccionMascotas: Mascotas[] = [];
+  publiSeleccionada!: Mascotas;
 
-  mascotas = new FormGroup({
-    raza: new FormControl("",Validators.required),
-    tamano: new FormControl("",Validators.required),
-    edad: new FormControl(0,Validators.required ),
-    nombre: new FormControl("",Validators.required),
-    sexo:new FormControl("",Validators.required),
-    descripcion: new FormControl("",Validators.required),
-    perdida: new FormControl("",Validators.required),
-    imagenprincipal: new FormControl("",Validators.required),
-    imagenn2: new FormControl("",Validators.required),
-    imagenn3: new FormControl("",Validators.required),
-    imagenn4: new FormControl("",Validators.required),
-  })
-  
   constructor(
-    public servicioCrud: ServicesService
+    //declaramos el SERVICIO CRUD
+    public servicioCRUD: ServicesService
   ){}
 
-  ngOnInit():void{
-    this.servicioCrud.obtenerMascota().subscribe(mascotas =>{
-      this.coleccionmascotas = mascotas
+  ngOnInit(): void{
+    /* del servicio Crud, llamamos a obtener producto y los guardamos
+    en la colección */
+    this.servicioCRUD.obtenerMascota().subscribe(mascota =>{
+      this.coleccionMascotas = mascota;
     })
-  }
-
-  async agregarmascotas(){
-    if
-  }
-
 
 }
+
+
+mostrarBorrar(publiSeleccionada: Mascotas){ // boton para el model
+  this.publiSeleccionada = publiSeleccionada;
+}
+
+eliminarMascotas(){
+  this.servicioCRUD.eliminarMascotas(this.publiSeleccionada.idmp)
+  .then(respuesta =>{
+    alert("El producto se elimino correctamente.");
+  })
+  .catch(error =>{
+    alert("No se ha podido eliminar el producto: \n"+error)
+  })
+}
+}
+

@@ -9,12 +9,14 @@ import { AdminComponent } from './pages/admin/admin.component';
 
 //Angular
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TablausuarioComponent } from './components/tablausuario/tablausuario.component';
 
 
 @NgModule({
   declarations: [
     TablaComponent,
-    AdminComponent
+    AdminComponent,
+    TablausuarioComponent
   ],
   imports: [
     CommonModule,
