@@ -196,12 +196,12 @@
 
 
 .btn1{
-  transform: translateX(-110%) scale(3.2) translateY(-320%); 
+  transform: translateX(-110%) scale(3) translateY(-320%); 
   border: none;
   padding: 0;
 }
 .btn2{
-  transform: translateX(110%) scale(3.2) translateY(-320%); 
+  transform: translateX(110%) scale(3) translateY(-320%); 
   border: none;
   padding: 0;
 }
