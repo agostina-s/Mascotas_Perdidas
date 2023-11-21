@@ -192,6 +192,7 @@
 
 .btn1{
   transform: translateX(-90%) scale(2) translateY(250%); 
+  border: none;
 }
 .btn2{
   transform: translateX(90%) scale(2) translateY(250%); 
