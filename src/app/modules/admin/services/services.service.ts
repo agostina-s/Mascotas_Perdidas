@@ -1,6 +1,7 @@
 //archivo CRUD services
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { BehaviorSubject } from 'rxjs';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -10,12 +11,17 @@ import { Observable } from 'rxjs';
 })
 export class ServicesService {
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
+  private mascotasSubject = new BehaviorSubject<Mascotas[]>([]);
+  mascotas$ = this.mascotasSubject.asObservable();
+
 
   constructor(private database: AngularFirestore) { 
     this.mascotasColeccion = database.collection("mascotas")
   }
-
-  //
+  ngOnInit():void{
+    const idMascota= '...'
+    this.obtenerMascotaById(idMascota)
+  }
   //
   //
   //funcion crear mascota CREAR
@@ -68,7 +74,6 @@ export class ServicesService {
       }
     })
   }
-
   //
   //
   //
