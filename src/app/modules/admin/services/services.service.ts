@@ -34,9 +34,8 @@ export class ServicesService {
     })
   }
 
-  //
-  //
-  //
+
+  
   //funcion obtener mascotas GET
   obtenerMascota(){
     // snapshoot -> captura los cambios

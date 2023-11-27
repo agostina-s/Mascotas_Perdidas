@@ -18,6 +18,7 @@ import { NavbarComponent } from '../shared/components/navbar/navbar.component'
     RouterModule
   ],
   exports: [
+    //Exportamos el footer y el navbar para poder usarlo en donde queramos de la pagina
     FooterComponent,
     NavbarComponent
   ]

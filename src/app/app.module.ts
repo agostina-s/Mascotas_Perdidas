@@ -12,6 +12,7 @@ import { enviroment } from 'src/enviroments/enviroment';
 import { AngularFireModule} from '@angular/fire/compat'; //importacion de firestore (BD)
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //importacion de AUTH
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { EditarmascotaComponent } from './modules/editarmascota/editarmascota.component';
  // importacion de storage (para imagenes)
 
 
@@ -19,6 +20,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 @NgModule({
   declarations: [
     AppComponent,
+    EditarmascotaComponent,
   ],
   imports: [
     BrowserModule,
