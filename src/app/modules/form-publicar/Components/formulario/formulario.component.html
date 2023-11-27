@@ -163,6 +163,10 @@
             <!-- INFO CONTACTO -->
             <label for="nombre"><strong>Nombre del dueño:</strong></label>
             <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
+                <!-- validators contacto -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.nombredueno.errors && mascotas.controls.nombredueno.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.nombredueno.errors?.['required']">Se requiere ingresar un nombre de contacto</div>
+                </div>
             
             <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
             <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
