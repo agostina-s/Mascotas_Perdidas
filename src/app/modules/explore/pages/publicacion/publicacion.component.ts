@@ -11,10 +11,11 @@ import { ServicesService } from 'src/app/modules/admin/services/services.service
   styleUrls: ['./publicacion.component.css']
 })
 export class PublicacionComponent{
+  mascotas: Mascotas[] = []
 
   publicacion?:Mascotas;
 
-  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService, router:Router){
+  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService, private router:Router){
 
     //lo siguiente se ejecutara al momento de ser cargada la pagina
     //llama a la funcion obtenerMascotasById y envia el id para que le devuelva una publicacion especifica con subscribe()
@@ -31,6 +32,15 @@ export class PublicacionComponent{
     })
   }
 
+  ngOnInit():void{
+    this.servicioCRUD.obtenerMascota().subscribe((mascotas)=>{
+      this.mascotas = mascotas
+    })
+  }
+
+  editarMascota(mascota:Mascotas): void {
+    this.router.navigate(['/editarmascota',mascota.idmp])
+  }
 
 
 }
