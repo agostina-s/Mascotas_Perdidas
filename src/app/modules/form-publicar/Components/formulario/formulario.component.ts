@@ -36,17 +36,17 @@ export class FormularioComponent {
     descripcion: new FormControl("",Validators.required),
     perdida: new FormControl("",Validators.required),
     imagenprincipal: new FormControl("",Validators.required),
-    imagen2: new FormControl("",Validators.required),
-    imagen3: new FormControl("",Validators.required),
-    imagen4: new FormControl("",Validators.required),
+    imagen2: new FormControl("",),
+    imagen3: new FormControl("",),
+    imagen4: new FormControl("",),
     // UBICACION
     ciudad: new FormControl("",Validators.required),
     barrio: new FormControl("",Validators.required),
     fechaperdida: new FormControl("",Validators.required),
     // CONTACTO
     nombredueno: new FormControl("",Validators.required),
-    tel1: new FormControl(0,Validators.required),
-    tel2: new FormControl(0,Validators.required),
+    tel1: new FormControl(null,Validators.required),
+    tel2: new FormControl(null,),
     mail: new FormControl("",[Validators.required, Validators.email]),
   })
   
