@@ -30,7 +30,7 @@ export class FormularioComponent {
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
     tamano: new FormControl("",Validators.required),
-    edad: new FormControl(0,Validators.required ),
+    edad: new FormControl(null,Validators.required ),
     nombre: new FormControl("",Validators.required),
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),

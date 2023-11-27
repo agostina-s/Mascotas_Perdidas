@@ -54,6 +54,10 @@
                         <option value="Mediano">Mediano</option>
                         <option value="Grande">Grande</option>
                     </select>
+                    <!-- validators tamaño -->
+                    <div class="validators ms-2" *ngIf="mascotas.controls.tamano.errors && mascotas.controls.tamano.touched">
+                        <div class="form-text" *ngIf="mascotas.controls.tamano.errors?.['required']">Se requiere ingresar el tamaño</div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -61,6 +65,10 @@
                     <!-- EDAD -->
                     <label for="edad"><strong>Edad: </strong></label>
                     <input type="number" placeholder="Ingrese la edad de su mascota" name="edad" id="edad" formControlName="edad">
+                    <!-- validators edad -->
+                    <div class="validators ms-2" *ngIf="mascotas.controls.edad.errors && mascotas.controls.edad.touched">
+                        <div class="form-text" *ngIf="mascotas.controls.edad.errors?.['required']">Se requiere ingresar la edad, en caso de desconocerse ingrese una aproximación</div>
+                    </div>
                 </div>
                 <div class="col">
                     <!-- SEXO -->
