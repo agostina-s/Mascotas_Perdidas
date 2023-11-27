@@ -88,7 +88,11 @@
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describá su mascota" formControlName="descripcion"></textarea>
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describa su mascota, características, por ej: pelo blanco, mancha negra en la oreja " formControlName="descripcion"></textarea>
+                <!-- validators descripcion -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.descripcion.errors && mascotas.controls.descripcion.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.descripcion.errors?.['required']">Se requiere que ingrese una descripción de su mascota</div>
+                </div>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
