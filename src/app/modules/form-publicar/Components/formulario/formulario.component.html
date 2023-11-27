@@ -124,7 +124,7 @@
                 </div>
 
             <!-- CIUDAD -->
-            <label for="nombre"><strong>Ciudad:</strong></label>
+            <label for="ciudad"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad" placeholder="En que ciudad sucedio">
                 <!-- validators ciudad -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.ciudad.errors && mascotas.controls.ciudad.touched">
@@ -132,8 +132,12 @@
                 </div>
 
             <!-- BARRIO -->
-            <label for="nombre"><strong>Barrio: </strong></label>
+            <label for="barrio"><strong>Barrio: </strong></label>
             <input type="text" name="Barrio" id="barrio" formControlName="barrio" placeholder="En que barrio sucedio">
+                <!-- validators barrio -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.barrio.errors && mascotas.controls.barrio.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.barrio.errors?.['required']">Se requiere ingresar el barrio o una zona aproximada</div>
+                </div>
 
             <!-- FECHA -->
             <label for="nombre"><strong>Fecha/Hora cuando se perdio:</strong></label>
