@@ -61,5 +61,59 @@ export class EditarmascotaComponent {
       }
     )
   }
+
+
+
+  // estilos para el formulario 
+   // MODIFICACION DE ESTILOS
+
+  //Valores predefinidos
+  mostrarDivDescripcion = true;
+  mostrarDivUbicacion = false;
+  mostrarDivContacto = false;
+
+  btnSiguienteForm(){
+      //si estoy parado en descripcion y presiono siguiente --> voy a ubicacion
+    if(this.mostrarDivDescripcion == true){
+      this.mostrarDivUbicacion = true;
+      this.mostrarDivDescripcion = false;
+    }else{
+      //si estoy parado en ubicacion y presiono siguiente --> voy a contacto
+      if(this.mostrarDivUbicacion == true){
+        this.mostrarDivContacto = true;
+        this.mostrarDivUbicacion = false;
+      }
+    }
+  }
+
+  btnAtrasForm(){
+    // si estoy parado en ubicacion y quiero volver atras --> voy hacia descripcion
+    if(this.mostrarDivUbicacion == true){
+      this.mostrarDivUbicacion = false;
+      this.mostrarDivDescripcion = true;
+    }else{
+      //si estoy parado en contacto y quiero volver atras --> voy hacia ubicacion
+      if(this.mostrarDivContacto == true){
+        this.mostrarDivContacto = false;
+        this.mostrarDivUbicacion = true;
+      }
+    }
+  }
+
+  btnDescripcion(){
+    this.mostrarDivDescripcion = true;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = false;
+  }
+  btnUbicacion(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = true;
+    this.mostrarDivContacto = false;
+  }
+  btnContacto(){
+    this.mostrarDivDescripcion = false;
+    this.mostrarDivUbicacion = false;
+    this.mostrarDivContacto = true;
+  }
 }
 
