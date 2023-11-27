@@ -24,7 +24,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //importacion shared
+    //importacion shared, aca importamos los componentes footer y el navbar para utilizarlos en toda la pagina, estos se colocan visibles en el app.html
     SharedModule,
     //modulos de firebase
     AngularFireModule.initializeApp(enviroment.firebaseConfig),
