@@ -140,7 +140,7 @@
                 </div>
 
             <!-- FECHA -->
-            <label for="nombre"><strong>Fecha cuando se perdió:</strong></label>
+            <label for="fecha"><strong>Fecha cuando se perdió:</strong></label>
             <input type="date" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de perdida">
                 <!-- validators fecha -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.fechaperdida.errors && mascotas.controls.fechaperdida.touched">
@@ -161,21 +161,33 @@
         </header>
         <div class="contacto tarjetas-info">
             <!-- INFO CONTACTO -->
-            <label for="nombre"><strong>Nombre del dueño:</strong></label>
+            <!-- NOMBRE DUEÑO -->
+            <label for="contacto"><strong>Nombre del dueño:</strong></label>
             <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
                 <!-- validators contacto -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.nombredueno.errors && mascotas.controls.nombredueno.touched">
                     <div class="form-text" *ngIf="mascotas.controls.nombredueno.errors?.['required']">Se requiere ingresar un nombre de contacto</div>
                 </div>
             
-            <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
+            <!-- TEL 1 -->
+            <label for="tel1"><strong>Teléfono 1 (Principal)</strong></label>
             <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.tel1.errors && mascotas.controls.tel1.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.tel1.errors?.['required']">Se requiere ingresar un número de teléfono</div>
+                </div>
 
-            <label for="nombre"><strong>Telefono 2:</strong></label>
+            <!-- TEL 2 -->
+            <label for="tel2"><strong>Teléfono 2:</strong></label>
             <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
-
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.tel2.errors && mascotas.controls.tel2.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.tel2.errors?.['required']">Se requiere ingresar un número de teléfono</div>
+                </div>
+                
+            <!-- EMAIL -->
             <label for="gmail"><strong>Correo electrónico:</strong></label>
-            <input type="text" name="mail" id="mail" placeholder="Ingrese un Mail de contacto" formControlName="mail">
+            <input type="mail" name="mail" id="mail" placeholder="Ingrese un Mail de contacto" formControlName="mail">
         </div>
     </div>
     <div class="mx-auto d-flex mt-3">
