@@ -41,6 +41,10 @@
                         <option value="Golden Retriever">Golden Retriever </option>
                         <option value="otro">Otro</option>
                     </select>
+                    <!-- validators raza -->
+                    <div class="validators ms-2" *ngIf="mascotas.controls.raza.errors && mascotas.controls.raza.touched">
+                        <div class="form-text" *ngIf="mascotas.controls.raza.errors?.['required']">Se requiere ingresar la raza, en caso de desconocerse ingrese "otro"</div>
+                    </div>
                 </div>
                 <div class="col">
                     <!-- TAMAÑO -->
