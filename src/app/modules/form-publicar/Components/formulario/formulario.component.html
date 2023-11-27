@@ -126,6 +126,10 @@
             <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad" placeholder="En que ciudad sucedio">
+                <!-- validators ciudad -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.ciudad.errors && mascotas.controls.ciudad.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.ciudad.errors?.['required']">Se requiere ingresar la ciudad</div>
+                </div>
 
             <!-- BARRIO -->
             <label for="nombre"><strong>Barrio: </strong></label>
