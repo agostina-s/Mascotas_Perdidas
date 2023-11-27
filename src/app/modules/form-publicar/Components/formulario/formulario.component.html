@@ -22,9 +22,10 @@
             <!-- NOMBRE -->
             <label for="nombre"><strong>Nombre: </strong> </label>
             <input type="text" name="nombre" placeholder="Ingrese el nombre de tu mascota" id="nombre" formControlName="nombre">
-            <div class="validators" *ngIf="mascotas.controls.nombre.errors && mascotas.controls.nombre.touched">
-                <div class="form-text" *ngIf="mascotas.controls.nombre.errors?.['required']">Se requiere ingresar el nombre</div>
-            </div>
+                <!-- validators nombre -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.nombre.errors && mascotas.controls.nombre.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.nombre.errors?.['required']">Se requiere ingresar el nombre</div>
+                </div>
 
             <div class="row">
                 <div class="col">

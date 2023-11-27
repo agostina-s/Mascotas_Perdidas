@@ -19,6 +19,10 @@
     transform: scale(0.8); /* Escala el título inactivo */
 }
 
+/* MENSAJES DE VALIDACION DE INPUTS */
+.form-text{
+    color: red;
+}
 
 /* Estilos para pantallas grandes (computadoras de escritorio) */
 @media screen and (min-width: 1300px) {
