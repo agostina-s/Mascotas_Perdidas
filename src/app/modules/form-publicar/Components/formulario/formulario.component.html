@@ -140,8 +140,12 @@
                 </div>
 
             <!-- FECHA -->
-            <label for="nombre"><strong>Fecha/Hora cuando se perdio:</strong></label>
-            <input type="datetime-local" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de perdida">
+            <label for="nombre"><strong>Fecha cuando se perdió:</strong></label>
+            <input type="date" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de perdida">
+                <!-- validators fecha -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.fechaperdida.errors && mascotas.controls.fechaperdida.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.fechaperdida.errors?.['required']">Se requiere ingresar la fecha o una aproximación</div>
+                </div>
 
             <!-- MAPA -->
             <label for="nombre"><strong>Mapa:</strong></label>
