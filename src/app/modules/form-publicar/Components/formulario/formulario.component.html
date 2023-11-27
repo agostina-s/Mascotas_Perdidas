@@ -117,7 +117,11 @@
         <div class="ubicacion tarjetas-info">
             <!-- COMO SE PERDIO -->
             <label for="perdida"><strong>Cómo se perdió: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Explique como se perdio" formControlName="perdida"></textarea>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Explique cómo se perdió su mascota, ej: se escapó jugando en la plaza en dirección al centro" formControlName="perdida"></textarea>
+                <!-- validators perdida -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.perdida.errors && mascotas.controls.perdida.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.perdida.errors?.['required']">Se requiere ingresar los detalles de su pérdida</div>
+                </div>
 
             <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
