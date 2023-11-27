@@ -47,7 +47,7 @@ export class FormularioComponent {
     nombredueno: new FormControl("",Validators.required),
     tel1: new FormControl(0,Validators.required),
     tel2: new FormControl(0,Validators.required),
-    mail: new FormControl("",Validators.required),
+    mail: new FormControl("",[Validators.required, Validators.email]),
   })
   
   //LLAMAR AL SERVICIO CRUD

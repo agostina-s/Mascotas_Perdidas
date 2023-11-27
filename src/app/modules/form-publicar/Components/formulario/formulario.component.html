@@ -187,7 +187,12 @@
                 
             <!-- EMAIL -->
             <label for="gmail"><strong>Correo electrónico:</strong></label>
-            <input type="mail" name="mail" id="mail" placeholder="Ingrese un Mail de contacto" formControlName="mail">
+            <input type="mail" name="mail" id="mail" placeholder="Ingrese un mail de contacto" formControlName="mail">
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.mail.errors && mascotas.controls.mail.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.mail.errors?.['required']">Se requiere ingresar un correo electrónico</div>
+                    <div class="form-text" *ngIf="mascotas.controls.mail.errors?.['email']">Se requiere ingresar un correo electrónico válido</div>
+                </div>
         </div>
     </div>
     <div class="mx-auto d-flex mt-3">
