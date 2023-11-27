@@ -1,6 +1,7 @@
 import { Component, inject} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
+import { Router } from '@angular/router';
 //CRUD Service
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 
@@ -13,7 +14,7 @@ export class PublicacionComponent{
 
   publicacion?:Mascotas;
 
-  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
+  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService, router:Router){
 
     //lo siguiente se ejecutara al momento de ser cargada la pagina
     //llama a la funcion obtenerMascotasById y envia el id para que le devuelva una publicacion especifica con subscribe()
@@ -29,5 +30,7 @@ export class PublicacionComponent{
       //this.publicacionID= params['id'];
     })
   }
+
+
 
 }
