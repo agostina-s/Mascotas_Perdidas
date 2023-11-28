@@ -48,7 +48,7 @@ export class FormularioComponent {
     nombrepublicador: new FormControl("",Validators.required),
     tel1: new FormControl(null,Validators.required),
     tel2: new FormControl(null), //opcional
-    mail: new FormControl("",Validators.required), 
+    mail: new FormControl("",[Validators.required, Validators.email]), 
   })
   
   // Constructor para inyectar el servicio CRUD
