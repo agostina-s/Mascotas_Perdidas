@@ -12,21 +12,27 @@
                             <div id="CarruselMascota" class="carousel slide carousel-container" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="1" aria-label="Slide 2" *ngIf="publicacion.imagen2 !== '' "></button>
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="2" aria-label="Slide 3" *ngIf="publicacion.imagen3 !== '' "></button>
+                                    <button type="button" data-bs-target="#CarruselMascota" data-bs-slide-to="3" aria-label="Slide 4" *ngIf="publicacion.imagen4 !== '' "></button>
+
                                 </div>
                                 <div class="carousel-inner my-auto fixed-size-img">
                                     <div class="carousel-item active fixed-size-img">
                                     <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagenprincipal }}" alt="Imagen 2" class="d-block w-100 rounded-2 fixed-size-img">
                                     </div>
-                                    <div class="carousel-item fixed-size-img">
+                                    <div class="carousel-item fixed-size-img" *ngIf="publicacion.imagen2 !== '' ">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen2 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
-                                    <div class="carousel-item fixed-size-img">
+                                    <div class="carousel-item fixed-size-img" *ngIf="publicacion.imagen3 !== '' ">
                                         <!-- IMAGEN -->
                                         <img src="{{ publicacion.imagen3 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
+                                    </div>
+                                    <div class="carousel-item fixed-size-img" *ngIf="publicacion.imagen4 !== '' ">
+                                        <!-- IMAGEN -->
+                                        <img src="{{ publicacion.imagen4 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#CarruselMascota" data-bs-slide="prev">
