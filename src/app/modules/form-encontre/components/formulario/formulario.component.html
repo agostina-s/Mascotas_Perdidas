@@ -121,7 +121,7 @@
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
             <!-- ENCUENTRO -->
-            <label for="encuentro"><strong>Donde y cómo la encontró?: </strong></label>
+            <label for="encuentro"><strong>Donde y cómo fue el encuentro?: </strong></label>
             <textarea class="textarea" type="text" name="encuentro" id="encuentro" placeholder="Aporte contexto a cómo fue el encuentro con la mascota presuntamente perdida " formControlName="encuentro"></textarea>
                 <!-- validators perdida -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.encuentro.errors && mascotas.controls.encuentro.touched">
@@ -145,7 +145,7 @@
                 </div>
 
             <!-- FECHA -->
-            <label for="fecha"><strong>Fecha cuando se encontro</strong></label>
+            <label for="fecha"><strong>Fecha cuando se avistó:</strong></label>
             <input type="date" name="fecha-encontro" id="fechaencontro" formControlName="fechaencontro" placeholder="Ingrese la fecha cuando se encontro">
                 <!-- validators fecha -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.fechaencuentro.errors && mascotas.controls.fechaencuentro.touched">
