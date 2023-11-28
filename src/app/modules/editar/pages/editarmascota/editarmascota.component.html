@@ -122,7 +122,7 @@
             <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" [(ngModel)]="mascota.nombredueno">
             
             <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
-            <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
+            <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" [ngModel]="mascota.tel1" >
 
             <label for="nombre"><strong>Telefono 2:</strong></label>
             <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
