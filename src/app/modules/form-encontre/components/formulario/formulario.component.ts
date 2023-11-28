@@ -31,7 +31,7 @@ export class FormularioComponent {
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
     tamano: new FormControl("",Validators.required),
-    collar: new FormControl(null, Validators.required), //1 para si 0 para no
+    collar: new FormControl(false, Validators.required), //true o false
     nombre: new FormControl("",), //opcional
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),
@@ -63,7 +63,7 @@ export class FormularioComponent {
   //   })
   // }
 
-  //FUNCION QUE ENVIA EL FORM
+  //FUNCION QUE ENVIA EL FORM AL SERVICE
   async agregarMascotaEncontrada(){
     if(this.mascotas.value){
       let nuevamascota: Mascotasencontrada = {
@@ -91,7 +91,7 @@ export class FormularioComponent {
       }
       await this.servicioCrud.crearMascotaEncontrada(nuevamascota)
       .then(mascotas=>{
-        alert("Se ha añadido su mascota correctamente")
+        alert("Se ha añadido la mascota posiblemente extraviada correctamente")
       })
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
@@ -99,7 +99,7 @@ export class FormularioComponent {
     }
   }
 
-  // MODIFICACION DE ESTILOS
+  /* ============= MODIFICACION DE ESTILOS ============== */
 
   //Valores predefinidos
   mostrarDivDescripcion = true;
