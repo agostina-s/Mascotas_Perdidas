@@ -56,7 +56,7 @@
                 <div class="col">
                     <!-- SEXO -->
                     <label for="sexo"><strong>Sexo: </strong></label>
-                    <select name="sexo" id="nombre" formControlName="sexo">
+                    <select name="sexo" id="nombre" [(ngModel)]="mascota.sexo">
                         <option value="Hembra">Hembra</option>
                         <option value="Macho">Macho</option>
                     </select>
