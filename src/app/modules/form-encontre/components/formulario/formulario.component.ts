@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -54,7 +55,8 @@ export class FormularioComponent {
   // Constructor para inyectar el servicio CRUD
   //LLAMAR AL SERVICIO CRUD
   constructor(
-    public servicioCrud: ServicesService
+    public servicioCrud: ServicesService, 
+    private router: Router
   ){}
 
   //Probar form
@@ -99,6 +101,7 @@ export class FormularioComponent {
       await this.servicioCrud.crearMascotaEncontrada(nuevamascota)
       .then(mascotas=>{
         alert("Se ha añadido la mascota posiblemente extraviada correctamente")
+        this.router.navigate(['../../explore/busqueda'])
       })
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
