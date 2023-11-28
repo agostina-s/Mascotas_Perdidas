@@ -40,7 +40,7 @@
                 <div class="col">
                     <!-- TAMAÑO -->
                     <label for="tamaño"><strong>Tamaño: </strong></label>
-                    <select name="tamaño" id="tamaño" formControlName="tamano">
+                    <select name="tamaño" id="tamaño" [(ngModel)]="mascota.tamano">
                         <option value="Pequeño">Pequeño</option>
                         <option value="Mediano">Mediano</option>
                         <option value="Grande">Grande</option>
