@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 //importaciones
-import { AuthService } from '../../services/auth.service';
-import { Usuario } from 'src/app/models/usuario';
-import { FirestoreService } from 'src/app/shared/services/firestore.service';
-import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'; // Servicio de autenticación
+import { Usuario } from 'src/app/models/usuario'; // Interfaz para usuarios
+import { FirestoreService } from 'src/app/shared/services/firestore.service'; // Servicio para interactuar con Firestore
+import { Router } from '@angular/router'; // Servicio de enrutamiento para navegar
+
 
 
 @Component({
@@ -12,8 +13,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  hide = true; //del input
+  hide = true; // Para ocultar la contraseña en el input
 
+  // Modelo de usuario para el formulario
   usuarios: Usuario = {
     uid: '',
     name: '',
@@ -25,11 +27,11 @@ export class RegisterComponent {
 
   // crear una nueva colección para usuarios
   coleccionUsuarios: Usuario[] = [];
-
+ // Constructor que inyecta los servicios necesarios
   constructor(
     public servicioAuth: AuthService, // servicioAuth referencia a nuestro servicio Auth
-    public servicioFirestore: FirestoreService,
-    public router: Router
+    public servicioFirestore: FirestoreService,  // Servicio para interactuar con Firestore
+    public router: Router // Servicio de enrutamiento para navegar
   ) { }
 
   // tomamos nuevos registros y mostramos los resultados
@@ -57,18 +59,20 @@ export class RegisterComponent {
     this.guardarUser();
 }
 
-  // función que agrega NUEVO USUARIO
+  // función que agrega NUEVO USUARIO en Firestore
   async guardarUser(){
     this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res => {
+      // visualización de datos 
       console.log(this.usuarios)
       console.log(this.usuarios.email)  
     })
     .catch(error =>{
+      //errores en caso de que falle la operación
       console.log('Error =>', error)
     })
   }
-
+// Método que se ejecuta al inicializar el componente
   async ngOnInit(){
     const uid = await this.servicioAuth.getUID();
     console.log(uid);

@@ -21,6 +21,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
   ],
 })
 export class FormularioComponent {
+  // Arreglo para almacenar las mascotas existentes
   coleccionmascotas: Mascotas [] = [];
   productoSeleccionado!: Mascotas; // ! -> toma valores vacios
 
@@ -50,6 +51,7 @@ export class FormularioComponent {
     mail: new FormControl("",Validators.required),
   })
   
+  // Constructor para inyectar el servicio CRUD
   //LLAMAR AL SERVICIO CRUD
   constructor(
     public servicioCrud: ServicesService
@@ -134,6 +136,7 @@ export class FormularioComponent {
     }
   }
 
+  // Funciones para cambiar entre secciones del formulario
   btnDescripcion(){
     this.mostrarDivDescripcion = true;
     this.mostrarDivUbicacion = false;

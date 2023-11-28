@@ -1,5 +1,5 @@
 export const enviroment = {
-    production: false,
+    production: false, //desarollo
     //copy paste firebase cambiando = por : y sin ;
     firebaseConfig: {
         apiKey: "AIzaSyAlwGai8cCR0lbQvjxti_THIpX5Xq-HvTE",
