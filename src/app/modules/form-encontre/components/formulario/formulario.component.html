@@ -145,8 +145,8 @@
                 </div>
 
             <!-- FECHA -->
-            <label for="fecha"><strong>Fecha cuando se avistó:</strong></label>
-            <input type="date" name="fecha-encontro" id="fechaencontro" formControlName="fechaencontro" placeholder="Ingrese la fecha cuando se encontro">
+            <label for="fechaencuentro"><strong>Fecha cuando se avistó:</strong></label>
+            <input type="date" name="fechaencuentro" id="fechaencuentro" formControlName="fechaencuentro" placeholder="Ingrese la fecha cuando se encontro">
                 <!-- validators fecha -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.fechaencuentro.errors && mascotas.controls.fechaencuentro.touched">
                     <div class="form-text" *ngIf="mascotas.controls.fechaencuentro.errors?.['required']">Se requiere ingresar la fecha o una aproximación</div>

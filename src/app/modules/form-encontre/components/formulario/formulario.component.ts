@@ -36,9 +36,9 @@ export class FormularioComponent {
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),
     imagenprincipal: new FormControl("",Validators.required),
-    img2: new FormControl("",Validators.required),
-    img3: new FormControl("",Validators.required),
-    img4: new FormControl("",Validators.required),
+    img2: new FormControl(""),//opcional
+    img3: new FormControl(""),//opcional
+    img4: new FormControl(""),//opcional
     // UBICACION
     encuentro: new FormControl("", Validators.required),
     ciudad: new FormControl("",Validators.required),
@@ -57,6 +57,11 @@ export class FormularioComponent {
     public servicioCrud: ServicesService
   ){}
 
+  //Probar form
+  // impimirForm(){
+  //   console.log(this.mascotas)
+  // }
+
   // //NO NECESITAMOS PEDIR LAS PUBLICACIONES
   // ngOnInit():void{
   //   this.servicioCrud.obtenerMascota().subscribe(mascotas =>{
@@ -66,7 +71,7 @@ export class FormularioComponent {
 
   //FUNCION QUE ENVIA EL FORM AL SERVICE
   async agregarMascotaEncontrada(){
-    if(this.mascotas.value){
+    if(this.mascotas.valid){
       let nuevamascota: Mascotasencontrada = {
         // INFORMACION DE LA MASCOTA
         idme : '', //se guarda vacio para agregarlo en el crud
