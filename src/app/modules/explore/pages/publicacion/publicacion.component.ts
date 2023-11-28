@@ -39,7 +39,7 @@ export class PublicacionComponent{
   }
 
   editarMascota(mascota:Mascotas): void {
-    this.router.navigate(['/editarmascota',mascota.idmp])
+    this.router.navigate(['./editar/pages/editarmascota',mascota.idmp])
   }
 
 
