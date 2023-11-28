@@ -4,21 +4,25 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
-// Constructor del servicio, establece la conexión con Firestore
+  private mascotasEncontradasColeccion: AngularFirestoreCollection<Mascotasencontrada>
+  // Constructor del servicio, establece la conexión con Firestore
   constructor(private database: AngularFirestore) { 
     // Inicializa la colección de mascotas, apuntando a la colección "mascotas" en Firestore
     this.mascotasColeccion = database.collection("mascotas")
+    // Inicializa la colección de mascotas, apuntando a la colección "mascotas-encontradas" en Firestore
+    this.mascotasEncontradasColeccion = database.collection("mascotas-encontradas")
   }
 
-  //
-  //
-  //
+
+    /* ============== CRUD DE MASCOTAS PERDIDAS utiliza coleccion mascotas ============== */
+
   //funcion crear mascota CREAR
   crearMascota(mascota:Mascotas){
     // Devolver una nueva promesa que se resolverá o rechazará más adelante
@@ -39,9 +43,6 @@ export class ServicesService {
     })
   }
 
-  //
-  //
-  //
   //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
   obtenerMascota(){
     // snapshoot -> captura los cambios
@@ -50,18 +51,12 @@ export class ServicesService {
     return this.mascotasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
-  //
-  //
-  //
   //funcion modificar mascotas
   modificarMascota(idmp: string, nuevoData:Mascotas){
     //Envíamos el id del producto seleccionado y su nueva información
     return this.database.collection("mascotas").doc(idmp).update(nuevoData)
   }
 
-  //
-  //
-  //
   // Eliminar una mascota de la colección "mascotas" en Firestore
   eliminarMascotas(idmp:string){
     // Devolver una nueva promesa que se resolverá o rechazará más adelante
@@ -79,9 +74,6 @@ export class ServicesService {
     })
   }
 
-  //
-  //
-  //
   //funcion para obetener mascota por ID
   publicacion!: Observable<Mascotas>
   obtenerMascotaById(idmp: string){
@@ -90,28 +82,27 @@ export class ServicesService {
     return this.publicacion
   }
 
+  /* ============== CRUD DE POSIBLES EXTRAVIOS utiliza coleccion mascotas-encontradas ============== */
+  //funcion crear encontre mascota CREAR 
+  crearMascotaEncontrada(mascota:Mascotasencontrada){
+    // Devolver una nueva promesa que se resolverá o rechazará más adelante
+    return new Promise(async(resolve,reject)=>{
+      try{
+        // Generar un ID único para la nueva mascota utilizando createId
+        const id = this.database.createId();
+         // Asignar el ID único a la mascota
+        mascota.idme = id;
+         // Intentar realizar la operación de escritura en la colección de mascotas
+        const resultado = await this.mascotasEncontradasColeccion.doc(id).set(mascota)
+         // Si el resultado se completa con éxito, resuelve la promesa
+        resolve(resultado);
+      } catch(error){
+        // Si hay un error, rechaza la promesa y pasa el error
+        reject(error);
+      }
+    })
+  }
 
-
-
-
-  /*
-  async obtenerMascotaById(id:string):Promise<Publicacion | undefined{
-    const publicaciones = await this.obtenerMascota();
-    const publiElegida = publicaciones.find( mascota => publicacion.id === id )
-
-  }*/
-
-
-
-  // obtenerMascotaById(idmp:string){
-  //   return new Promise ((resolve, reject) => {
-  //     try{
-  //       const res= this.mascotasColeccion.doc(idmp).get()
-  //       resolve(res)
-  //     } catch(error){
-  //       reject (error)}
-  //   }) 
-
-  // }
+  
 
 }
