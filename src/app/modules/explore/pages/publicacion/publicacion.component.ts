@@ -1,5 +1,5 @@
 import { Component, inject} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router'; //importo ac routes
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 //CRUD Service
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
@@ -13,13 +13,13 @@ export class PublicacionComponent{
 
   publicacion?:Mascotas;
 
-  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){
+  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){ //acroutes detecta id que esta en el url
 
     //lo siguiente se ejecutara al momento de ser cargada la pagina
     //llama a la funcion obtenerMascotasById y envia el id para que le devuelva una publicacion especifica con subscribe()
-    this.acroutes.params.subscribe(param => {
+    this.acroutes.params.subscribe(param => { 
       console.log(param)
-      const idPublicacion = param['id']
+      const idPublicacion = param['id'] //id url
       if(param['id']){
         this.servicioCRUD.obtenerMascotaById(idPublicacion).subscribe(data => {
           this.publicacion = data;
