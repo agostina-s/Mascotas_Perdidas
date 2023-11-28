@@ -125,7 +125,7 @@
             <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" [ngModel]="mascota.tel1" >
 
             <label for="nombre"><strong>Telefono 2:</strong></label>
-            <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
+            <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" [(ngModel)]="mascota.tel2">
 
             <label for="gmail"><strong>Correo electrónico:</strong></label>
             <input type="text" name="mail" id="mail" placeholder="Ingrese un Mail de contacto" formControlName="mail">
