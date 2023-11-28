@@ -119,7 +119,7 @@
         <div class="contacto tarjetas-info">
             <!-- INFO CONTACTO -->
             <label for="nombre"><strong>Nombre del dueño:</strong></label>
-            <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" formControlName="nombredueno">
+            <input type="text" placeholder="Ingrese el nombre del dueño" name="dueño" id="nombredueno" [(ngModel)]="mascota.nombredueno">
             
             <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
             <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
