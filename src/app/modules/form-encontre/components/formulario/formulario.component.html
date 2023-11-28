@@ -53,6 +53,10 @@
                         <option value="Golden Retriever">Golden Retriever </option>
                         <option value="otro">Otro</option>
                     </select>
+                        <!-- validators raza -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.raza.errors && mascotas.controls.raza.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.raza.errors?.['required']">Se requiere especificar la raza</div>
+                        </div>
                 </div>
                 <div class="col">
                     <!-- TAMAÑO -->
@@ -62,23 +66,31 @@
                         <option value="Mediano">Mediano</option>
                         <option value="Grande">Grande</option>
                     </select>
+                        <!-- validators tamaño -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.tamano.errors && mascotas.controls.tamano.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.tamano.errors?.['required']">Se requiere especificar el tamaño</div>
+                        </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <!-- EDAD -->
-                    <label for="edad"><strong>Edad: </strong></label>
-                    <input type="number" placeholder="Ingrese la edad de la mascota" name="edad" id="edad" formControlName="edad">
-                </div>
-                <div class="col">
+                <div class="col-3">
                     <!-- SEXO -->
                     <label for="sexo"><strong>Sexo: </strong></label>
                     <select name="sexo" id="nombre" formControlName="sexo">
                         <option value="Hembra">Hembra</option>
                         <option value="Macho">Macho</option>
+                        <option value="Desconocido">Desconocido</option>
                     </select>
                 </div>
+                <div class="col p-4">
+                    <!-- validators sexo -->
+                    <div class="validators ms-2" *ngIf="mascotas.controls.sexo.errors && mascotas.controls.sexo.touched">
+                        <div class="form-text" *ngIf="mascotas.controls.sexo.errors?.['required']">Se requiere el sexo de la mascota, en caso de desconocerse ingrese "Desconocido"</div>
+                    </div>
+                    <div class="form-text" *ngIf="mascotas.controls.sexo.value === 'Desconocido'">Seleccionar la opción 'Desconocido' podría dificultar la búsqueda de la mascota.</div>
+                </div>
             </div>
+            
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de la mascota: </strong></label>
