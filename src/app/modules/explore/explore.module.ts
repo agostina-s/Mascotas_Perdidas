@@ -14,13 +14,15 @@ import { PublicacionComponent } from './pages/publicacion/publicacion.component'
 import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 //componente card de cada publicacion
 import { CardComponent } from './componentes/card/card.component';
+import { CardPosibleExtravioComponent } from './componentes/card-posible-extravio/card-posible-extravio.component';
 
 
 @NgModule({
   declarations: [
     PublicacionComponent,
     BusquedaComponent,
-    CardComponent
+    CardComponent,
+    CardPosibleExtravioComponent
   ],
   imports: [
     CommonModule,
