@@ -90,11 +90,14 @@
                     <div class="form-text" *ngIf="mascotas.controls.sexo.value === 'Desconocido'">Seleccionar la opción 'Desconocido' podría dificultar la búsqueda de la mascota.</div>
                 </div>
             </div>
-            
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de la mascota: </strong></label>
-            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describanos a la mascota" formControlName="descripcion"></textarea>
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Ingrese una descripción de la mascota presuntamente perdida" formControlName="descripcion"></textarea>
+                <!-- validators descripcion -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.descripcion.errors && mascotas.controls.descripcion.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.descripcion.errors?.['required']">Se requiere que ingrese una descripción de la mascota y una descripcion del encuentro con la mascota presuntamente perdida</div>
+                </div>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
@@ -118,8 +121,12 @@
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
             <!-- COMO la encontro -->
-            <label for="perdida"><strong>Donde la encontro: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Donde encontro la mascota" formControlName="perdida"></textarea>
+            <label for="perdida"><strong>Donde y cómo la encontró?: </strong></label>
+            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Aporte contexto a cómo fue el encuentro con la mascota presuntamente perdida " formControlName="perdida"></textarea>
+                <!-- validators perdida -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.perdida.errors && mascotas.controls.perdida.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.perdida.errors?.['required']">Se requiere ingresar los detalles de su pérdida</div>
+                </div>
 
             <!-- CIUDAD -->
             <label for="nombre"><strong>Ciudad:</strong></label>
