@@ -102,7 +102,7 @@
 
             <!-- FECHA -->
             <label for="nombre"><strong>Fecha/Hora cuando se perdio:</strong></label>
-            <input type="datetime-local" name="fecha-perdida" id="fechaperdida" formControlName="fechaperdida" placeholder="Ingrese la fecha de perdida">
+            <input type="datetime-local" name="fecha-perdida" id="fechaperdida" [(ngModel)]="mascota.fechaperdida" placeholder="Ingrese la fecha de perdida">
 
             <!-- MAPA -->
             <label for="nombre"><strong>Mapa:</strong></label>
