@@ -47,9 +47,23 @@
                             <div class="row">
                                 <!-- NOMBRE -->
                                 <div *ngIf="publicacion.nombre !== '' " class="rounded-2 casilla"><h2 class="card-text">{{ publicacion.nombre }}</h2></div>
-                                <!-- RAZA -->
-                                <div class="label text-start colinfo"><h5 class="">Raza:</h5></div>
-                                <div class="rounded-2 casilla p1"><p class="card-text">{{ publicacion.raza }}</p></div>
+
+                                <div>
+                                    <div class="row">
+                                        <!-- RAZA -->
+                                        <div class="col colinfo col1">
+                                            <!-- RAZA -->
+                                            <div class="label text-start colinfo"><h5 class="">Raza:</h5></div>
+                                            <div class="rounded-2 casilla p1"><p class="card-text">{{ publicacion.raza }}</p></div>
+
+                                        </div>
+                                        <!-- SEXO -->
+                                        <div class="col colinfo col2">
+                                            <div class="label text-start"><h5 class="">Sexo:</h5></div>
+                                            <div class="rounded-2 casilla p1"> <p class="card-text">{{ publicacion.sexo }}</p> </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div>
                                     <div class="row">
                                         <!-- COLLAR -->
