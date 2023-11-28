@@ -54,7 +54,11 @@
 #div2{
   display: flex;
   justify-content: center;
+}
 
+/* POINTER */
+.pointer{
+  cursor: pointer;
 }
 
 #boton{
