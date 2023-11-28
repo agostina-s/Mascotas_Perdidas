@@ -13,8 +13,10 @@
 .bg-color{
     background: rgb(226,178,120);
     background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
+    min-height: 85vh;
 }
 .appform{
     margin-left: 20%;
     margin-right: 20%;
 }
+

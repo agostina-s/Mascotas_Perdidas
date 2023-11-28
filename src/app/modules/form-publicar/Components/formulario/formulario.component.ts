@@ -30,24 +30,24 @@ export class FormularioComponent {
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
     tamano: new FormControl("",Validators.required),
-    edad: new FormControl(0,Validators.required ),
+    edad: new FormControl(null,Validators.required ),
     nombre: new FormControl("",Validators.required),
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),
     perdida: new FormControl("",Validators.required),
     imagenprincipal: new FormControl("",Validators.required),
-    imagen2: new FormControl("",Validators.required),
-    imagen3: new FormControl("",Validators.required),
-    imagen4: new FormControl("",Validators.required),
+    imagen2: new FormControl("",),
+    imagen3: new FormControl("",),
+    imagen4: new FormControl("",),
     // UBICACION
     ciudad: new FormControl("",Validators.required),
     barrio: new FormControl("",Validators.required),
     fechaperdida: new FormControl("",Validators.required),
     // CONTACTO
     nombredueno: new FormControl("",Validators.required),
-    tel1: new FormControl(0,Validators.required),
-    tel2: new FormControl(0,Validators.required),
-    mail: new FormControl("",Validators.required),
+    tel1: new FormControl(null,Validators.required),
+    tel2: new FormControl(null,),
+    mail: new FormControl("",[Validators.required, Validators.email]),
   })
   
   //LLAMAR AL SERVICIO CRUD
