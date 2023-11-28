@@ -31,7 +31,7 @@ export class FormularioComponent {
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
     tamano: new FormControl("",Validators.required),
-    collar: new FormControl(false, Validators.required), //true o false
+    collar: new FormControl(null, Validators.required), //true o false
     nombre: new FormControl("",), //opcional
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),

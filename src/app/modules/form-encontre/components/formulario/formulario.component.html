@@ -19,10 +19,26 @@
         <div class="mascota tarjetas-info">
             <!-- COMIENZO FORM -->
 
-            <!-- NOMBRE -->
-            <!-- opcional si tiene collar -->
-            <label for="nombre"><strong>Nombre: </strong> </label>
-            <input type="text" name="nombre" placeholder="Ingrese el nombre de la mascota" id="nombre" formControlName="nombre">
+            <div class="row">
+                <div class="col-3">
+                    <!-- COLLAR -->
+                    <label for="collar"><strong>Tiene collar?: </strong></label>
+                    <select name="collar" id="collar" formControlName="collar">
+                        <option [ngValue]="true">Sí tiene</option>
+                        <option [ngValue]="false">No tiene</option>
+                    </select>
+                        <!-- validators collar -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.collar.errors && mascotas.controls.collar.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.collar.errors?.['required']">Se requiere especificar si posee collar</div>
+                        </div>
+                </div>
+                <div class="col" *ngIf="mascotas.controls.collar.value === true">
+                    <!-- NOMBRE -->
+                    <!-- opcional si tiene collar -->
+                    <label for="nombre"><strong>Nombre: </strong> </label>
+                    <input type="text" name="nombre" placeholder="Ingrese el nombre de la mascota en caso de tenerlo" id="nombre" formControlName="nombre">
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <!-- RAZA -->
