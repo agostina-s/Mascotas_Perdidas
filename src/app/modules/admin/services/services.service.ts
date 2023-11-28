@@ -4,16 +4,20 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
-// Constructor del servicio, establece la conexión con Firestore
+  private mascotasEncontradasColeccion: AngularFirestoreCollection<Mascotasencontrada>
+  // Constructor del servicio, establece la conexión con Firestore
   constructor(private database: AngularFirestore) { 
     // Inicializa la colección de mascotas, apuntando a la colección "mascotas" en Firestore
     this.mascotasColeccion = database.collection("mascotas")
+    // Inicializa la colección de mascotas, apuntando a la colección "mascotas-encontradas" en Firestore
+    this.mascotasEncontradasColeccion = database.collection("mascotas-encontradas")
   }
 
   //
@@ -91,7 +95,25 @@ export class ServicesService {
   }
 
 
-
+  //funcion crear mascota CREAR
+  crearMascotaEncontrada(mascota:Mascotasencontrada){
+    // Devolver una nueva promesa que se resolverá o rechazará más adelante
+    return new Promise(async(resolve,reject)=>{
+      try{
+        // Generar un ID único para la nueva mascota utilizando createId
+        const id = this.database.createId();
+         // Asignar el ID único a la mascota
+        mascota.idme = id;
+         // Intentar realizar la operación de escritura en la colección de mascotas
+        const resultado = await this.mascotasEncontradasColeccion.doc(id).set(mascota)
+         // Si el resultado se completa con éxito, resuelve la promesa
+        resolve(resultado);
+      } catch(error){
+        // Si hay un error, rechaza la promesa y pasa el error
+        reject(error);
+      }
+    })
+  }
 
 
   /*

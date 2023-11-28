@@ -20,6 +20,7 @@
             <!-- COMIENZO FORM -->
 
             <!-- NOMBRE -->
+            <!-- opcional si tiene collar -->
             <label for="nombre"><strong>Nombre: </strong> </label>
             <input type="text" name="nombre" placeholder="Ingrese el nombre de la mascota" id="nombre" formControlName="nombre">
             <div class="row">
@@ -135,7 +136,7 @@
     <div class="mx-auto d-flex mt-3">
         <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button>
         <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
-        <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button>
+        <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascotaEncontrada()">Finalizar</button>
     </div>
 </div>
 
