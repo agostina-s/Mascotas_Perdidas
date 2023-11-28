@@ -12,6 +12,7 @@ export interface Mascotasencontrada {
     img3:string;  // Ruta o enlace a la tercera imagen de la mascota 
     img4:string; // Ruta o enlace a la cuarta imagen de la mascota
     // UBICACION
+    encuentro: string;
     ciudad: string;
     barrio: string;
     fechaencuentro: string;

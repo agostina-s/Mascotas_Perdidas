@@ -120,12 +120,12 @@
         </header>
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
-            <!-- COMO la encontro -->
-            <label for="perdida"><strong>Donde y cómo la encontró?: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Aporte contexto a cómo fue el encuentro con la mascota presuntamente perdida " formControlName="perdida"></textarea>
+            <!-- ENCUENTRO -->
+            <label for="encuentro"><strong>Donde y cómo la encontró?: </strong></label>
+            <textarea class="textarea" type="text" name="encuentro" id="encuentro" placeholder="Aporte contexto a cómo fue el encuentro con la mascota presuntamente perdida " formControlName="encuentro"></textarea>
                 <!-- validators perdida -->
-                <div class="validators ms-2" *ngIf="mascotas.controls.perdida.errors && mascotas.controls.perdida.touched">
-                    <div class="form-text" *ngIf="mascotas.controls.perdida.errors?.['required']">Se requiere ingresar los detalles de su pérdida</div>
+                <div class="validators ms-2" *ngIf="mascotas.controls.encuentro.errors && mascotas.controls.encuentro.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.encuentro.errors?.['required']">Se requiere ingresar los detalles de cómo fue su encuentro con la mascota</div>
                 </div>
 
             <!-- CIUDAD -->

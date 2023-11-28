@@ -40,6 +40,7 @@ export class FormularioComponent {
     img3: new FormControl("",Validators.required),
     img4: new FormControl("",Validators.required),
     // UBICACION
+    encuentro: new FormControl("", Validators.required),
     ciudad: new FormControl("",Validators.required),
     barrio: new FormControl("",Validators.required),
     fechaencuentro: new FormControl("",Validators.required),
@@ -80,6 +81,7 @@ export class FormularioComponent {
         img3:this.mascotas.value.img3!,
         img4:this.mascotas.value.img4!,
         // UBICACION
+        encuentro: this.mascotas.value.encuentro!,
         ciudad: this.mascotas.value.ciudad!,
         barrio: this.mascotas.value.barrio!,
         fechaencuentro: this.mascotas.value.fechaencuentro!,
