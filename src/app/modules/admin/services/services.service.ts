@@ -102,7 +102,22 @@ export class ServicesService {
       }
     })
   }
-
   
+    //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
+    obtenerMascotaEncontrada(){
+      // snapshoot -> captura los cambios
+      // pipe -> tubería por dónde viajan esos nuevos datos
+      // map -> recorre esos datos, los lee
+      return this.mascotasEncontradasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
+    }
+
+    
+    //funcion para obetener mascota por ID
+    publicacionEncontrada!: Observable<Mascotasencontrada>
+    obtenerMascotaEncontradaById(idme: string){
+      // Utiliza AngularFirestore para obtener una publicación por su ID
+      this.publicacionEncontrada = this.database.collection('mascotas-encontradas').doc(idme).valueChanges().pipe(map((data:any) => data as Mascotasencontrada));
+      return this.publicacionEncontrada
+    }
 
 }

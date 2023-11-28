@@ -1,0 +1,76 @@
+.card{
+    background-color: #F0D8B8;
+}
+ul{
+    background-color: #F0D8B8;
+    border: 1px solid black
+}
+#dropdownMenuButton{
+    background-color: #F0D8B8;
+    border:none;
+    color:black; 
+    padding:0px;
+
+}
+.dropdown-toggle::after{
+    content: none;
+}
+img{
+    height: 15rem;
+    object-fit: cover;
+}
+.card{
+    border: 1px solid black; 
+    margin-bottom: 20px;
+}
+#botonvermas{
+    border:1px solid black;  
+}
+.padding{
+    padding:0px;
+}
+
+/*Modal*/
+.modal-header{
+    background: #B88B54;
+}
+.modal-footer{
+    background: #B88B54;
+}
+.modal-body{
+    background: #B88B54;
+}
+#botonreportar{
+    color:rgb(175, 16, 16)
+}
+.form-check{
+    background:#E8BE89;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#textarea{
+    background:#E8BE89;
+    border-radius: 10px;
+    border: 1px solid black
+    
+}
+#exampleFormControlTextarea1{
+    background-color:#E8BE89;
+    border:none;
+    border-top:1px solid black;
+    border-top-left-radius:0px;
+    border-top-right-radius: 0px;
+    
+}
+#enviardenuncia{
+    background: rgb(154, 18, 18);
+    border: 1px solid black
+}
+strong{
+    padding-left: 0.5rem;
+    padding-top:0.5rem;
+}
