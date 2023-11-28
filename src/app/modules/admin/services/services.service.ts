@@ -102,6 +102,14 @@ export class ServicesService {
       }
     })
   }
+  
+    //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
+    obtenerMascotaEncontrada(){
+      // snapshoot -> captura los cambios
+      // pipe -> tubería por dónde viajan esos nuevos datos
+      // map -> recorre esos datos, los lee
+      return this.mascotasEncontradasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
+    }
 
   
 

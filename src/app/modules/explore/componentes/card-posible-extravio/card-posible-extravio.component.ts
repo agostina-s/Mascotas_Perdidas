@@ -10,5 +10,20 @@ import 'bootstrap'
   styleUrls: ['./card-posible-extravio.component.css']
 })
 export class CardPosibleExtravioComponent {
+  coleccionMascotas: Mascotasencontrada[] = [];
 
+  publiSeleccionada!: Mascotasencontrada;
+
+  constructor(
+    //declaramos el SERVICIO CRUD
+    public servicioCRUD: ServicesService
+  ){}
+
+  ngOnInit(): void{
+    /* del servicio Crud, llamamos a obtener producto y los guardamos
+    en la colección */
+    this.servicioCRUD.obtenerMascotaEncontrada().subscribe(mascota =>{
+      this.coleccionMascotas = mascota;
+    })
+  }
 }
