@@ -22,11 +22,11 @@
                                     </div>
                                     <div class="carousel-item fixed-size-img">
                                         <!-- IMAGEN -->
-                                        <img src="{{ publicacion.imagen2 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
+                                        <img src="{{ publicacion.img2 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
                                     <div class="carousel-item fixed-size-img">
                                         <!-- IMAGEN -->
-                                        <img src="{{ publicacion.imagen3 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
+                                        <img src="{{ publicacion.img3 }}" class="d-block w-100 rounded-2 fixed-size-img" alt="">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#CarruselMascota" data-bs-slide="prev">
@@ -69,7 +69,7 @@
                                 <div class="rounded-2 casilla p2">  <p class="card-text"> {{ publicacion.descripcion }}</p></div>
                                 <!-- COMO SE PERDIO -->
                                 <div class="label text-start colinfo"><h5 class="">¿Cómo se perdió?:</h5></div>
-                                <div class="rounded-2 casilla p2"><p class="card-text">{{ publicacion.perdida }}</p></div>
+                                <div class="rounded-2 casilla p2"><p class="card-text">{{ publicacion.encuentro }}</p></div>
                                 <!-- INFO CONTACTO -->
                                 <div class="label text-start colinfo"><h5 class="">Información de contacto:</h5></div>
                                 <div class="rounded-2 casilla-contacto p2">
@@ -88,7 +88,7 @@
                                         </div>
                                     </div>
                                     <div class="label text-start colinfo"><h5 class="">Nombre del dueño:</h5></div>
-                                    <div class="rounded-2 casilla p1 text-start"><p class="card-text ms-3">{{ publicacion.nombredueno }}</p></div>
+                                    <div class="rounded-2 casilla p1 text-start"><p class="card-text ms-3">{{ publicacion.nombrepublicador }}</p></div>
                                     <button type="button" class="btn btn-success btn-contacto btn-block">Llamar</button>
                                     <!-- agregar funcionalidad al boton -->
                                 </div>
