@@ -20,9 +20,9 @@ export class ServicesService {
     this.mascotasEncontradasColeccion = database.collection("mascotas-encontradas")
   }
 
-  //
-  //
-  //
+
+    /* ============== CRUD DE MASCOTAS PERDIDAS utiliza coleccion mascotas ============== */
+
   //funcion crear mascota CREAR
   crearMascota(mascota:Mascotas){
     // Devolver una nueva promesa que se resolverá o rechazará más adelante
@@ -43,9 +43,6 @@ export class ServicesService {
     })
   }
 
-  //
-  //
-  //
   //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
   obtenerMascota(){
     // snapshoot -> captura los cambios
@@ -54,18 +51,12 @@ export class ServicesService {
     return this.mascotasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
-  //
-  //
-  //
   //funcion modificar mascotas
   modificarMascota(idmp: string, nuevoData:Mascotas){
     //Envíamos el id del producto seleccionado y su nueva información
     return this.database.collection("mascotas").doc(idmp).update(nuevoData)
   }
 
-  //
-  //
-  //
   // Eliminar una mascota de la colección "mascotas" en Firestore
   eliminarMascotas(idmp:string){
     // Devolver una nueva promesa que se resolverá o rechazará más adelante
@@ -83,9 +74,6 @@ export class ServicesService {
     })
   }
 
-  //
-  //
-  //
   //funcion para obetener mascota por ID
   publicacion!: Observable<Mascotas>
   obtenerMascotaById(idmp: string){
@@ -94,8 +82,8 @@ export class ServicesService {
     return this.publicacion
   }
 
-
-  //funcion crear mascota CREAR
+  /* ============== CRUD DE POSIBLES EXTRAVIOS utiliza coleccion mascotas-encontradas ============== */
+  //funcion crear encontre mascota CREAR 
   crearMascotaEncontrada(mascota:Mascotasencontrada){
     // Devolver una nueva promesa que se resolverá o rechazará más adelante
     return new Promise(async(resolve,reject)=>{
@@ -115,25 +103,6 @@ export class ServicesService {
     })
   }
 
-
-  /*
-  async obtenerMascotaById(id:string):Promise<Publicacion | undefined{
-    const publicaciones = await this.obtenerMascota();
-    const publiElegida = publicaciones.find( mascota => publicacion.id === id )
-
-  }*/
-
-
-
-  // obtenerMascotaById(idmp:string){
-  //   return new Promise ((resolve, reject) => {
-  //     try{
-  //       const res= this.mascotasColeccion.doc(idmp).get()
-  //       resolve(res)
-  //     } catch(error){
-  //       reject (error)}
-  //   }) 
-
-  // }
+  
 
 }
