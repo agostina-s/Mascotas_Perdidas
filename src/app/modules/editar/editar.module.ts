@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { EditarRoutingModule } from './editar-routing.module';
 import { EditarmascotaComponent } from './pages/editarmascota/editarmascota.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { EditarmascotaComponent } from './pages/editarmascota/editarmascota.comp
   ],
   imports: [
     CommonModule,
-    EditarRoutingModule
+    EditarRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class EditarModule { }

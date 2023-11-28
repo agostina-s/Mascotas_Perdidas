@@ -5,7 +5,6 @@ import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 
-
 @Component({
   selector: 'app-editarmascota',
   templateUrl: './editarmascota.component.html',
@@ -83,9 +82,9 @@ export class EditarmascotaComponent {
    // MODIFICACION DE ESTILOS
 
   //Valores predefinidos
-  mostrarDivDescripcion = true;
-  mostrarDivUbicacion = false;
-  mostrarDivContacto = false;
+  mostrarDivDescripcion:boolean = true;
+  mostrarDivUbicacion:boolean = false;
+  mostrarDivContacto:boolean = false;
 
   btnSiguienteForm(){
       //si estoy parado en descripcion y presiono siguiente --> voy a ubicacion
