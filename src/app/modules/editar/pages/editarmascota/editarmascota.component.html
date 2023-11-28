@@ -65,7 +65,7 @@
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de tu mascota: </strong></label>
-            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describá su mascota" formControlName="descripcion"></textarea>
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describá su mascota" [(ngModel)]="mascota.descripcion"></textarea>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
