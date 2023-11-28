@@ -7,7 +7,6 @@ export interface Mascotasencontrada {
     nombre:string;   // Nombre de la mascota
     sexo:string;  // Sexo de la mascota
     descripcion:string; // Descripción general de la mascota 
-    transito: boolean; // Esta en transito si o no
     imagenprincipal:string; // Ruta o enlace a la imagen principal de la mascota
     img2:string;  // Ruta o enlace a la segunda imagen de la mascota
     img3:string;  // Ruta o enlace a la tercera imagen de la mascota 
