@@ -1,27 +1,61 @@
 <div id="fondo" class="componente">
-  <div class="container">
-    <div class="row">
-      <img src="../../../../../assets/logo1.svg" alt="" width="150" height="150">
-      <h1>MASCOTAS PERDIDAS</h1>
-      <h5> Una plataforma segura y efectiva para publicar y buscar mascotas perdidas</h5>
+  <div class="container-fluid text-center pt-3">
+
+      <div class="align-items-start encabezado">
+          <img src="../../../../../assets/logoV2.svg" alt="" width="150" height="150" class="logoTitulo">
+          <h1 class="letraTitulo">MASCOTAS<br>PERDIDAS</h1>
+      </div>
+      <h5 class="subtitulo"> Una plataforma segura y efectiva para publicar y buscar mascotas perdidas</h5>
       <img src="/src/assets/fondo.jpg" alt="">
-      <div id="div1">
+      <div id="div1" class="botones">
         <div>
-          <button type="button" class="btn btn-outline-secondary" id="boton" routerLink="../../form-publicar/paginapublicar">Publica tu mascota perdida</button>
+          <button type="button" class="btn btn-outline-secondary" id="boton" routerLink="../../form-publicar/paginapublicar">
+            <span class="botonSpan">Publica tu </span><span class="botonSpan">mascota perdida</span>
+          </button>
         </div>
-          <br><br>
         <div>
-          <button type="button" class="btn btn-outline-secondary" id="boton" routerLink="../../form-encontre/pagina-encontre">Encontré una mascota perdida</button>
+          <button type="button" class="btn btn-outline-secondary" id="boton" routerLink="../../form-encontre/pagina-encontre">
+            <span class="botonSpan">Encontré una </span><span class="botonSpan">mascota perdida</span>
+          </button>
         </div>
       </div>
       <div id="div2">
-        <div class="card" style="width: 30%;" id="mapa">
-          <div class="card-body" align="center" >
-            <h5 class="card-title">Explorar</h5>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12414.105648848905!2d-67.9881331!3d-38.934800800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1690293312106!5m2!1ses!2sar" width="265" height="250" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="mapa" class="p-4 position-relative">
+          <div>
+            <h2 class="align-items-start">Explorar publicaciones</h2>
+          </div>
+          <div class="slider-wrapper">
+            <div class="slider" *ngFor="let publicacion of coleccionMascotas let i=index">
+                <div class="card" [routerLink]="['../../explore/publicacion/', publicacion.idmp]">
+                  <img src="{{ publicacion.imagenprincipal }}" class="card-img-top" alt=>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ publicacion.nombre }}</h5>
+                    <p class="card-text">{{getDescripcionCorta(publicacion.descripcion)}}</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="position-relative">
+            <div class="row">
+                      <!-- voton atras -->
+                      <div class="d-flex col">
+                        <button class="btn btn1 position-absloute me-auto" (click)="desplazarIzquierda()">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- boton avanzar -->
+                      <div class="d-flex col">
+                        <button class="btn btn2 ms-auto" (click)="desplazarDerecha()">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                          </svg>
+                        </button>
+                      </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>

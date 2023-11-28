@@ -1,30 +1,20 @@
-h1{
-  text-align: center;
-  border-radius: 20px;
-}
-.h1{
-  padding-bottom: 40px;
-}
-span{
-  background-color: rgba(0, 0, 0, 0.351);
-  border-radius: 10px ;
-}
-.button{
-  padding-top: 40px;
-  text-align: center;
-}
-button{
-  height: 50px;
-  width: 300px;
-  box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ;
-  border-color: black;
+
+.titulo{
+  text-align: center;  
+  margin-top: 2rem;
+  margin-bottom: 0px;
 }
 
 .container-fluid{
-  padding-top: 40px;
-  padding-bottom: 40px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
 }
 
 .bg-color{
-  background-color: #F2c995;
+  background: rgb(226,178,120);
+  background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
+}
+.appform{
+  margin-left: 20%;
+  margin-right: 20%;
 }
