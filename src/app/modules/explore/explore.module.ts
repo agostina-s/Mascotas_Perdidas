@@ -16,6 +16,7 @@ import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 import { CardComponent } from './componentes/card/card.component';
 import { CardPosibleExtravioComponent } from './componentes/card-posible-extravio/card-posible-extravio.component';
 import { PosibleExtravioComponent } from './pages/posible-extravio/posible-extravio.component';
+import { PublicacionPosibleExtravioComponent } from './pages/publicacion-posible-extravio/publicacion-posible-extravio.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PosibleExtravioComponent } from './pages/posible-extravio/posible-extra
     BusquedaComponent,
     CardComponent,
     CardPosibleExtravioComponent,
-    PosibleExtravioComponent
+    PosibleExtravioComponent,
+    PublicacionPosibleExtravioComponent
   ],
   imports: [
     CommonModule,
