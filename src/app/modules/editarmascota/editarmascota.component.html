@@ -9,7 +9,7 @@
     </h4>
 </div>
 
-<div [formGroup]="mascotas" class="container-fluid tarjetas">
+<div class="container-fluid tarjetas">
     <!-- TARJETA DE INFORMACION DE LA MASCOTA -->
     <div id="descripcion" *ngIf="mostrarDivDescripcion" class="form-mascota mx-auto transicion-div mostrar shadow-lg" [@fade]>
         <header class="py-2">
@@ -22,7 +22,7 @@
 
             <!-- NOMBRE -->
             <label for="nombre"><strong>Nombre: </strong> </label>
-            <input type="text" name="nombre" placeholder="Ingrese el nombre de tu mascota" id="nombre" formControlName="nombre">
+            <input type="text" name="nombre" placeholder="Ingrese el nombre de tu mascota" id="nombre" [(ngModel)]="">
             <div class="row">
                 <div class="col">
                     <!-- RAZA -->
@@ -135,6 +135,6 @@
     <div class="mx-auto d-flex mt-3">
          <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button> 
          <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
-         <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button> 
+         <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="guardarCambios()">Guardar Cambios</button> 
         </div>
 </div>

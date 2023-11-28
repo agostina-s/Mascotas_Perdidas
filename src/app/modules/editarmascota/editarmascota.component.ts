@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from '../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
@@ -22,6 +23,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
   ],
 })
 export class EditarmascotaComponent {
+  
   mascota: Mascotas = {
     idmp: '',
     raza: '',
