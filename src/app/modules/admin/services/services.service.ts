@@ -111,6 +111,13 @@ export class ServicesService {
       return this.mascotasEncontradasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
     }
 
-  
+    
+    //funcion para obetener mascota por ID
+    publicacionEncontrada!: Observable<Mascotasencontrada>
+    obtenerMascotaEncontradaById(idme: string){
+      // Utiliza AngularFirestore para obtener una publicación por su ID
+      this.publicacionEncontrada = this.database.collection('mascotas-encontradas').doc(idme).valueChanges().pipe(map((data:any) => data as Mascotasencontrada));
+      return this.publicacionEncontrada
+    }
 
 }
