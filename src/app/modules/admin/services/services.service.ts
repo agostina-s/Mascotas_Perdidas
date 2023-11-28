@@ -10,8 +10,9 @@ import { Observable } from 'rxjs';
 })
 export class ServicesService {
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
-
+// Constructor del servicio, establece la conexión con Firestore
   constructor(private database: AngularFirestore) { 
+    // Inicializa la colección de mascotas, apuntando a la colección "mascotas" en Firestore
     this.mascotasColeccion = database.collection("mascotas")
   }
 
@@ -20,15 +21,19 @@ export class ServicesService {
   //
   //funcion crear mascota CREAR
   crearMascota(mascota:Mascotas){
+    // Devolver una nueva promesa que se resolverá o rechazará más adelante
     return new Promise(async(resolve,reject)=>{
       try{
+        // Generar un ID único para la nueva mascota utilizando createId
         const id = this.database.createId();
+         // Asignar el ID único a la mascota
         mascota.idmp = id;
-
+         // Intentar realizar la operación de escritura en la colección de mascotas
         const resultado = await this.mascotasColeccion.doc(id).set(mascota)
-
+         // Si el resultado se completa con éxito, resuelve la promesa
         resolve(resultado);
       } catch(error){
+        // Si hay un error, rechaza la promesa y pasa el error
         reject(error);
       }
     })
@@ -37,7 +42,7 @@ export class ServicesService {
   //
   //
   //
-  //funcion obtener mascotas GET
+  //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
   obtenerMascota(){
     // snapshoot -> captura los cambios
     // pipe -> tubería por dónde viajan esos nuevos datos
@@ -57,14 +62,18 @@ export class ServicesService {
   //
   //
   //
-  //funcion eliminar mascotas
+  // Eliminar una mascota de la colección "mascotas" en Firestore
   eliminarMascotas(idmp:string){
+    // Devolver una nueva promesa que se resolverá o rechazará más adelante
     return new Promise ((resolve,reject) =>{
       try{
+          // Intentar eliminar el documento con el ID proporcionado
         const respuesta = this.mascotasColeccion.doc(idmp).delete()
+         // Si la operación se completa con éxito, resuelve la promesa
         resolve(respuesta)
       }
       catch(error){
+        // Si hay un error durante la operación, rechaza la promesa y pasa el error
         reject(error)
       }
     })
