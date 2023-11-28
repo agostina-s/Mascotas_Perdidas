@@ -129,7 +129,7 @@
                 </div>
 
             <!-- CIUDAD -->
-            <label for="nombre"><strong>Ciudad:</strong></label>
+            <label for="ciudad"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad" placeholder="En que ciudad la encontro">
                 <!-- validators ciudad -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.ciudad.errors && mascotas.controls.ciudad.touched">
@@ -137,7 +137,7 @@
                 </div>
 
             <!-- BARRIO -->
-            <label for="nombre"><strong>Barrio: </strong></label>
+            <label for="barrio"><strong>Barrio: </strong></label>
             <input type="text" name="Barrio" id="barrio" formControlName="barrio" placeholder="En que barrio">
                 <!-- validators barrio -->
                 <div class="validators ms-2" *ngIf="mascotas.controls.barrio.errors && mascotas.controls.barrio.touched">
@@ -145,8 +145,12 @@
                 </div>
 
             <!-- FECHA -->
-            <label for="nombre"><strong>Fecha cuando se encontro</strong></label>
-            <input type="datetime-local" name="fecha-encontro" id="fechaencontro" formControlName="fechaencontro" placeholder="Ingrese la fecha cuando se encontro">
+            <label for="fecha"><strong>Fecha cuando se encontro</strong></label>
+            <input type="date" name="fecha-encontro" id="fechaencontro" formControlName="fechaencontro" placeholder="Ingrese la fecha cuando se encontro">
+                <!-- validators fecha -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.fechaencuentro.errors && mascotas.controls.fechaencuentro.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.fechaencuentro.errors?.['required']">Se requiere ingresar la fecha o una aproximación</div>
+                </div>
 
             <!-- MAPA -->
             <label for="nombre"><strong>Mapa:</strong></label>
