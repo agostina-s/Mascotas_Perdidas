@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 //importaciones
 import { AuthService } from '../../services/auth.service'; // Servicio de autenticación
 import { Usuario } from 'src/app/models/usuario'; // Interfaz para usuarios
@@ -12,7 +12,7 @@ import { Router } from '@angular/router'; // Servicio de enrutamiento para naveg
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
   hide = true; // Para ocultar la contraseña en el input
 
   // Modelo de usuario para el formulario
@@ -77,7 +77,8 @@ export class RegisterComponent {
       console.log('Error =>', error)
     })
   }
-// Método que se ejecuta al inicializar el componente
+
+  // Método que se ejecuta al inicializar el componente y obtiene el UID el identificador del usuario
   async ngOnInit(){
     const uid = await this.servicioAuth.getUID();
     console.log(uid);
