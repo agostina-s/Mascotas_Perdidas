@@ -24,6 +24,10 @@ export class AuthService {
     return this.auth.signInWithEmailAndPassword(email, password)
   }
 
+  //funcion para CERRAR SESION
+  cerrarSesion(){
+    this.auth.signOut();
+  }
 
   //funcion para TOMAR UID
   async getUID(){
