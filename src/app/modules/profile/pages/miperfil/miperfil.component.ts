@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-miperfil',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./miperfil.component.css']
 })
 export class MiperfilComponent {
+
+
+  usuario: Usuario = {
+    uid: "",
+    email: "",
+    password: "",
+    name: "",
+    foto: "",
+    descripcion: "",
+    ubicacion: null,
+  }
 
 }
