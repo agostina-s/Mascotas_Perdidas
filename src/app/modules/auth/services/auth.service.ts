@@ -26,7 +26,7 @@ export class AuthService {
 
   //funcion para CERRAR SESION
   cerrarSesion(){
-    this.auth.signOut();
+    return this.auth.signOut();
   }
 
   //funcion para TOMAR UID

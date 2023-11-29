@@ -44,17 +44,17 @@ export class RegisterComponent {
     const credenciales = {
       email: this.usuarios.email,
       password: this.usuarios.password
-  };
-  const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
-  // el método THEN nos devuelve el mismo valor que guarda la promesa
-    .then(res =>{
-      alert("Se ha registrado exitosamente");
-      this.router.navigate(['/inicio']); //redirige a inicio
-    })
-    // el método CATCH mostrará el error en caso de un error xd
-    .catch(error => 
-      alert("Hubo un error al cargar el nuevo usuario :( \n"+error+'email='+this.usuarios.email)
-    );
+    };
+    const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
+    // el método THEN nos devuelve el mismo valor que guarda la promesa
+      .then(res =>{
+        alert("Se ha registrado exitosamente");
+        this.router.navigate(['/inicio']); //redirige a inicio
+      })
+      // el método CATCH mostrará el error en caso de un error xd
+      .catch(error => 
+        alert("Hubo un error al cargar el nuevo usuario :( \n"+error+'email='+this.usuarios.email)
+      );
 
     //constante para UID
     const uid = await this.servicioAuth.getUID();

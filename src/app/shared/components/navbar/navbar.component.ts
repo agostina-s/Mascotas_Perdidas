@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit{
-  constructor(){ }
+  constructor(
+    public servicioAuth: AuthService, // servicioAuth referencia a nuestro servicio Auth
+  ){ }
   ngOnInit(): void {
     
+  }
+
+  cerrarSesion(){
+    this.servicioAuth.cerrarSesion();
+    alert('la sesión se cerró exitosamente')
   }
 }
