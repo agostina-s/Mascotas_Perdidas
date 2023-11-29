@@ -17,16 +17,21 @@ export class RegisterComponent {
 
   // Modelo de usuario para el formulario
   usuarios: Usuario = {
-    uid: '',
-    name: '',
-    email: '',
-    password: ''
+    uid: "",
+    email: "",
+    password: "",
+    name: "",
+    foto: "",
+    descripcion: "",
+    ubicacion: ""
   }
 
   uid = '';
 
   // crear una nueva colección para usuarios
   coleccionUsuarios: Usuario[] = [];
+
+
  // Constructor que inyecta los servicios necesarios
   constructor(
     public servicioAuth: AuthService, // servicioAuth referencia a nuestro servicio Auth

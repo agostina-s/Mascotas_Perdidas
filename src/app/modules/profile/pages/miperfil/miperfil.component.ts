@@ -9,14 +9,14 @@ import { Usuario } from 'src/app/models/usuario';
 export class MiperfilComponent {
 
 
-  usuario: Usuario = {
-    uid: "",
-    email: "",
-    password: "",
-    name: "",
-    foto: "",
-    descripcion: "",
-    ubicacion: null,
-  }
-
+//   usuario: Usuario = {
+//     uid: "",
+//     email: "",
+//     password: "",
+//     name: "",
+//     foto: "",
+//     descripcion: "",
+//     ubicacion: ""
+//   }
+// //proximamente agregar las publicaciones de la que es dueño
 }

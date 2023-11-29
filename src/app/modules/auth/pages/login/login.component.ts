@@ -15,10 +15,13 @@ export class LoginComponent {
  
   // Modelo de usuario para el formulario
   usuarios: Usuario = {
-    uid: '',
-    name: '',
-    email: '',
-    password: ''
+    uid: "",
+    email: "",
+    password: "",
+    name: "",
+    foto: "",
+    descripcion: "",
+    ubicacion: ""
   }
 
   constructor(
