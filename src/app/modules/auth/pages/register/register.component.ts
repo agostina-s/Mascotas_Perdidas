@@ -26,18 +26,31 @@ export class RegisterComponent implements OnInit{
     ubicacion: ""
   }
 
-  uid = '';
 
   // crear una nueva colección para usuarios
   coleccionUsuarios: Usuario[] = [];
 
+  userID!:string | undefined;
 
  // Constructor que inyecta los servicios necesarios
   constructor(
     public servicioAuth: AuthService, // servicioAuth referencia a nuestro servicio Auth
     public servicioFirestore: FirestoreService,  // Servicio para interactuar con Firestore
     public router: Router // Servicio de enrutamiento para navegar
-  ) { }
+  ) { 
+        //LA GLORIA
+        this.servicioAuth.authState().subscribe( res => {
+          if(res?.uid !== undefined){
+            this.userID = res?.uid
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }else{
+            this.userID = undefined
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }
+        })
+  }
 
   // tomamos nuevos registros y mostramos los resultados
   async registrarse() {

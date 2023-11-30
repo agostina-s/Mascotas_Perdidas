@@ -13,6 +13,8 @@ import { Router } from '@angular/router'; // Servicio de enrutamiento para naveg
 export class LoginComponent {
   hide = true;
 
+  userID!:string | undefined;
+
   // Modelo de usuario para el formulario
   usuarios: Usuario = {
     uid: "",
@@ -28,7 +30,20 @@ export class LoginComponent {
     public servicioAuth: AuthService,  // Servicio de autenticación
     public firestore: FirestoreService, // Servicio para interactuar con Firestore
     public router: Router // Servicio de enrutamiento para navegar
-  ){}
+  ){
+        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        this.servicioAuth.authState().subscribe( res => {
+          if(res?.uid !== undefined){
+            this.userID = res?.uid
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }else{
+            this.userID = undefined
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }
+        })
+  }
 // Método para iniciar sesión
   async ingresar(){
      // Crear objeto de credenciales para iniciar sesión
