@@ -83,7 +83,6 @@ export class RegisterComponent implements OnInit{
 
   // Método que se ejecuta al inicializar el componente y obtiene el UID el identificador del usuario
   async ngOnInit(){
-    const uid = await this.servicioAuth.getUID();
-    console.log(uid);
+    await this.servicioAuth.getUID();
   }
 }
