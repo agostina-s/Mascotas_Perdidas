@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'form-publicar',loadChildren:()=>import('./modules/form-publicar/formpublicar.module').then( m=>m.FormpublicarModule)},
   {path: 'form-encontre',loadChildren:()=>import('./modules/form-encontre/form-encontre.module').then( m=>m.FormEncontreModule)},
   {path: 'profile', loadChildren:()=>import('./modules/profile/profile.module').then( m => m.ProfileModule)},
-  {path: 'admin',loadChildren:()=>import('./modules/admin/admin.module').then(m => m.AdminModule)}
-
+  {path: 'admin',loadChildren:()=>import('./modules/admin/admin.module').then(m => m.AdminModule)},
+  {path: 'editar',loadChildren:()=>import('./modules/editar/editar.module').then(m=>m.EditarModule)}
 ];
 
 @NgModule({

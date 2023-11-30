@@ -68,7 +68,7 @@ export class EditarmascotaComponent {
     this.mascotaService.modificarMascota(this.mascota.idmp, this.mascota).then(
       ()=>{
         alert("cambios guardados exitosamente");
-        this.router.navigate(["/publicacion",this.mascota.idmp])
+        this.router.navigate(["../../explore/publicacion/",this.mascota.idmp])
       },
       error =>{
         alert("Error al guardar cambios")
