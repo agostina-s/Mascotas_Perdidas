@@ -27,6 +27,7 @@
                     <!-- RAZA -->
                     <label for="raza"><strong>Raza: </strong> </label>
                     <select name="raza" id="raza" formControlName="raza" [(ngModel)]="mascota.raza">
+                        <option selected value="{{mascota.raza}}">{{mascota.raza}}</option>
                         <option value="Caniche">Caniche</option>
                         <option value="Galgo">Galgo</option>
                         <option value="Chihuahua">chihuahua</option>
