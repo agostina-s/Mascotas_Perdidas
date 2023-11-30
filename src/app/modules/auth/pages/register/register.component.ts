@@ -62,9 +62,12 @@ export class RegisterComponent implements OnInit{
 
     // GUARDA EL NUEVO USUARIO
     this.guardarUser();
-}
 
-  // función que agrega NUEVO USUARIO en Firestore
+
+    this.router.navigate(['../../home/inicio']);
+  } 
+
+  // función que agrega NUEVO USUARIO en Firestore LOS DATOS DEL USER
   async guardarUser(){
     this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res => {

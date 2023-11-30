@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Usuario } from 'src/app/models/usuario';
 
+//SERVICIO PARA AGREGAR LA INFORMACION DEL USUARIO A LA BASE DE DATOS (FIRESTORE)
+
 @Injectable({
   providedIn: 'root'
 })
 export class FirestoreService {
   private usuariosCollection: AngularFirestoreCollection<Usuario>
 
-    // Dentro de los parámetros, inyectamos el servicio AngularFirestore para interactuar con Firestore
+  // Dentro de los parámetros, inyectamos el servicio AngularFirestore para interactuar con Firestore
   constructor(private database: AngularFirestore) {
-      // Referenciamos la colección 'usuarios' en la base de datos
+    
+    // Referenciamos la colección 'usuarios' en la base de datos
     this.usuariosCollection = this.database.collection<Usuario>('usuarios')
   }
 // Método para agregar un usuario a la colección 'usuario' en Firestore
