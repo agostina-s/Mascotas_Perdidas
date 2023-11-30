@@ -6,3 +6,4 @@ export interface Contacto {
    telefono2: number; // Número de teléfono secundario
    mail:string;   // Dirección de correo electrónico del contacto
 }
+// forma de hacerse los datos.
