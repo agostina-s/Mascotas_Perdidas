@@ -59,6 +59,7 @@
                     <!-- SEXO -->
                     <label for="sexo"><strong>Sexo: </strong></label>
                     <select name="sexo" id="nombre" [(ngModel)]="mascota.sexo">
+                        <option selected value="{{mascota.sexo}}">{{mascota.sexo}}</option>
                         <option value="Hembra">Hembra</option>
                         <option value="Macho">Macho</option>
                     </select>
