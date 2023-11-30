@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit{
     .then(res => {
       // visualización de datos 
       console.log(this.usuarios)
-      console.log(this.usuarios.email)  
+      console.log(this.usuarios.email)
     })
     .catch(error =>{
       //errores en caso de que falle la operación

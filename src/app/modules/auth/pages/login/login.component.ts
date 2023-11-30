@@ -12,7 +12,7 @@ import { Router } from '@angular/router'; // Servicio de enrutamiento para naveg
 })
 export class LoginComponent {
   hide = true;
- 
+
   // Modelo de usuario para el formulario
   usuarios: Usuario = {
     uid: "",
@@ -44,7 +44,7 @@ export class LoginComponent {
       // Alerta de inicio de sesión exitoso
       alert("Ha iniciado sesión exitosamente");
       // Redirigir a la página de inicio después de iniciar sesión
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['../../home/inicio']);
     })
     .catch(error => {
          // Alerta en caso de error al iniciar sesión
