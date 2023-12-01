@@ -16,15 +16,7 @@ export class LoginComponent {
   userID!:string | undefined;
 
   // Modelo de usuario para el formulario
-  usuarios: Usuario = {
-    uid: "",
-    email: "",
-    password: "",
-    name: "",
-    foto: "",
-    descripcion: "",
-    ubicacion: ""
-  }
+  usuarios!: Usuario;
 
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
