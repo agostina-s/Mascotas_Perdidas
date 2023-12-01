@@ -9,8 +9,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthService {
 
   //referenciamos auth de firebase
-  constructor(public auth: AngularFireAuth) { }
-
+  constructor(public auth: AngularFireAuth) { 
+  }
 
   //funcion para REGISTRARSE
   registrar(email:string, password: string){
@@ -24,16 +24,29 @@ export class AuthService {
     return this.auth.signInWithEmailAndPassword(email, password)
   }
 
+  //funcion para CERRAR SESION
+  cerrarSesion(){
+    return this.auth.signOut();
+  }
 
-  //funcion para TOMAR UID
+  //funcion para OBTENER UID --- NO ES NECESARIO USAR ESTA FUNCION USAR LA DE ABAJO
   async getUID(){
     //genera una promesa y user la captura 
     const user = await this.auth.currentUser;
 
     if(user == null){
+      console.log('no registrado')
       return null;
     }else{
+      const identificador:string = user.uid
+      console.log(identificador)
       return user.uid;
     }
   }
+
+  // Verificar el estado de autenticación 
+  authState(){
+    return this.auth.authState;
+  }
+
 }

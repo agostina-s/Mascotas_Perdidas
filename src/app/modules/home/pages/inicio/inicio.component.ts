@@ -3,6 +3,7 @@ import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 import * as $ from 'jquery';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -20,16 +21,30 @@ export class InicioComponent {
   // Mascota seleccionada actualmente
   publiSeleccionadaEncontrada!: Mascotasencontrada;
 
+  userID!:string | undefined;
 
 // Constructor para inyectar el servicio CRUD
   constructor(
     //declaramos el SERVICIO CRUD
-    public servicioCRUD: ServicesService
-
-  ){}
+    public servicioCRUD: ServicesService,
+    //declaramos el SERVICIO AUTH
+    private servicioAuth: AuthService,
+  ){ 
+    //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+    this.servicioAuth.authState().subscribe( res => {
+      if(res?.uid !== undefined){
+        this.userID = res?.uid
+        console.log('la respuesta del observable:',this.userID)
+        return this.userID
+      }else{
+        this.userID = undefined
+        console.log('la respuesta del observable:',this.userID)
+        return this.userID
+      }
+    })
+  }
 
   ngOnInit(): void{
-
     /* del servicio Crud, llamamos a obtener publicaciones y los guardamos
     en la colección */
     this.servicioCRUD.obtenerMascota().subscribe(mascota =>{
@@ -42,6 +57,9 @@ export class InicioComponent {
       this.coleccionMascotasEncontradas = mascota;
     })
   }
+
+
+  /* ================== ESTILOS PARA CARROUSEL ================== */
 
   // Método para obtener una descripción corta (primeros 10 palabras) de una cadena
   getDescripcionCorta(desc: string){
