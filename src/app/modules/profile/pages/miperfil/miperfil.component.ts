@@ -46,6 +46,7 @@ export class MiperfilComponent {
   obtenerInfoUser(uid:string){
     this.servicioFirestore.getUserInfo(uid).subscribe(res =>{
         this.usuario = res
+        console.log(this.usuario.publicaciones)
     })
   }
 
