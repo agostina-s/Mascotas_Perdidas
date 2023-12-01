@@ -4,6 +4,7 @@ import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 import * as $ from 'jquery';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -21,6 +22,7 @@ export class InicioComponent {
   // Mascota seleccionada actualmente
   publiSeleccionadaEncontrada!: Mascotasencontrada;
 
+
   userID!:string | undefined;
 
 // Constructor para inyectar el servicio CRUD
@@ -29,6 +31,8 @@ export class InicioComponent {
     public servicioCRUD: ServicesService,
     //declaramos el SERVICIO AUTH
     private servicioAuth: AuthService,
+    //servicio de ruteo
+    private router: Router
   ){ 
     //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
     this.servicioAuth.authState().subscribe( res => {
@@ -42,6 +46,21 @@ export class InicioComponent {
         return this.userID
       }
     })
+  }
+
+  btnMP(){
+    if(this.userID !== undefined){
+      this.router.navigate(['../../form-publicar/paginapublicar'])
+    }else{
+      this.router.navigate(['../../auth/login'])
+    }
+  }
+  btnME(){
+    if(this.userID !== undefined){
+      this.router.navigate(['../../form-publicar/pagina-encontre'])
+    }else{
+      this.router.navigate(['../../auth/login'])
+    }
   }
 
   ngOnInit(): void{
