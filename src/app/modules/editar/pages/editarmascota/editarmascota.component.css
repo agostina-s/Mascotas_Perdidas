@@ -7,6 +7,9 @@
 .pointer{
     cursor: pointer;
 }
+.contenedorprincipal{
+    background-color: #F2c995;
+}
 
 .titulo-activo{
     color: #000000;

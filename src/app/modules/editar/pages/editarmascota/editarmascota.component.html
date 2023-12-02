@@ -1,3 +1,4 @@
+<div class="contenedorprincipal">
 <div class="text-center mb-4">
     <h4 class="text-muted progreso">
         <span class="pointer" (click)="btnDescripcion()" [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>
@@ -139,4 +140,5 @@
          <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
          <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="guardarCambios()">Guardar Cambios</button> 
         </div>
+</div>
 </div>
