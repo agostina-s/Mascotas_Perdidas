@@ -33,6 +33,12 @@ hr{
     margin-bottom: 2px;
 }
 .cerrarsesion{
+    display: contents;
+    margin-top: auto;
+}
+
+.contenedor-logout{
     display: flex;
     margin-top: auto;
+    cursor: pointer;
 }

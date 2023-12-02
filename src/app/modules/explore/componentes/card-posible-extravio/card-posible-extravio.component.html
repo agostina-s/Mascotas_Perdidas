@@ -11,10 +11,9 @@
                 <div class="container">
                     <div class="row align-items-start">
                         <div class="col padding">
-                            <!-- BOTÓN PARA VER MAS te lleva a una ruta q es explore,publi y desp agrega id al link -->
+                            <!-- BOTÓN PARA VER MAS -->
                             <button type="button" class="btn" id="botonvermas"
-                                [routerLink]="['../publicacion', publicacion.idmp]"> 
-                                <!-- EJEMPLO: http://localhost:4200/explore/publicacion/4Zwt7r34I7ZjRVKB6fbK -->
+                                [routerLink]="['../publicacion-posible-extravio', publicacion.idme]">
                                 Ver más
                             </button>
                         </div>
@@ -58,6 +57,11 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+                <!-- =============== REPORTE =============== -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">

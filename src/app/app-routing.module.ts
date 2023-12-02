@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  //lazyloading
-  //aca se encuentran las cargas perezosas, esto sirve para poder ver la pagina en el navegador, si queremos entrar al formulario pondremos lo que dice en path
+  // lazyloading
+  // aca se encuentran las cargas perezosas, esto sirve para poder ver la pagina en el navegador, si queremos entrar al formulario pondremos lo que dice en path
+  // loadChildren:Carga de manera diferida.el módulo asociado se carga dinámicamente,
+  // mejorando así la eficiencia de la aplicación.
+
   {path: '', redirectTo: "/home/inicio", pathMatch:"full"},
   {path: 'home', loadChildren:()=>import('./modules/home/home.module').then( m => m.HomeModule)},
   {path: 'explore', loadChildren:()=>import('./modules/explore/explore.module').then( m => m.ExploreModule)},

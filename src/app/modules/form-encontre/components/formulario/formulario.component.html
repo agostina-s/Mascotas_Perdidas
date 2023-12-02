@@ -19,9 +19,26 @@
         <div class="mascota tarjetas-info">
             <!-- COMIENZO FORM -->
 
-            <!-- NOMBRE -->
-            <label for="nombre"><strong>Nombre: </strong> </label>
-            <input type="text" name="nombre" placeholder="Ingrese el nombre de la mascota" id="nombre" formControlName="nombre">
+            <div class="row">
+                <div class="col-3">
+                    <!-- COLLAR -->
+                    <label for="collar"><strong>Tiene collar?: </strong></label>
+                    <select name="collar" id="collar" formControlName="collar">
+                        <option [ngValue]="true">Sí tiene</option>
+                        <option [ngValue]="false">No tiene</option>
+                    </select>
+                        <!-- validators collar -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.collar.errors && mascotas.controls.collar.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.collar.errors?.['required']">Se requiere especificar si posee collar</div>
+                        </div>
+                </div>
+                <div class="col" *ngIf="mascotas.controls.collar.value === true">
+                    <!-- NOMBRE -->
+                    <!-- opcional si tiene collar -->
+                    <label for="nombre"><strong>Nombre: </strong> </label>
+                    <input type="text" name="nombre" placeholder="Ingrese el nombre de la mascota en caso de tenerlo" id="nombre" formControlName="nombre">
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <!-- RAZA -->
@@ -36,6 +53,10 @@
                         <option value="Golden Retriever">Golden Retriever </option>
                         <option value="otro">Otro</option>
                     </select>
+                        <!-- validators raza -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.raza.errors && mascotas.controls.raza.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.raza.errors?.['required']">Se requiere especificar la raza</div>
+                        </div>
                 </div>
                 <div class="col">
                     <!-- TAMAÑO -->
@@ -45,38 +66,49 @@
                         <option value="Mediano">Mediano</option>
                         <option value="Grande">Grande</option>
                     </select>
+                        <!-- validators tamaño -->
+                        <div class="validators ms-2" *ngIf="mascotas.controls.tamano.errors && mascotas.controls.tamano.touched">
+                            <div class="form-text" *ngIf="mascotas.controls.tamano.errors?.['required']">Se requiere especificar el tamaño</div>
+                        </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <!-- EDAD -->
-                    <label for="edad"><strong>Edad: </strong></label>
-                    <input type="number" placeholder="Ingrese la edad de la mascota" name="edad" id="edad" formControlName="edad">
-                </div>
-                <div class="col">
+                <div class="col-3">
                     <!-- SEXO -->
                     <label for="sexo"><strong>Sexo: </strong></label>
                     <select name="sexo" id="nombre" formControlName="sexo">
                         <option value="Hembra">Hembra</option>
                         <option value="Macho">Macho</option>
+                        <option value="Desconocido">Desconocido</option>
                     </select>
+                </div>
+                <div class="col p-4">
+                    <!-- validators sexo -->
+                    <div class="validators ms-2" *ngIf="mascotas.controls.sexo.errors && mascotas.controls.sexo.touched">
+                        <div class="form-text" *ngIf="mascotas.controls.sexo.errors?.['required']">Se requiere el sexo de la mascota, en caso de desconocerse ingrese "Desconocido"</div>
+                    </div>
+                    <div class="form-text" *ngIf="mascotas.controls.sexo.value === 'Desconocido'">Seleccionar la opción 'Desconocido' podría dificultar la búsqueda de la mascota.</div>
                 </div>
             </div>
 
             <!-- DESCRIPCION -->
             <label for="descripcion"><strong>Descripcion de la mascota: </strong></label>
-            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Describanos a la mascota" formControlName="descripcion"></textarea>
+            <textarea class="textarea" type="text" name="descripcion" id="descripcion" placeholder="Ingrese una descripción de la mascota presuntamente perdida" formControlName="descripcion"></textarea>
+                <!-- validators descripcion -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.descripcion.errors && mascotas.controls.descripcion.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.descripcion.errors?.['required']">Se requiere que ingrese una descripción de la mascota y una descripcion del encuentro con la mascota presuntamente perdida</div>
+                </div>
 
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
             <h6>Imagen principal</h6>
             <input type="text" name="imagenes" id="imagenprincipal" formControlName="imagenprincipal">
             <h6>Imagen N2</h6>
-            <input type="text" name="imagenes" id="imagen2" formControlName="imagen2">
+            <input type="text" name="imagenes" id="imagen2" formControlName="img2">
             <h6>Imagen N3</h6>
-            <input type="text" name="imagenes" id="imagen3" formControlName="imagen3">
+            <input type="text" name="imagenes" id="imagen3" formControlName="img3">
             <h6>Imagen N4</h6>
-            <input type="text" name="imagenes" id="imagen4" formControlName="imagen4">
+            <input type="text" name="imagenes" id="imagen4" formControlName="img4">
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE LA UBICACION -->
@@ -88,21 +120,37 @@
         </header>
         <!-- INFO UBICACION -->
         <div class="ubicacion tarjetas-info">
-            <!-- COMO la encontro -->
-            <label for="perdida"><strong>Donde la encontro: </strong></label>
-            <textarea class="textarea" type="text" name="perdida" id="perdida" placeholder="Donde encontro la mascota" formControlName="perdida"></textarea>
+            <!-- ENCUENTRO -->
+            <label for="encuentro"><strong>Donde y cómo fue el encuentro?: </strong></label>
+            <textarea class="textarea" type="text" name="encuentro" id="encuentro" placeholder="Aporte contexto a cómo fue el encuentro con la mascota presuntamente perdida " formControlName="encuentro"></textarea>
+                <!-- validators perdida -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.encuentro.errors && mascotas.controls.encuentro.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.encuentro.errors?.['required']">Se requiere ingresar los detalles de cómo fue su encuentro con la mascota</div>
+                </div>
 
             <!-- CIUDAD -->
-            <label for="nombre"><strong>Ciudad:</strong></label>
+            <label for="ciudad"><strong>Ciudad:</strong></label>
             <input type="text" name="ciudad" id="ciudad" formControlName="ciudad" placeholder="En que ciudad la encontro">
-          
+                <!-- validators ciudad -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.ciudad.errors && mascotas.controls.ciudad.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.ciudad.errors?.['required']">Se requiere ingresar la ciudad</div>
+                </div>
+
             <!-- BARRIO -->
-            <label for="nombre"><strong>Barrio: </strong></label>
+            <label for="barrio"><strong>Barrio: </strong></label>
             <input type="text" name="Barrio" id="barrio" formControlName="barrio" placeholder="En que barrio">
+                <!-- validators barrio -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.barrio.errors && mascotas.controls.barrio.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.barrio.errors?.['required']">Se requiere ingresar el barrio o una zona aproximada</div>
+                </div>
 
             <!-- FECHA -->
-            <label for="nombre"><strong>Fecha cuando se encontro</strong></label>
-            <input type="datetime-local" name="fecha-encontro" id="fechaencontro" formControlName="fechaencontro" placeholder="Ingrese la fecha cuando se encontro">
+            <label for="fechaencuentro"><strong>Fecha cuando se avistó:</strong></label>
+            <input type="date" name="fechaencuentro" id="fechaencuentro" formControlName="fechaencuentro" placeholder="Ingrese la fecha cuando se encontro">
+                <!-- validators fecha -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.fechaencuentro.errors && mascotas.controls.fechaencuentro.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.fechaencuentro.errors?.['required']">Se requiere ingresar la fecha o una aproximación</div>
+                </div>
 
             <!-- MAPA -->
             <label for="nombre"><strong>Mapa:</strong></label>
@@ -118,24 +166,46 @@
         </header>
         <div class="contacto tarjetas-info">
             <!-- INFO CONTACTO -->
+
+            <!-- NOMBRE publicador -->
             <label for="nombre"><strong>Ingrese su nombre:</strong></label>
-            <input type="text" placeholder="Ingrese su nombre" name="dueño" id="nombresunombre" formControlName="nombresunombre">
-            <!-- CONTACTO -->
-            <label for="nombre"><strong>Telefono 1 (Principal)</strong></label>
-            <input type="number" placeholder="Ingrese su numero de telefono" name="tel1" id="tel1" formControlName="tel1">
-             <!-- CONTACTO -->
-            <label for="nombre"><strong>Telefono 2:</strong></label>
+            <input type="text" placeholder="Ingrese su nombre" name="nombrepublicador" id="nombrepublicador" formControlName="nombrepublicador">
+                <!-- validators contacto -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.nombrepublicador.errors && mascotas.controls.nombrepublicador.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.nombrepublicador.errors?.['required']">Se requiere ingresar un nombre de contacto</div>
+                </div>
+
+            <!-- TEL 1 -->
+            <label for="tel1"><strong>Teléfono 1 (Principal)</strong></label>
+            <input type="number" placeholder="Ingrese numero de telefono" name="tel1" id="tel1" formControlName="tel1">
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.tel1.errors && mascotas.controls.tel1.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.tel1.errors?.['required']">Se requiere ingresar un número de teléfono</div>
+                </div>
+
+            <!-- TEL 2 -->
+            <label for="tel2"><strong>Teléfono 2:</strong></label>
             <input type="number" placeholder="Ingrese un numero de respaldo" name="tel2" id="tel2" formControlName="tel2">
-             <!-- CONTACTO -->
-            <label for="gmail"><strong>Correo electrónico:</strong></label>
-            <input type="text" name="mail" id="mail" placeholder="Ingrese su Mail de contacto" formControlName="mail">
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.tel2.errors && mascotas.controls.tel2.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.tel2.errors?.['required']">Se requiere ingresar un número de teléfono</div>
+                </div>
+                
+            <!-- EMAIL -->
+            <label for="mail"><strong>Correo electrónico:</strong></label>
+            <input type="mail" name="mail" id="mail" placeholder="Ingrese un mail de contacto" formControlName="mail">
+                <!-- validators telefono -->
+                <div class="validators ms-2" *ngIf="mascotas.controls.mail.errors && mascotas.controls.mail.touched">
+                    <div class="form-text" *ngIf="mascotas.controls.mail.errors?.['required']">Se requiere ingresar un correo electrónico</div>
+                    <div class="form-text" *ngIf="mascotas.controls.mail.errors?.['email']">Se requiere ingresar un correo electrónico válido</div>
+                </div>
         </div>
     </div>
-   <!-- botones --> 
+    <!-- botones --> 
     <div class="mx-auto d-flex mt-3">
         <button type="button" *ngIf="!mostrarDivDescripcion" class="btn btn-primary btn-lg mx-auto" (click)="btnAtrasForm()" >Atras</button>
         <button type="button" *ngIf="mostrarDivDescripcion || mostrarDivUbicacion" class="btn btn-primary btn-lg mx-auto" (click)="btnSiguienteForm()">Siguiente</button>
-        <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascota()">Finalizar</button>
+        <button type="button" class="btn btn-success mx-auto btn-lg" *ngIf="mostrarDivContacto" (click)="agregarMascotaEncontrada()" [disabled]="mascotas.invalid">Finalizar</button>
     </div>
 </div>
 

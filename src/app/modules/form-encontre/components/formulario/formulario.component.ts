@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
-import { Mascotas } from 'src/app/models/mascotasperdidas';
+import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -21,8 +22,9 @@ import { trigger, transition, animate, style } from '@angular/animations';
   ],
 })
 export class FormularioComponent {
-  coleccionmascotas: Mascotas [] = [];
-  productoSeleccionado!: Mascotas; // ! -> toma valores vacios
+  // Arreglo para almacenar las mascotas existentes
+  coleccionmascotas: Mascotasencontrada [] = [];
+  productoSeleccionado!: Mascotasencontrada; // ! -> toma valores vacios
 
 
   //ENLAZAMIENTO AL FORMULARIO
@@ -30,30 +32,37 @@ export class FormularioComponent {
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
     tamano: new FormControl("",Validators.required),
-    edad: new FormControl(0,Validators.required ),
-    nombre: new FormControl("",Validators.required),
+    collar: new FormControl(null, Validators.required), //true o false
+    nombre: new FormControl("",), //opcional
     sexo:new FormControl("",Validators.required),
     descripcion: new FormControl("",Validators.required),
-    perdida: new FormControl("",Validators.required),
     imagenprincipal: new FormControl("",Validators.required),
-    imagen2: new FormControl("",Validators.required),
-    imagen3: new FormControl("",Validators.required),
-    imagen4: new FormControl("",Validators.required),
+    img2: new FormControl(""),//opcional
+    img3: new FormControl(""),//opcional
+    img4: new FormControl(""),//opcional
     // UBICACION
+    encuentro: new FormControl("", Validators.required),
     ciudad: new FormControl("",Validators.required),
     barrio: new FormControl("",Validators.required),
-    fechaperdida: new FormControl("",Validators.required),
+    fechaencuentro: new FormControl("",Validators.required),
     // CONTACTO
-    nombredueno: new FormControl("",Validators.required),
-    tel1: new FormControl(0,Validators.required),
-    tel2: new FormControl(0,Validators.required),
-    mail: new FormControl("",Validators.required),
+    nombrepublicador: new FormControl("",Validators.required),
+    tel1: new FormControl(null,Validators.required),
+    tel2: new FormControl(null), //opcional
+    mail: new FormControl("",[Validators.required, Validators.email]), 
   })
   
+  // Constructor para inyectar el servicio CRUD
   //LLAMAR AL SERVICIO CRUD
   constructor(
-    public servicioCrud: ServicesService
+    public servicioCrud: ServicesService, 
+    private router: Router
   ){}
+
+  //Probar form
+  // impimirForm(){
+  //   console.log(this.mascotas)
+  // }
 
   // //NO NECESITAMOS PEDIR LAS PUBLICACIONES
   // ngOnInit():void{
@@ -62,36 +71,37 @@ export class FormularioComponent {
   //   })
   // }
 
-  //FUNCION QUE ENVIA EL FORM
-  async agregarMascota(){
-    if(this.mascotas.value){
-      let nuevamascota: Mascotas = {
+  //FUNCION QUE ENVIA EL FORM AL SERVICE
+  async agregarMascotaEncontrada(){
+    if(this.mascotas.valid){
+      let nuevamascota: Mascotasencontrada = { //ASIGNAR LOS VALORES DE LOS INPUTS A NUEVA MASCOTA
         // INFORMACION DE LA MASCOTA
-        idmp : '', //se guarda vacio para agregarlo en el crud
+        idme : '', //se guarda vacio para agregarlo en el crud
         raza:this.mascotas.value.raza!,
         tamano: this.mascotas.value.tamano!,
-        edad: this.mascotas.value.edad!,
+        collar: this.mascotas.value.collar!,
         nombre:this.mascotas.value.nombre!,
         sexo:this.mascotas.value.sexo!,
         descripcion:this.mascotas.value.descripcion!,
-        perdida:this.mascotas.value.perdida!,
         imagenprincipal:this.mascotas.value.imagenprincipal!,
-        imagen2:this.mascotas.value.imagen2!,
-        imagen3:this.mascotas.value.imagen3!,
-        imagen4:this.mascotas.value.imagen4!,
+        img2:this.mascotas.value.img2!,
+        img3:this.mascotas.value.img3!,
+        img4:this.mascotas.value.img4!,
         // UBICACION
+        encuentro: this.mascotas.value.encuentro!,
         ciudad: this.mascotas.value.ciudad!,
         barrio: this.mascotas.value.barrio!,
-        fechaperdida: this.mascotas.value.fechaperdida!,
+        fechaencuentro: this.mascotas.value.fechaencuentro!,
         // CONTACTO
-        nombredueno: this.mascotas.value.nombredueno!,
+        nombrepublicador: this.mascotas.value.nombrepublicador!,
         tel1: this.mascotas.value.tel1!,
         tel2: this.mascotas.value.tel2!,
         mail: this.mascotas.value.mail!,
       }
-      await this.servicioCrud.crearMascota(nuevamascota)
+      await this.servicioCrud.crearMascotaEncontrada(nuevamascota)
       .then(mascotas=>{
-        alert("Se ha añadido su mascota correctamente")
+        alert("Se ha añadido la mascota posiblemente extraviada correctamente")
+        this.router.navigate(['../../explore/busqueda'])
       })
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
@@ -99,7 +109,7 @@ export class FormularioComponent {
     }
   }
 
-  // MODIFICACION DE ESTILOS
+  /* ============= MODIFICACION DE ESTILOS ============== */
 
   //Valores predefinidos
   mostrarDivDescripcion = true;
@@ -134,6 +144,7 @@ export class FormularioComponent {
     }
   }
 
+  // Funciones para cambiar entre secciones del formulario
   btnDescripcion(){
     this.mostrarDivDescripcion = true;
     this.mostrarDivUbicacion = false;

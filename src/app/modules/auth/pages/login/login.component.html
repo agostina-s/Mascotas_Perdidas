@@ -6,10 +6,10 @@
                     <h2>Iniciar Sesión</h2>
                     <form class="login-form">
                         <!-- Email -->
-                        <input [(ngModel)]="usuarios.email" type="text" placeholder="Correo electrónico" required name="email" class="mb-3">
+                        <input [(ngModel)]="usuarios.email" type="text" autocomplete="username" placeholder="Correo electrónico" required name="email" class="mb-3">
                         <!-- Password -->
                         <div class="input-group">
-                            <input [(ngModel)]="usuarios.password" [type]="hide?'password':'text'" placeholder="Contraseña " required name="contraseña" class="form-control contrasena">
+                            <input [(ngModel)]="usuarios.password" autocomplete="current-password" [type]="hide?'password':'text'" placeholder="Contraseña " required name="contraseña" class="form-control contrasena">
                             <span class="ojito">
                                 <button class="btnOjito" type="button" (click)="hide = !hide">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">

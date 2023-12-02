@@ -1,10 +1,38 @@
 .footer{
-    background-color:#86653C;
+    background-color:#B88B54;
 }
 .img{
     height: 45%;
     width: 45%;
     
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    #logo1{
+        margin-top: 2rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    #logo1{
+        margin-top: 1rem;
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    #logo1{
+        margin-top: 2rem;
+        width: 6rem;
+        height: 6rem;
+    }
 }
 
 .botonA, .botonB {
@@ -22,4 +50,5 @@
 }
 .boton-contacto a {
     color: #000000;
+
 }

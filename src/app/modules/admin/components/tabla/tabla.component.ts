@@ -29,7 +29,7 @@ export class TablaComponent {
 mostrarBorrar(publiSeleccionada: Mascotas){ // boton para el model
   this.publiSeleccionada = publiSeleccionada;
 }
-
+// Método para eliminar la mascota seleccionada
 eliminarMascotas(){
   this.servicioCRUD.eliminarMascotas(this.publiSeleccionada.idmp)
   .then(respuesta =>{

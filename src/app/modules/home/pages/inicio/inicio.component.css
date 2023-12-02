@@ -54,7 +54,12 @@
 #div2{
   display: flex;
   justify-content: center;
+  
+}
 
+/* POINTER */
+.pointer{
+  cursor: pointer;
 }
 
 #boton{
@@ -88,6 +93,7 @@
   border-radius: 20px;
   width: 90vw;
   margin-bottom: 2rem;
+  box-shadow: 2px 5px 5px rgb(62, 62, 62);
 }
 
 /* Estilos para pantallas grandes (computadoras de escritorio) */
