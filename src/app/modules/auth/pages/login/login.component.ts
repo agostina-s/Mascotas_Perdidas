@@ -32,9 +32,9 @@ export class LoginComponent {
     public router: Router // Servicio de enrutamiento para navegar
   ){
         //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
-        this.servicioAuth.authState().subscribe( res => {
+        this.servicioAuth.authState().subscribe( res => { //se suscribe al metodo del servicio auth
           if(res?.uid !== undefined){
-            this.userID = res?.uid
+            this.userID = res?.uid //recupera el id y se lo asigna a una variable
             console.log('la respuesta del observable:',this.userID)
             return this.userID
           }else{
@@ -44,6 +44,7 @@ export class LoginComponent {
           }
         })
   }
+
 // Método para iniciar sesión
   async ingresar(){
      // Crear objeto de credenciales para iniciar sesión

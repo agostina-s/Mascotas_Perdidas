@@ -21,12 +21,12 @@ export class AuthService {
   //funcion para LOGUEARSE
   iniciarSesion(email: string, password: string){
     // valida email y contraseña de la BD
-    return this.auth.signInWithEmailAndPassword(email, password)
+    return this.auth.signInWithEmailAndPassword(email, password) //utiliza el metodo de firebase signInWithEmailAndPassword para iniciar sesion 
   }
 
   //funcion para CERRAR SESION
   cerrarSesion(){
-    return this.auth.signOut();
+    return this.auth.signOut(); //utiliza el metodo signOut de firebase para cerrar sesion 
   }
 
   //funcion para OBTENER UID --- NO ES NECESARIO USAR ESTA FUNCION USAR LA DE ABAJO
