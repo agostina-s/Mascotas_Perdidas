@@ -1,6 +1,7 @@
 import { Component, inject} from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; //importo ac routes
 import { Mascotas } from 'src/app/models/mascotasperdidas';
+import { Router } from '@angular/router';
 //CRUD Service
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 
@@ -10,10 +11,12 @@ import { ServicesService } from 'src/app/modules/admin/services/services.service
   styleUrls: ['./publicacion.component.css']
 })
 export class PublicacionComponent{
+  mascotas: Mascotas[] = []
 
   publicacion?:Mascotas;
 
-  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService){ //acroutes detecta id que esta en el url
+  constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService, private router:Router){ //acroutes detecta id que esta en el url
+
 
     //lo siguiente se ejecutara al momento de ser cargada la pagina
     //llama a la funcion obtenerMascotasById y envia el id para que le devuelva una publicacion especifica con subscribe()
@@ -29,5 +32,16 @@ export class PublicacionComponent{
       //this.publicacionID= params['id'];
     })
   }
+
+  ngOnInit():void{
+    this.servicioCRUD.obtenerMascota().subscribe((mascotas)=>{
+      this.mascotas = mascotas
+    })
+  }
+
+  editarMascota(id:string): void {
+    this.router.navigate(['../../editar/editarmascota/',id])
+  }
+
 
 }

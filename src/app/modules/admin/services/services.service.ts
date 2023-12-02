@@ -1,6 +1,7 @@
 //archivo CRUD services
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { BehaviorSubject } from 'rxjs';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -9,9 +10,13 @@ import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 @Injectable({
   providedIn: 'root'
 })
-export class ServicesService {
+export class ServicesService{
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
+
+  private mascotasSubject = new BehaviorSubject<Mascotas[]>([]);
+  mascotas$ = this.mascotasSubject.asObservable();
   private mascotasEncontradasColeccion: AngularFirestoreCollection<Mascotasencontrada>
+  
   // Constructor del servicio, establece la conexión con Firestore
   constructor(private database: AngularFirestore) { 
     // Inicializa la colección de mascotas, apuntando a la colección "mascotas" en Firestore
@@ -20,7 +25,10 @@ export class ServicesService {
     this.mascotasEncontradasColeccion = database.collection("mascotas-encontradas")
   }
 
-
+  ngOnInit():void{
+    const idMascota= '...'
+    this.obtenerMascotaById(idMascota)
+  }
     /* ============== CRUD DE MASCOTAS PERDIDAS utiliza coleccion mascotas ============== */
 
   //funcion crear mascota CREAR
@@ -44,6 +52,7 @@ export class ServicesService {
   }
 
   //funcion obtener mascotas GET // Recupera todos los documentos de la colección "mascotas" y emite cambios en tiempo real
+
   obtenerMascota(){
     // snapshoot -> captura los cambios
     // pipe -> tubería por dónde viajan esos nuevos datos

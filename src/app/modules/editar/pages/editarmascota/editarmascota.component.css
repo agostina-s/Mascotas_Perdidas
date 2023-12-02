@@ -1,0 +1,112 @@
+.tarjetas{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* SPANS PROGRESO */
+.pointer{
+    cursor: pointer;
+}
+.contenedorprincipal{
+    background-color: #F2c995;
+}
+
+.titulo-activo{
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+    transition: color 0.6s ease-in-out; /* Transición de color */
+}
+
+.titulo-inactivo {
+    transition: opacity 2s, transform 2s; /* Transición de opacidad y escala */
+    transform: scale(0.8); /* Escala el título inactivo */
+}
+
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media screen and (min-width: 1300px) {
+    .tarjetas{
+        padding-left: 32%;
+        padding-right: 32%;
+    }
+}
+
+/* Estilos para pantallas medianas (notebooks) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .tarjetas{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .tarjetas{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+/* CONTROLA LAS TARJETAS DEL FORMULARIO */
+.form-mascota, .form-ubicacion, .form-contacto{
+    background-color: #F2c995;
+    /* box-shadow: 7px 13px 37px rgba(0, 0, 0, .8) ; */
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+h2{
+    margin: 0;
+}
+
+header{
+    width:100%;
+    background-color: #B88B54;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
+}
+
+header span{
+    font-size:100px;
+    text-align: center;
+}
+.tarjetas-info{
+    padding:.8rem;
+    overflow:hidden;
+    color:black;
+    border:black;
+}
+
+.tarjetas-info label, .tarjetas-info input,.tarjetas-info select,.tarjetas-info textarea{
+    display:block;
+    width:100%;
+    margin-bottom:8px;
+}
+
+.tarjetas-info input::placeholder, .tarjetas-info textarea::placeholder{
+    color: #424242;
+}
+
+.tarjetas-info input,.tarjetas-info text,.tarjetas-info select, textarea{
+    text-decoration: #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #e2b278;
+}
+
+
+iframe{
+    border-radius: 10px;
+}
+
+/* Estilo para mostrar el div */
+.mostrar {
+    opacity: 1;
+    height: auto;
+}
+
+.textarea{
+    height: 5rem;
+}
