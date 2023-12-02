@@ -15,7 +15,11 @@ html{
 .contCarrusel{
     height: 50vh;
 }
-
+.btn-succes{
+    background-color: green;
+    color:white;
+    border: 1px solid black   
+}
 .carousel-container {
     display:flex;
     flex-direction: column;
