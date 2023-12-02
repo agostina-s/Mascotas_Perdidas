@@ -22,11 +22,11 @@
 
             <div class="user-section">
                 <h3 class="text-start mt-3">Mis publicaciones</h3>
-                <p>{{usuario?.publicaciones}} hola</p>
+                <p>{{usuario?.publicaciones}}</p>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" (click)="obtenerMascotasFor()">
                                 Activas.
                             </button>
                         </h2>
@@ -62,7 +62,12 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <div>
+                    hola {{publicacionesActivas[0].nombre }}
+                    hola {{publicacionesActivas[2].nombre }}
+                </div>
+
 
         </div>
         <div class="container mt-5">

@@ -2,8 +2,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
-import { first, map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { catchError, first, map } from 'rxjs/operators';
+import { Observable, forkJoin } from 'rxjs';
 import { Mascotasencontrada } from 'src/app/models/mascotasencontrada';
 import { Usuario } from 'src/app/models/usuario';
 
@@ -65,6 +65,7 @@ export class ServicesService {
     return this.mascotasColeccion. snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
+
   //funcion modificar mascotas
   modificarMascota(idmp: string, nuevoData:Mascotas){
     //Envíamos el id del producto seleccionado y su nueva información
@@ -88,13 +89,25 @@ export class ServicesService {
     })
   }
 
-  //funcion para obetener mascota por ID
-  publicacion!: Observable<Mascotas>
-  obtenerMascotaById(idmp: string){
-    // Utiliza AngularFirestore para obtener una publicación por su ID
-    this.publicacion = this.database.collection('mascotas').doc(idmp).valueChanges().pipe(map((data:any) => data as Mascotas));
-    return this.publicacion
-  }
+    //funcion para obetener mascota por ID
+    publicacion!: Observable<Mascotas>
+    obtenerMascotaById(idmp: string){
+      // Utiliza AngularFirestore para obtener una publicación por su ID
+      console.log('tomando el valor de ', idmp)
+      this.publicacion = this.database.collection('mascotas').doc(idmp).valueChanges().pipe(map((data:any) => data as Mascotas));
+      return this.publicacion
+    }
+
+    
+    // obtenerMascotasPorIds(ids: string[]): Observable<Mascotas[]> {
+    //   console.log('ejecutando servicio')
+    //   const observables = ids.map(id => this.obtenerMascotaById(id));
+    //   return forkJoin(observables);
+    // }
+    
+
+
+
 
   /* ============== CRUD DE POSIBLES EXTRAVIOS utiliza coleccion mascotas-encontradas ============== */
   //funcion crear encontre mascota CREAR 
