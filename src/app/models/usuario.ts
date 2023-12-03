@@ -7,4 +7,5 @@ export interface Usuario {
     foto: string;
     descripcion: string;
     ubicacion: any;
+    publicaciones: string[];
 }

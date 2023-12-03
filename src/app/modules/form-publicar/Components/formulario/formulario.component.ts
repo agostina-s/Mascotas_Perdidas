@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { FirestoreService } from 'src/app/shared/services/firestore.service';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-formulario',
@@ -23,6 +25,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
 export class FormularioComponent {
   coleccionmascotas: Mascotas [] = [];
   productoSeleccionado!: Mascotas; // ! -> toma valores vacios
+  userID!:string | undefined;
 
 
   //ENLAZAMIENTO AL FORMULARIO
@@ -52,8 +55,24 @@ export class FormularioComponent {
   
   //LLAMAR AL SERVICIO CRUD
   constructor(
-    public servicioCrud: ServicesService
-  ){}
+    public servicioAuth: AuthService,  // Servicio de autenticación
+    public servicioCrud: ServicesService,
+    private servicioUser: FirestoreService
+  ){
+        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        this.servicioAuth.authState().subscribe( res => {
+          if(res?.uid !== undefined){
+            this.userID = res?.uid
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }else{
+            this.userID = undefined
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }
+        })
+
+  }
 
   // //NO NECESITAMOS PEDIR LAS PUBLICACIONES
   // ngOnInit():void{
@@ -89,7 +108,7 @@ export class FormularioComponent {
         tel2: this.mascotas.value.tel2!,
         mail: this.mascotas.value.mail!,
       }
-      await this.servicioCrud.crearMascota(nuevamascota)
+      await this.servicioCrud.crearMascota(nuevamascota,this.userID as string)
       .then(mascotas=>{
         alert("Se ha añadido su mascota correctamente")
       })

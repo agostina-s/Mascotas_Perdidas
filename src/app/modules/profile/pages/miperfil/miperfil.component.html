@@ -8,7 +8,7 @@
             <div class="card my-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{usuario?.foto}}" class="img-fluid rounded-start" alt="Imagen de perfil">
+                        <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" class="img-fluid rounded-start" alt="Imagen de perfil">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -25,43 +25,39 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Activas.
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" (click)="obtenerMascotasUsuario()">
+                                Ver publicaciones activas
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong>Mascotas activas</strong> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Pasivas.
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>Mascotas pasivas</strong>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Finalizadas.
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>Mascotas finalizadas</strong> 
+                                <div *ngFor="let mascota of publicaciones">
+                                    <div class="card my-3 mx-auto tarjetaMascota">
+                                        <div class="row g-0">
+                                            <div class="col colImagen">
+                                                <img src="{{mascota.imagenprincipal}}" class="img-fluid rounded-start cardimg" alt="Imagen de perfil">
+                                            </div>
+                                            <div class="col">
+                                                <div class="card-body text-start">
+                                                    <h5 class="card-title">{{mascota.nombre}}</h5>
+                                                    <p class="card-text">{{mascota.descripcion}}</p>
+                                                    <p class="card-text"><small class="text-body-secondary">{{mascota.ciudad}}</small></p>
+                                                    
+                                                </div>
+                                                <button type="button" class="btn mx-auto" id="botonvermas"
+                                                        [routerLink]="['../../explore/publicacion', mascota.idmp]">
+                                                        Ver más
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                
+            </div>        
 
         </div>
         <div class="container mt-5">
@@ -75,34 +71,11 @@
                     </h2>
                     <div id="collapse1" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>Cambiar nombre</strong> 
+                            {{usuario?.email}}
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
-                            Contraseña.
-                        </button>
-                    </h2>
-                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Cambiar contraseña</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseThree">
-                            Correo electrónico
-                        </button>
-                    </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Cambiar correo.</strong> 
-                        </div>
-                    </div>
-                </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -111,11 +84,11 @@
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>Cambiar ubicación/dirección.</strong> 
+                            {{usuario?.ubicacion}}
                         </div>
                     </div>
                 </div>
-                <button class="config-button mt-3 btn"><p class="m-auto">Cerrar Sesión</p></button>
+                <button class="config-button mt-3 btn"><p class="m-auto" (click)="cerrarSesion()">Cerrar Sesión</p></button>
             </div>
 
 

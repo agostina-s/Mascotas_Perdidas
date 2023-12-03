@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit{
   hide = true; // Para ocultar la contraseña en el input
 
   // Modelo de usuario para el formulario
+  // Modelo de usuario para el formulario
   usuarios: Usuario = {
     uid: "",
     email: "",
@@ -23,7 +24,8 @@ export class RegisterComponent implements OnInit{
     name: "",
     foto: "",
     descripcion: "",
-    ubicacion: ""
+    ubicacion: "",
+    publicaciones: [],
   }
 
 

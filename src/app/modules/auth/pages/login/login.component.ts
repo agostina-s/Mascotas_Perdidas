@@ -23,8 +23,10 @@ export class LoginComponent {
     name: "",
     foto: "",
     descripcion: "",
-    ubicacion: ""
+    ubicacion: "",
+    publicaciones: [],
   }
+
 
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
