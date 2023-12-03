@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-editarmascota',
@@ -22,6 +23,9 @@ import { trigger, transition, animate, style } from '@angular/animations';
   ],
 })
 export class EditarmascotaComponent {
+
+  userID!:string | undefined;
+
   
   mascota: Mascotas = {
     idmp: '',
@@ -44,7 +48,21 @@ export class EditarmascotaComponent {
     tel2: 0,
     mail: '',
   }
-  constructor(private route: ActivatedRoute, private mascotaService: ServicesService, private router:Router) { }
+  constructor(private route: ActivatedRoute,
+              private mascotaService: ServicesService,
+              private router:Router,
+              private servicioAuth: AuthService) {
+        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        this.servicioAuth.authState().subscribe( res => {
+          if(res?.uid !== undefined){
+            this.userID = res?.uid
+            return this.userID
+          }else{
+            this.userID = undefined
+            return this.userID
+          }
+        })
+  }
 
   ngOnInit(): void {
     const mascotaidmp = this.route.snapshot.paramMap.get('id')
