@@ -21,6 +21,9 @@ import { trigger, transition, animate, style } from '@angular/animations';
     ]),
   ],
 })
+
+// el componente encargado de editar una publicacion, para corregir errores o modificar datos
+
 export class EditarmascotaComponent {
   
   mascota: Mascotas = {
@@ -65,7 +68,7 @@ export class EditarmascotaComponent {
   }
 
   guardarCambios():void{
-    this.mascotaService.modificarMascota(this.mascota.idmp, this.mascota).then(
+    this.mascotaService.modificarMascota(this.mascota.idmp, this.mascota).then( //al guardar los cambios se llama a la funcion modificar mascota del servicio crud
       ()=>{
         alert("cambios guardados exitosamente");
         this.router.navigate(["../../explore/publicacion/",this.mascota.idmp])
