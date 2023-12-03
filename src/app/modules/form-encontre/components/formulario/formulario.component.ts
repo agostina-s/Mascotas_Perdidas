@@ -74,7 +74,7 @@ export class FormularioComponent {
   //FUNCION QUE ENVIA EL FORM AL SERVICE
   async agregarMascotaEncontrada(){
     if(this.mascotas.valid){
-      let nuevamascota: Mascotasencontrada = {
+      let nuevamascota: Mascotasencontrada = { //ASIGNAR LOS VALORES DE LOS INPUTS A NUEVA MASCOTA
         // INFORMACION DE LA MASCOTA
         idme : '', //se guarda vacio para agregarlo en el crud
         raza:this.mascotas.value.raza!,

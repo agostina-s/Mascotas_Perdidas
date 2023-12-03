@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit{
         alert("Hubo un error al cargar el nuevo usuario :( \n"+error+'email='+this.usuarios.email)
       );
 
-    //constante para UID
+    //constante para asignar UID
     const uid = await this.servicioAuth.getUID();
     this.usuarios.uid = uid;
 
@@ -79,10 +79,10 @@ export class RegisterComponent implements OnInit{
     this.guardarUser();
 
 
-    this.router.navigate(['../../home/inicio']);
+    this.router.navigate(['../../home/inicio']); //redirige a inicio
   } 
 
-  // función que agrega NUEVO USUARIO en Firestore LOS DATOS DEL USER
+  // función que agrega NUEVO USUARIO en Firestore SE GUARDA EL USUARIO COMO DATOS (TODA SU INFORMACION)
   async guardarUser(){
     this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res => {
