@@ -102,4 +102,10 @@ export class MiperfilComponent implements OnInit {
         return this.usuario
       })
   }
+
+  cerrarSesion(){
+    this.servicioAuth.cerrarSesion();
+    alert('la sesión se cerró exitosamente')
+  }
+
 }
