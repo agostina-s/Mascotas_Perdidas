@@ -29,6 +29,7 @@ export class EditarmascotaComponent {
   
   mascota: Mascotas = {
     idmp: '',
+    uid: this.userID as string,
     raza: '',
     tamano: '',
     edad: 0,
@@ -52,13 +53,16 @@ export class EditarmascotaComponent {
               private mascotaService: ServicesService,
               private router:Router,
               private servicioAuth: AuthService) {
+
         //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
         this.servicioAuth.authState().subscribe( res => {
           if(res?.uid !== undefined){
             this.userID = res?.uid
+            console.log('la respuesta del observable:',this.userID)
             return this.userID
           }else{
             this.userID = undefined
+            console.log('la respuesta del observable:',this.userID)
             return this.userID
           }
         })
@@ -74,7 +78,7 @@ export class EditarmascotaComponent {
 
   obtenerMascotaPorUid(uid: string): void {
     this.mascotaService.obtenerMascotaById(uid).subscribe(mascota => {
-      if (mascota) {
+      if (mascota && this.userID !== undefined) {
         this.mascota = mascota
       } else {
         console.error("no se encontro la mascota por el id", uid)
