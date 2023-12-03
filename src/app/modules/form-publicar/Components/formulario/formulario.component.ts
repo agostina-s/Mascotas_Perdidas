@@ -5,6 +5,7 @@ import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -57,6 +58,7 @@ export class FormularioComponent {
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
     public servicioCrud: ServicesService,
+    private router:Router,
     private servicioUser: FirestoreService
   ){
         //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
@@ -83,10 +85,11 @@ export class FormularioComponent {
 
   //FUNCION QUE ENVIA EL FORM
   async agregarMascota(){
-    if(this.mascotas.value){
+    if(this.mascotas.value && this.userID !== undefined){
       let nuevamascota: Mascotas = {
         // INFORMACION DE LA MASCOTA
         idmp : '', //se guarda vacio para agregarlo en el crud
+        uid: this.userID as string,
         raza:this.mascotas.value.raza!,
         tamano: this.mascotas.value.tamano!,
         edad: this.mascotas.value.edad!,
@@ -111,6 +114,7 @@ export class FormularioComponent {
       await this.servicioCrud.crearMascota(nuevamascota,this.userID as string)
       .then(mascotas=>{
         alert("Se ha añadido su mascota correctamente")
+        this.router.navigate(["../../explore/busqueda/"])
       })
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
