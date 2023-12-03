@@ -118,6 +118,10 @@ export class FormularioComponent {
     }
   }
 
+  nuevaFoto(file:any){
+
+  }
+
   // MODIFICACION DE ESTILOS
 
   //Valores predefinidos
