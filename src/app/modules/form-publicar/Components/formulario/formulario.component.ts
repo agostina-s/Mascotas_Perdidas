@@ -5,6 +5,7 @@ import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { FirestorageService } from 'src/app/shared/services/firestorage.service';
 
 @Component({
   selector: 'app-formulario',
@@ -57,7 +58,8 @@ export class FormularioComponent {
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
     public servicioCrud: ServicesService,
-    private servicioUser: FirestoreService
+    private servicioUser: FirestoreService,
+    private servicioStorage: FirestorageService
   ){
         //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
         this.servicioAuth.authState().subscribe( res => {
@@ -118,8 +120,16 @@ export class FormularioComponent {
     }
   }
 
-  nuevaFoto(file:any){
+  nuevaImagen= '';
 
+  nuevaFoto(evento:any){
+    if(evento.target.files && evento.target.files[0]){
+      const reader = new FileReader();
+      reader.onload = ((image) =>{
+        this.nuevaImagen = image.target?.result as string;
+      });
+      reader.readAsDataURL(evento.target.files[0])
+    }
   }
 
   // MODIFICACION DE ESTILOS
