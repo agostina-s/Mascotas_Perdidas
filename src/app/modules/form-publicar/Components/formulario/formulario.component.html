@@ -31,7 +31,7 @@
                 <div class="col">
                     <!-- RAZA -->
                     <label for="raza"><strong>Raza: </strong> </label>
-                    <select name="raza" id="raza" formControlName="raza">
+                    <select name="raza" id="raza" formControlName="raza"><!--Conectamos con el form control del ts-->
                         <option value="Caniche">Caniche</option>
                         <option value="Galgo">Galgo</option>
                         <option value="Chihuahua">chihuahua</option>
@@ -97,13 +97,13 @@
             <!-- IMAGENES URL beta -->
             <label for="imagenes"><strong>Imagenes de la mascota </strong></label>
             <h6>Imagen principal</h6>
-            <input type="text" name="imagenes" id="imagenprincipal" formControlName="imagenprincipal">
+            <input type="file" (change)="nuevaFoto($event, 'imagenprincipal')" name="imagenes" id="imagenprincipal" formControlName="imagenprincipal" accept="image/*">
             <h6>Imagen N2</h6>
-            <input type="text" name="imagenes" id="imagen2" formControlName="imagen2">
+            <input type="file" (change)="nuevaFoto($event, 'imagen2')" name="imagenes" id="imagen2" formControlName="imagen2" accept="image/*">
             <h6>Imagen N3</h6>
-            <input type="text" name="imagenes" id="imagen3" formControlName="imagen3">
+            <input type="file" (change)="nuevaFoto($event, 'imagen3')" name="imagenes" id="imagen3" formControlName="imagen3" accept="image/*">
             <h6>Imagen N4</h6>
-            <input type="text" name="imagenes" id="imagen4" formControlName="imagen4">
+            <input type="file" (change)="nuevaFoto($event, 'imagen4')" name="imagenes" id="imagen4" formControlName="imagen4" accept="image/*">
         </div>
     </div>
     <!-- TARJETA DE INFORMACION DE LA UBICACION -->

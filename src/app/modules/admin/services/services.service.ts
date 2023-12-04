@@ -12,6 +12,7 @@ import { Usuario } from 'src/app/models/usuario';
   providedIn: 'root'
 })
 export class ServicesService{
+  //cuando dice angularfirestore estas pidiendo la coleccion desde firebase
   private mascotasColeccion: AngularFirestoreCollection<Mascotas>
 
   private mascotasSubject = new BehaviorSubject<Mascotas[]>([]);

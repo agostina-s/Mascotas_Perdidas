@@ -57,7 +57,7 @@ export class InicioComponent {
   }
   btnME(){
     if(this.userID !== undefined){
-      this.router.navigate(['../../form-publicar/pagina-encontre'])
+      this.router.navigate(['../../form-encontre/pagina-encontre'])
     }else{
       this.router.navigate(['../../auth/login'])
     }
