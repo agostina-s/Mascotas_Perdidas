@@ -1,4 +1,4 @@
-<div class="contenedorprincipal">
+<div class="contenedorprincipal" *ngIf="mascota.uid === userID">
 <div class="text-center mb-4">
     <h4 class="text-muted progreso">
         <span class="pointer" (click)="btnDescripcion()" [ngClass]="{'titulo-activo': mostrarDivDescripcion, 'titulo-inactivo': !mostrarDivDescripcion}">Descripcion</span>

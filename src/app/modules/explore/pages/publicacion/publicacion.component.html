@@ -107,8 +107,9 @@
                                     <button type="button" class="btn btn-success btn-contacto btn-block">Llamar</button>
                                     <!-- agregar funcionalidad al boton -->
                                 </div>
-                                <button class="btn btn-succes"  (click)="editarMascota(publicacion.idmp)">Editar publicacion</button>
-                                <button type="button" title="Eliminar" class="btn" data-bs-toggle="modal" data-bs-target="#eliminarMascotas" style="background-color: rgb(133, 36, 36); color:white; margin-top: 1rem;" (click)="mostrarBorrar(publicacion)">Eliminar publicacion </button>
+
+                                <button class="btn btn-succes" *ngIf="publicacion.uid === userID" (click)="editarMascota(publicacion.idmp)">Editar publicacion</button>
+                                <button type="button" *ngIf="publicacion.uid === userID" title="Eliminar" class="btn" data-bs-toggle="modal" data-bs-target="#eliminarMascotas" style="background-color: rgb(133, 36, 36); color:white; margin-top: 1rem;" (click)="mostrarBorrar(publicacion)">Eliminar publicacion </button>
                             </div>
                             <div class="container-fluid">
                                 <div *ngFor=" let publicacion of mascotas" class="modal fade" id="eliminarMascotas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

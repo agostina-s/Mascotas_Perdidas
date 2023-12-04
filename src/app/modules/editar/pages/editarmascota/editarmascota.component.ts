@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Mascotas } from 'src/app/models/mascotasperdidas';
 import { ServicesService } from 'src/app/modules/admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'app-editarmascota',
@@ -25,9 +26,13 @@ import { trigger, transition, animate, style } from '@angular/animations';
 // el componente encargado de editar una publicacion, para corregir errores o modificar datos
 
 export class EditarmascotaComponent {
+
+  userID!:string | undefined;
+
   
   mascota: Mascotas = {
     idmp: '',
+    uid: this.userID as string,
     raza: '',
     tamano: '',
     edad: 0,
@@ -47,7 +52,24 @@ export class EditarmascotaComponent {
     tel2: 0,
     mail: '',
   }
-  constructor(private route: ActivatedRoute, private mascotaService: ServicesService, private router:Router) { }
+  constructor(private route: ActivatedRoute,
+              private mascotaService: ServicesService,
+              private router:Router,
+              private servicioAuth: AuthService) {
+
+        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        this.servicioAuth.authState().subscribe( res => {
+          if(res?.uid !== undefined){
+            this.userID = res?.uid
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }else{
+            this.userID = undefined
+            console.log('la respuesta del observable:',this.userID)
+            return this.userID
+          }
+        })
+  }
 
   ngOnInit(): void {
     const mascotaidmp = this.route.snapshot.paramMap.get('id')
@@ -59,7 +81,7 @@ export class EditarmascotaComponent {
 
   obtenerMascotaPorUid(uid: string): void {
     this.mascotaService.obtenerMascotaById(uid).subscribe(mascota => {
-      if (mascota) {
+      if (mascota && this.userID !== undefined) {
         this.mascota = mascota
       } else {
         console.error("no se encontro la mascota por el id", uid)
