@@ -26,7 +26,6 @@ export class FirestorageService {
           })
         })
       ).subscribe();
-      resolve('a')
     })
   }
 

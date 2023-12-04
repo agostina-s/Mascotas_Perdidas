@@ -120,15 +120,19 @@ export class FormularioComponent {
     }
   }
 
-  nuevaImagen= '';
-
-  nuevaFoto(evento:any){
-    if(evento.target.files && evento.target.files[0]){
-      const reader = new FileReader();
-      reader.onload = ((image) =>{
-        this.nuevaImagen = image.target?.result as string;
+  // Función para manejar el cambio en el input de tipo file
+  nuevaFoto(event: any, nombreCampo: string) {
+    const file = event.target.files[0];
+    
+    if (file) {
+      const path = 'mascotas'; // Reemplaza con la ruta correcta
+      this.servicioStorage.subirImagen(file, path).then((url) => {
+        // Asigna la URL de descarga al formControl correspondiente
+        this.mascotas.get(nombreCampo)?.setValue(url);
+        console.log('respuesta:',url)
+      }).catch((error) => {
+        console.error('Error al subir la imagen:', error);
       });
-      reader.readAsDataURL(evento.target.files[0])
     }
   }
 
