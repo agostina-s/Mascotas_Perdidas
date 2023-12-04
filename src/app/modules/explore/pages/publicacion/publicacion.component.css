@@ -1,5 +1,45 @@
 
+#imagendelamascota{
+    height: 4rem;
+    width: 4rem;
+}
+.container-fluid{
+    background-color: #F2c995;
+}
+th{
+    background-color: #F2c995;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+td{
+    background-color: #F2c995;
+    border-bottom: 1px solid black;
+}
+.img{
+    height: 6rem;
+    width: 6rem;
+}
+table{
+    background-color: #F2c995;
+    margin-bottom: 0;
+}
+#ultimotd{
+    border-right: 1px solid black;
+}
+.modal-header{
+    background-color: #B88B54;
+    border-bottom: 1px solid black;
+}
 
+.modal-footer{
+    background-color: #B88B54;
+}
+.modal-body{
+    background-color: #F2c995;
+}
+.btn-primary{
+    background-color: rgb(108, 21, 21);
+}
 html{
     background-color: #F2C995;
 }
