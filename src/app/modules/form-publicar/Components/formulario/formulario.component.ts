@@ -5,6 +5,7 @@ import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { Route , Router} from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -59,6 +60,7 @@ export class FormularioComponent {
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
     public servicioCrud: ServicesService,
+    private router:Router,
     private servicioUser: FirestoreService
   ){
         //pide el estado de autentificacion en tiempo real y devuelve el userID
@@ -113,6 +115,7 @@ export class FormularioComponent {
       await this.servicioCrud.crearMascota(nuevamascota,this.userID as string)
       .then(mascotas=>{
         alert("Se ha añadido su mascota correctamente")
+        this.router.navigate(['../home/inicio'])
       })
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
