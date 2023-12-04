@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 
 import { FirestorageService } from 'src/app/shared/services/firestorage.service';
 
-import { Route , Router} from '@angular/router';
-
 
 @Component({
   selector: 'app-formulario',
