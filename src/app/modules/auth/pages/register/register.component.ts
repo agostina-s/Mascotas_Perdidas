@@ -40,9 +40,9 @@ export class RegisterComponent implements OnInit{
     public servicioFirestore: FirestoreService,  // Servicio para interactuar con Firestore
     public router: Router // Servicio de enrutamiento para navegar
   ) { 
-        //LA GLORIA
+        //el estado del usuario actual 
         this.servicioAuth.authState().subscribe( res => {
-          if(res?.uid !== undefined){
+          if(res?.uid !== undefined){// si la respuesta del estado del usuario es distinta a indefinida se devuelve al usuario
             this.userID = res?.uid
             console.log('la respuesta del observable:',this.userID)
             return this.userID
@@ -77,8 +77,6 @@ export class RegisterComponent implements OnInit{
 
     // GUARDA EL NUEVO USUARIO
     this.guardarUser();
-
-
     this.router.navigate(['../../home/inicio']); //redirige a inicio
   } 
 

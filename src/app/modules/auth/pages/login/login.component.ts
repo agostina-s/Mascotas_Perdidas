@@ -27,13 +27,12 @@ export class LoginComponent {
     publicaciones: [],
   }
 
-
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
     public firestore: FirestoreService, // Servicio para interactuar con Firestore
     public router: Router // Servicio de enrutamiento para navegar
   ){
-        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        //pide el estado de autentificacion en tiempo real y devuelve el userID
         this.servicioAuth.authState().subscribe( res => { //se suscribe al metodo del servicio auth
           if(res?.uid !== undefined){
             this.userID = res?.uid //recupera el id y se lo asigna a una variable
