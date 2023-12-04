@@ -60,6 +60,7 @@ export class RegisterComponent implements OnInit{
       email: this.usuarios.email,
       password: this.usuarios.password
     };
+    //llamamo al servicioAuth y activamos la funcion registrar mandandoles las credenciales
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
     // el método THEN nos devuelve el mismo valor que guarda la promesa
       .then(res =>{
