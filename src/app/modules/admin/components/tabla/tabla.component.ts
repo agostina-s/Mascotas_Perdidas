@@ -17,7 +17,7 @@ export class TablaComponent {
   ){}
 
   ngOnInit(): void{
-    /* del servicio Crud, llamamos a obtener producto y los guardamos
+    /* del servicio Crud, llamamos a obtener mascota y los guardamos
     en la colección */
     this.servicioCRUD.obtenerMascota().subscribe(mascota =>{
       this.coleccionMascotas = mascota;

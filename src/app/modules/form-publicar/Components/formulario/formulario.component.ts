@@ -29,6 +29,8 @@ export class FormularioComponent {
 
 
   //ENLAZAMIENTO AL FORMULARIO
+
+  //grupo de formcontrol
   mascotas = new FormGroup({
     // INFORMACION DE LA MASCOTA
     raza: new FormControl("",Validators.required),
@@ -59,7 +61,7 @@ export class FormularioComponent {
     public servicioCrud: ServicesService,
     private servicioUser: FirestoreService
   ){
-        //LA GLORIA pide el estado de autentificacion en tiempo real y devuelve el userID
+        //pide el estado de autentificacion en tiempo real y devuelve el userID
         this.servicioAuth.authState().subscribe( res => {
           if(res?.uid !== undefined){
             this.userID = res?.uid

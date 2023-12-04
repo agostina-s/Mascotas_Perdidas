@@ -108,7 +108,34 @@
                                     <!-- agregar funcionalidad al boton -->
                                 </div>
                                 <button class="btn btn-succes"  (click)="editarMascota(publicacion.idmp)">Editar publicacion</button>
+                                <button type="button" title="Eliminar" class="btn" data-bs-toggle="modal" data-bs-target="#eliminarMascotas" (click)="mostrarBorrar(publicacion)">Eliminar publicacion </button>
                             </div>
+                            <div class="container-fluid">
+                                <div *ngFor=" let publicacion of mascotas" class="modal fade" id="eliminarMascotas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro de eliminar la publicacion?</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="col">
+                                            <p>Nombre: {{publiSeleccionada.nombre}}</p>
+                                            <p>Descripcion: {{publiSeleccionada.descripcion}} </p>
+                                            <p>Fecha de perdida: {{publiSeleccionada.fechaperdida}}</p>
+                                          </div>            
+                                          <div class="col" style="text-align: center;">
+                                            <img class="img" src="{{publiSeleccionada.imagenprincipal}}" style="height: 300px; width: 300px;">
+                                          </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn"  data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="eliminarMascotas()">Eliminar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                              </div> 
                         </div>
                         <!-- div derecha -->
                     </div>

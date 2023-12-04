@@ -12,8 +12,9 @@ import { ServicesService } from 'src/app/modules/admin/services/services.service
 })
 export class PublicacionComponent{
   mascotas: Mascotas[] = []
-
+  publiSeleccionada!: Mascotas;
   publicacion?:Mascotas;
+  coleccionMascotas: Mascotas[] = [];
 
   constructor(private acroutes:ActivatedRoute, public servicioCRUD:ServicesService, private router:Router){ //acroutes detecta id que esta en el url
 
@@ -26,7 +27,7 @@ export class PublicacionComponent{
       if(param['id']){
         this.servicioCRUD.obtenerMascotaById(idPublicacion).subscribe(data => {
           this.publicacion = data;
-        })
+          })
         
       }
       //this.publicacionID= params['id'];
@@ -43,5 +44,22 @@ export class PublicacionComponent{
     this.router.navigate(['../../editar/editarmascota/',id])
   }
 
+ mostrarBorrar(publiSeleccionada: Mascotas){ // boton para el model
+  this.publiSeleccionada = publiSeleccionada;
+}
+
+// Método para eliminar la mascota seleccionada
+eliminarMascotas(){
+  this.servicioCRUD.eliminarMascotas(this.publiSeleccionada.idmp)
+  .then(respuesta =>{
+    alert("La publicacion se elimino correctamente.");
+    this.router.navigate(['../explore/busqueda'])
+  })
+  .catch(error =>{
+    alert("No se ha podido eliminar la publicacion \n"+error)
+  })
+}
+
 
 }
+
