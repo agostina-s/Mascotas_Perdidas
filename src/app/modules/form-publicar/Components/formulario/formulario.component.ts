@@ -5,7 +5,11 @@ import { ServicesService } from '../../../admin/services/services.service';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+
+import { FirestorageService } from 'src/app/shared/services/firestorage.service';
+
 import { Route , Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-formulario',
@@ -60,8 +64,10 @@ export class FormularioComponent {
   constructor(
     public servicioAuth: AuthService,  // Servicio de autenticación
     public servicioCrud: ServicesService,
-    private router:Router,
-    private servicioUser: FirestoreService
+    private servicioUser: FirestoreService,
+    private servicioStorage: FirestorageService,
+    private router:Router
+
   ){
         //pide el estado de autentificacion en tiempo real y devuelve el userID
         this.servicioAuth.authState().subscribe( res => {
@@ -120,6 +126,22 @@ export class FormularioComponent {
       .catch(error =>{
         alert("Hubo un error al agregar sus mascota :( \n"+error);
       })
+    }
+  }
+
+  // Función para manejar el cambio en el input de tipo file
+  nuevaFoto(event: any, nombreCampo: string) {
+    const file = event.target.files[0];
+    
+    if (file) {
+      const path = 'mascotas'; // Reemplaza con la ruta correcta
+      this.servicioStorage.subirImagen(file, path).then((url) => {
+        // Asigna la URL de descarga al formControl correspondiente
+        this.mascotas.get(nombreCampo)?.setValue(url);
+        console.log('respuesta:',url)
+      }).catch((error) => {
+        console.error('Error al subir la imagen:', error);
+      });
     }
   }
 

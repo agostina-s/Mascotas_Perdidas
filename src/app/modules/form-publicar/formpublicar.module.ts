@@ -7,6 +7,8 @@ import { FormularioComponent } from './Components/formulario/formulario.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
+
 @NgModule({
   declarations: [
     PaginapublicarComponent,
@@ -21,7 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports:[
     FormsModule,
     ReactiveFormsModule,
-    FormularioComponent
+    FormularioComponent,
   ]
 })
 export class FormpublicarModule { }
