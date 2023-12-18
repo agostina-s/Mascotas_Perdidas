@@ -1,15 +1,16 @@
-
-.componente{
-  min-height: 90vh;
-}
-
 #fondo{
   position: relative;
   left: 0%;
   right: 0%;
   bottom: 2%;
-  height: 50%;
-  background-image: linear-gradient(0.01deg, #F2C995 0%, rgba(184, 139, 84, 0.48) 43.69%), url('/assets/fondo.jpg');
+  background: rgb(226,178,120);
+  background-image: linear-gradient(0.01deg, #F2C995 35%, rgba(184, 139, 84, 0.48) 100%), url('/assets/fondo1.webp');
+  background-position: center top;
+  background-size: 200vh;
+  background-repeat: no-repeat;
+  min-height: 150vh;
+  /* background: rgb(226,178,120);
+  background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%); */
 }
 .contenedor{
   min-height: 100vh;
