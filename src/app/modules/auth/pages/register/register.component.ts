@@ -44,11 +44,11 @@ export class RegisterComponent implements OnInit{
         this.servicioAuth.authState().subscribe( res => {
           if(res?.uid !== undefined){// si la respuesta del estado del usuario es distinta a indefinida se devuelve al usuario
             this.userID = res?.uid
-            console.log('la respuesta del observable:',this.userID)
+            // console.log('la respuesta del observable:',this.userID)
             return this.userID
           }else{
             this.userID = undefined
-            console.log('la respuesta del observable:',this.userID)
+            // console.log('la respuesta del observable:',this.userID)
             return this.userID
           }
         })
@@ -86,8 +86,8 @@ export class RegisterComponent implements OnInit{
     this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res => {
       // visualización de datos 
-      console.log(this.usuarios)
-      console.log(this.usuarios.email)
+      // console.log(this.usuarios)
+      // console.log(this.usuarios.email)
     })
     .catch(error =>{
       //errores en caso de que falle la operación

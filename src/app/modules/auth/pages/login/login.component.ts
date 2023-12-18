@@ -36,11 +36,11 @@ export class LoginComponent {
         this.servicioAuth.authState().subscribe( res => { //se suscribe al metodo del servicio auth
           if(res?.uid !== undefined){
             this.userID = res?.uid //recupera el id y se lo asigna a una variable
-            console.log('la respuesta del observable:',this.userID)
+            // console.log('la respuesta del observable:',this.userID)
             return this.userID
           }else{
             this.userID = undefined
-            console.log('la respuesta del observable:',this.userID)
+            // console.log('la respuesta del observable:',this.userID)
             return this.userID
           }
         })

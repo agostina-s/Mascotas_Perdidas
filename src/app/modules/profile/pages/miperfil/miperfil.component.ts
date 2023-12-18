@@ -29,12 +29,12 @@ export class MiperfilComponent implements OnInit {
     this.servicioAuth.authState().subscribe( res => {
       if(res?.uid !== undefined){
         this.userID = res?.uid
-        console.log('la respuesta del observable +:',this.userID)
+        // console.log('la respuesta del observable +:',this.userID)
         this.obtenerInfoUser(this.userID as string)
         return this.userID
       }else{
         this.userID = undefined
-        console.log('la respuesta del observable -:',this.userID)
+        // console.log('la respuesta del observable -:',this.userID)
         this.router.navigate(['../../auth/login'])
         return this.userID
       }
