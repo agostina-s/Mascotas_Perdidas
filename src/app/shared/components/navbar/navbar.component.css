@@ -1,5 +1,5 @@
 .menu{
-    background-color: #B88B54;
+    background-color: #db9a5c;
 }
 .link{
     cursor: pointer;
@@ -7,7 +7,7 @@
 
 .sidemenu{
     transition: 0.5s;
-    background-color: #86653C;
+    background-color: #db9a5c;
     width: auto;
 }
 .titulomenu{

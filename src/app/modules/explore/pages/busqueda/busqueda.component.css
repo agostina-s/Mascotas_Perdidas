@@ -1,10 +1,12 @@
-
-
 html{
-    background-color: #F2C995;
+    min-height: 85vh;
+    background: rgb(226,178,120);
+    background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
 }
 
 .busqueda{
-    background-color: #F2C995;
+    min-height: 85vh;
+    background: rgb(226,178,120);
+    background: linear-gradient(153deg, rgba(226,178,120,1) 0%, rgba(246,217,178,1) 100%);
 }
 

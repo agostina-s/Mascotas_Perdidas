@@ -38,11 +38,11 @@ export class InicioComponent {
     this.servicioAuth.authState().subscribe( res => {
       if(res?.uid !== undefined){
         this.userID = res?.uid
-        console.log('la respuesta del observable:',this.userID)
+        // console.log('la respuesta del observable:',this.userID)
         return this.userID
       }else{
         this.userID = undefined
-        console.log('la respuesta del observable:',this.userID)
+        // console.log('la respuesta del observable:',this.userID)
         return this.userID
       }
     })
